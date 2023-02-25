@@ -5,32 +5,53 @@ import Menu from './Menu';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/material/styles';
 import ToolBar from '@mui/material/Toolbar';
+import { INavItems } from '../../lib/navigation.interfaces';
 
 type Props = {
   title?: string;
-navitems?: { name: string; link: string }[];
+  navitems?: INavItems[];
 };
-const Navbar = ({
-  title,
-  navitems,
-}: Props) => {
+const Navbar = ({ title, navitems }: Props) => {
   const theme = useTheme();
 
   return (
-    // {/* <Appbar /> */
-    // }
-    <Grid display={'none'} sx={{
-      display:{
-       sm:"flex"
-      }  
-    }} container bgcolor="blue" height={64} > 
-      <Grid  item sm={1} xs={2} >
-        <Logo height={"100%"} bgcolor={theme.navbar.bg_logo} />
+    <>
+      {' '}
+      <Appbar
+        items={navitems}
+        appbar={{
+          sx: {
+            bgcolor: 'transparent',
+            color:'black',
+
+            display: {
+              sm: 'none',
+            },
+          },
+        }}
+      />
+      <Grid
+        sx={{
+          display: {
+            sm: 'flex',
+            xs: 'none',
+          },
+        }}
+        container
+        bgcolor="blue"
+        height={64}
+      >
+        <Grid item sm={1} xs={2}>
+          <Logo height={'100%'} bgcolor={theme.navbar.bg_logo} />
+        </Grid>
+        <Grid item sm={11} xs={10}>
+          <Menu
+            items={navitems}
+            boxProps={{ bgcolor: theme.navbar.bg, color: theme.navbar.text }}
+          />
+        </Grid>
       </Grid>
-      <Grid item sm={11} xs={10}>
-        <Menu items={navitems}  boxProps={{bgcolor:theme.navbar.bg,color:theme.navbar.text}} />
-      </Grid>
-    </Grid>
+    </>
   );
 };
 
