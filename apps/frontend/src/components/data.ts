@@ -4,7 +4,7 @@ export const navItems=[
     link:"/glasses"
   },
   {
-    name:"SunGlasses",
+    name:"Sun Glasses",
     link:"/sunGlasses"
   },
   {
@@ -17,6 +17,6 @@ export const navItems=[
   },
   {
     name:"Sale",
-    link:"/slae"
+    link:"/sale"
   }
 ];
