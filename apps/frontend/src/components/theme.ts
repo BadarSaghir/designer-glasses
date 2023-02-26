@@ -13,6 +13,7 @@ declare module '@mui/material/styles' {
  navbar:{
   bg:string;
   text:string;
+  active:string;
   bg_logo:string;
 }
 }
@@ -21,8 +22,9 @@ declare module '@mui/material/styles' {
 
 export const theme = createTheme({
 navbar:{
-  bg:"gray",
-  text:"white",
+  bg:"blue",
+  active:"red",
+  text:"yellow",
   bg_logo:"white"
 }
 }as ThemeOptions);

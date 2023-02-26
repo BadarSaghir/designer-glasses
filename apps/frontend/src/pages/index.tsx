@@ -6,9 +6,10 @@ import UserLayout from "../components/Layout/UserLayout";
 import { FeatureSellers } from "../components/Sellers";
 
 const Index =()=>{
+  
   return (
     <UserLayout>
-    <Header navData={navItems}/>
+    <Header navData={navItems} logo={"Logo here"}/>
     <FeatureSellers list={["Ali"]}/>
     <FeatureStyle title=""/>
     <Footer logo="" signupLink="string" social={[]} title=""/>
