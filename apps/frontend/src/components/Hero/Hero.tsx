@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import glasses from '../../assets/hero.jpg';
 import { INavItems } from '../../lib/navigation.interfaces';
 import Link from 'next/link';
+import Brands from './Brands';
 type Props = PropsWithChildren & {
   imgSrc?: string;
   imageText?: INavItems[];
@@ -47,10 +48,12 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
                 })}
               </Grid>
             </Grid>
+            <div>Button</div>
           </div>
+          
         </Grid>
         <Grid item  xs={2}  >
-          <Box>h</Box>
+          <Box><Brands /></Box>
         </Grid>
       </Grid>
     </Box>

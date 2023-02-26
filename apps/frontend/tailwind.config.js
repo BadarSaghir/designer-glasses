@@ -26,8 +26,7 @@ module.exports = {
 
     '2xl': '1536px',
     // => @media (min-width: 1536px) { ... }
-     '2md': '600px',
-     '3md':'960px'
+    
   },
     colors:{
       transparent: 'transparent',
