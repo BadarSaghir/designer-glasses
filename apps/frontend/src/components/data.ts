@@ -20,3 +20,21 @@ export const navItems=[
     link:"/sale"
   }
 ];
+export const imageText=[  {
+  name:"MEN GLASSES",
+  link:"/"
+},
+{
+  name:"MEN SUNGLASSES ",
+  link:"/"
+},
+{
+  name:"WOMEN GLASSES",
+  link:"/"
+},
+{
+  name:"WOMEN SUNGLASSES ",
+  link:"/"
+},
+]
+

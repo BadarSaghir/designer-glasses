@@ -95,7 +95,7 @@ function Appbar({ appbar, items, logo, active, setActive }: Props) {
                     >
                       {items?.map((item, idx) => {
                         return (
-                          <>
+                          <div key={idx}>
                           <Link
                           className="font-bold border-solid border-red border-b-2"
                             href={item.link}
@@ -113,7 +113,7 @@ function Appbar({ appbar, items, logo, active, setActive }: Props) {
                             {item.name}
                           </Link>
                        
-                          </>
+                          </div>
                         );
                       })}
                     </Grid>

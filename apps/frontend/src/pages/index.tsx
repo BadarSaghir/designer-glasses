@@ -1,4 +1,4 @@
-import { navItems } from "../components/data";
+import { navItems,imageText } from "../components/data";
 import { FeatureStyle } from "../components/Feature";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header/Header";
@@ -9,7 +9,7 @@ const Index =()=>{
   
   return (
     <UserLayout>
-    <Header navData={navItems} logo={"Logo here"}/>
+    <Header navData={navItems} imageText={imageText} logo={"Logo here"}/>
     <FeatureSellers list={["Ali"]}/>
     <FeatureStyle title=""/>
     <Footer logo="" signupLink="string" social={[]} title=""/>

@@ -29,7 +29,8 @@ const Navbar = ({ logo, navitems }: Props) => {
   
 
   return (
-    <Box bgcolor={theme.navbar.bg_logo} paddingBottom={5} className="shadow">
+    <div className='shadow-lg'>
+    <Box bgcolor={theme.navbar.bg_logo} paddingBottom={3} >
      
       <Appbar
       
@@ -62,7 +63,7 @@ const Navbar = ({ logo, navitems }: Props) => {
         }}
         container
         bgcolor="blue"
-        height={64}
+        height={54}
       >
         <Grid item sm={2} xs={2}>
           <Logo className="cursor-pointer" height={'100%'} bgcolor={theme.navbar.bg_logo} onClick={()=>setActive(-1)} >
@@ -79,7 +80,7 @@ const Navbar = ({ logo, navitems }: Props) => {
         </Grid>
       </Grid>
     </Box>
-  
+    </div>
   );
 };
 

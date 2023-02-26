@@ -16,7 +16,7 @@ function Menu({ items, boxProps,active, setActive }: Props) {
   return (
     <Box className='flex text-xs sm:text-base font-bold justify-evenly items-center' height="100%" {...boxProps}>
       {items?.map((item, idx) => {
-        return <Link href={item.link} style={{color:(active===idx)?theme.navbar.active:theme.navbar.text}} onClick={()=>{setActive(idx)}}  key={idx}>{item.name}</Link>;
+        return <Link  href={item.link} style={{color:(active===idx)?theme.navbar.active:theme.navbar.text}} onClick={()=>{setActive(idx)}}  key={idx}>{item.name}</Link>;
       })}
     </Box>
   );
