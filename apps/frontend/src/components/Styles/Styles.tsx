@@ -4,10 +4,10 @@ type Props = {
   title:""
 }
 
-const FeatureStyle = (props: Props) => {
+const Style = (props: Props) => {
   return (
     <div>FeatureStyle</div>
   )
 }
 
-export default FeatureStyle
+export default Style

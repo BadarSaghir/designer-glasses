@@ -1,17 +1,17 @@
 import { navItems,imageText } from "../components/data";
-import { FeatureStyle } from "../components/Feature";
+import { Styles } from "../components/Styles";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header/Header";
 import UserLayout from "../components/Layout/UserLayout";
-import { FeatureSellers } from "../components/Sellers";
+import { Features } from "../components/Features";
 
 const Index =()=>{
-  
+
   return (
     <UserLayout>
     <Header navData={navItems} imageText={imageText} logo={"Logo here"}/>
-    <FeatureSellers list={["Ali"]}/>
-    <FeatureStyle title=""/>
+    <Features list={["Ali"]}/>
+    <Styles title=""/>
     <Footer logo="" signupLink="string" social={[]} title=""/>
     </UserLayout>
   );}

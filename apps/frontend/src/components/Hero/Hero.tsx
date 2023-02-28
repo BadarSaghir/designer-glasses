@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import glasses from '../../assets/hero.jpg';
 import { INavItems } from '../../lib/navigation.interfaces';
 import Link from 'next/link';
-import Brands from './Brands';
+import {Brands} from '../Features/Brands';
 import IconButton from '@mui/material/Button';
 import { useTheme } from '@mui/material';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
@@ -22,7 +22,7 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
   return (
     <Box height="100%">
       <Grid container height="100%" direction="column">
-        <Grid container direction="row" item xs={6.5}>
+        <Grid container direction="row" item xs={12}>
           <Grid
             container
             direction="column"
@@ -110,7 +110,7 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
                       boxShadow: 'inset 0px 0px 10px 0px #00000092',
                     }}
                   >
-                    <div className='flex h-[100%] w-[100%] items-center gap-2 text-lg'>
+                    <div className='flex  h-[100%] w-[100%] items-center gap-2 text-sm'>
                       <div>SHOP NOW</div>
 
                     <PlayCircleFilledIcon fontSize='large'  />
@@ -121,11 +121,7 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={5.5}>
-          <Box>
-            <Brands />
-          </Box>
-        </Grid>
+
       </Grid>
     </Box>
   );
