@@ -31,6 +31,8 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
               backgroundImage: `url(${glasses.src})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
+              backgroundPosition: 'center bottom'
+
             }}
           >
             <Grid
