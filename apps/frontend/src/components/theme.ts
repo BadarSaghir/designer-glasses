@@ -15,16 +15,25 @@ declare module '@mui/material/styles' {
   text:string;
   active:string;
   bg_logo:string;
+};
+button:{
+  heroBtnBgColor:string;
+  heroBtnTextColor:string
 }
+
 }
 }
 
 
 export const theme = createTheme({
 navbar:{
-  bg:"blue",
-  active:"red",
-  text:"yellow",
-  bg_logo:"white"
+  bg:"#42379c",
+  active:"#912356BB",
+  text:"#DFCA9D",
+  bg_logo:"#ffffff"
+},
+button:{
+  heroBtnBgColor:"#3e369a",
+  heroBtnTextColor:"#fdfdff"
 }
 }as ThemeOptions);
