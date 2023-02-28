@@ -2,7 +2,15 @@
   "name": "designer-glasses",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "nest:dev":"nx run api:serve",
+    "nest:prod" :"nx run api:build:production && node dist/apps/api/main.js",
+    "next:dev":"nx run frontend:serve:development",
+    "next:prod":"nx run frontend:build:production && nx run frontend:serve:production",
+    "dev":  "concurrently --kill-others \"npm run nest:dev\"  \"npm run next:dev\"",
+    "start":"concurrently --kill-others \"npm run nest:prod\"  \"npm run next:prod\""
+
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
