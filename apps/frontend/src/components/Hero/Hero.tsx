@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import glasses from '../../assets/hero.jpg';
 import { INavItems } from '../../lib/navigation.interfaces';
 import Link from 'next/link';
-import {Brands} from '../Features/Brands';
 import IconButton from '@mui/material/Button';
 import { useTheme } from '@mui/material';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
