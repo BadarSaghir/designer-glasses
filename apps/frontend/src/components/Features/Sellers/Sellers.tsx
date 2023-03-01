@@ -1,5 +1,5 @@
 import PhonelinkLockOutlined from '@mui/icons-material/PhonelinkLockOutlined';
-import { Grid } from '@mui/material';
+import { Grid, useTheme } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import React, { useState } from 'react';
@@ -16,7 +16,7 @@ type Props = {
 
 const Sellers = ({ sellerListSrc, sectionTitles }: Props) => {
   const [value, setValue] = useState(0);
-
+const theme = useTheme()
   return (
     <div className="h-[100%]   flex flex-col">
       <FeaturesLayout>
@@ -33,14 +33,14 @@ const Sellers = ({ sellerListSrc, sectionTitles }: Props) => {
             ))}
           </Tabs>
         </div>
-        <div className="w-full h-full">
+        <div className="w-full h-[100%]">
           <TabContext value={value+""}>
             {Object.entries(sellerListSrc).map(([key, val], idx) => {
               return (
-                <TabPanel className='h-full'  key={key} value={idx+""}>
-                  <Grid container  className="h-full w-[100%]">
+                <TabPanel className=''  key={key} value={idx+""}>
+                  <Grid container  gap={3} justifyContent="center"  className="h-[80%] w-[100%]">
                   {val.map((src, i) => (
-                  <Grid item  className="" xs={4} key={i} >
+                  <Grid item  className="h-[40%] w-[40%]" xs={3} key={i} >
                    
                    
                     <Seller   imgSrc={src} />
@@ -53,7 +53,7 @@ const Sellers = ({ sellerListSrc, sectionTitles }: Props) => {
             })}
           </TabContext>
         </div>
-        <div>d</div>
+        <div className={`width-full bg-[${theme.sellerBg}]`}>d</div>
       </FeaturesLayout>
     </div>
   );

@@ -16,11 +16,11 @@ const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc
   return (
     <div className="flex-col min-h-[100vh] sm:h-screen">
 
-        <div className='h-[40vh] bg-red' >
+        <div className='h-[30vh] bg-red' >
           {' '}
           <Brands brandImagesSrc={brandsImagesSrc} brandTitles={brandTitle} />
         </div>
-        <div className="sm:h-[60vh]">
+        <div className="sm:h-[70vh]">
           <Sellers sectionTitles={sellerListTitles} sellerListSrc={sellerImagesSrc} sellerUrl={sellerUrl} />
         </div>
 
