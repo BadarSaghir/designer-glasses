@@ -16,6 +16,7 @@ declare module '@mui/material/styles' {
   active:string;
   bg_logo:string;
 };
+secondaryColor:string,
 button:{
   heroBtnBgColor:string;
   heroBtnTextColor:string
@@ -32,6 +33,7 @@ navbar:{
   text:"#DFCA9D",
   bg_logo:"#ffffff"
 },
+secondaryColor:"#ffe556",
 button:{
   heroBtnBgColor:"#3e369a",
   heroBtnTextColor:"#fdfdff"

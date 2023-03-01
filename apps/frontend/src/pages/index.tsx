@@ -1,4 +1,4 @@
-import { navItems,imageText } from "../components/data";
+import { navItems,imageText, brandTitle, brandsImagesSrc, sellerImagesSrc, sellerListTitle } from "../components/data";
 import { Styles } from "../components/Styles";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header/Header";
@@ -10,7 +10,7 @@ const Index =()=>{
   return (
     <UserLayout>
     <Header navData={navItems} imageText={imageText} logo={"Logo here"}/>
-    <Features list={["Ali"]}/>
+    <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={sellerImagesSrc} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={"/"}/>
     <Styles title=""/>
     <Footer logo="" signupLink="string" social={[]} title=""/>
     </UserLayout>

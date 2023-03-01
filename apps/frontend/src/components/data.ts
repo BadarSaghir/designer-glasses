@@ -38,3 +38,7 @@ export const imageText=[  {
 },
 ]
 
+  export const brandsImagesSrc=["https://pngimg.com/uploads/netflix/netflix_PNG32.png","https://pngimg.com/uploads/netflix/netflix_PNG32.png","https://pngimg.com/uploads/netflix/netflix_PNG32.png"]
+  export const sellerImagesSrc=["https://pngimg.com/uploads/netflix/netflix_PNG32.png","https://pngimg.com/uploads/netflix/netflix_PNG32.png","https://pngimg.com/uploads/netflix/netflix_PNG32.png"]
+  export const brandTitle=["TOP BRAND"]
+  export const sellerListTitle=["NEW ARRIVALS","BEST SELLER"]

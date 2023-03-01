@@ -1,0 +1,3 @@
+export const SHOW_ALL_BRANDS_BUTTON = "SEE ALL BRANDS"
+export const SEE_ALL_SELLERS_BUTTON = "VIEW ALL"
+export const SHOP_BUTTON = "SHOP BUTTON"
