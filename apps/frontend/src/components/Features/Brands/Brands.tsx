@@ -8,13 +8,14 @@ import Brand from './Brand'
 type Props = PropsWithChildren &{
   brandImagesSrc?:string[]
   brandTitles:string[],
+  route?:string,
 
 }
 
-const Brands = ({brandImagesSrc=['none','none','none','none','none','none'],brandTitles}: Props) => {
+const Brands = ({route,brandImagesSrc=['none','none','none','none','none','none'],brandTitles}: Props) => {
   const theme= useTheme()
   return (
-    <div className=' h-[100%] flex flex-col justify-between items-center pt-11 pb-6'>
+    <div className=' h-[100%] flex flex-col justify-evenly items-center py-6'>
 <div className='flex'>
         {brandTitles.map((txt,idx)=>{
 
@@ -26,7 +27,7 @@ const Brands = ({brandImagesSrc=['none','none','none','none','none','none'],bran
     <div  className=' w-full flex'> 
       <div className='flex h-11 gap-1 p-1 sm:h-16 md:h-24  items-center w-full justify-evenly'>{brandImagesSrc.map((src,idx)=><div className='flex items-center h-full' key={idx} ><Brand src={src} key={idx} /></div>)}</div>
       </div>
-    <div className=""><ViewButton bgColor={theme.navbar.bg_logo} size='medium' fontColor={theme.secondaryColor} variant='outlined' text={SHOW_ALL_BRANDS_BUTTON}/></div>
+    <div className=""><ViewButton bgColor={theme.navbar.bg_logo} shadowColor={"rgba(255,160,160,0.75)"} route={route?route:"/brands"}size='medium' fontColor={theme.secondaryColor} variant='outlined' text={SHOW_ALL_BRANDS_BUTTON}/></div>
     </div>
   )
 }
