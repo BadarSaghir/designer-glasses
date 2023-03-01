@@ -8,7 +8,7 @@ const FeaturesLayout = ({children}:Props) => {
   const childrens=Children.toArray(children);
   const theme= useTheme()
   return (
-    <div className=' h-[100%] flex flex-col justify-evenly items-center py-6'>
+    <div className=' h-[100%] flex flex-col  items-center'>
 <div className='flex'>
         {childrens[0]}
 

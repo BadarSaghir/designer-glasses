@@ -10,7 +10,7 @@ const Index =()=>{
   return (
     <UserLayout>
     <Header navData={navItems} imageText={imageText} logo={"Logo here"}/>
-    <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={sellerImagesSrc} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={"/"}/>
+    <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={{best:sellerImagesSrc,new:sellerImagesSrc}} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={{new:"/sellers",best:"sellers"}}/>
     <Styles title=""/>
     <Footer logo="" signupLink="string" social={[]} title=""/>
     </UserLayout>

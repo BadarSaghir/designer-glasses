@@ -5,10 +5,10 @@ import Sellers from './Sellers';
 import Grid from '@mui/material/Grid';
 type Props = {
   brandsImagesSrc: string[],
-  sellerImagesSrc: string[],
+  sellerImagesSrc: {new:string[],best:string[]},
+  sellerUrl:{new:string,best:string},
   brandTitle:string[],
   brandUrl:string,
-  sellerUrl:string,
   sellerListTitles:string[],
 };
 
@@ -20,8 +20,8 @@ const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc
           {' '}
           <Brands brandImagesSrc={brandsImagesSrc} brandTitles={brandTitle} />
         </div>
-        <div className="sm:flex-1">
-          <Sellers sectionTitles={sellerListTitles} sellerListSrc={sellerImagesSrc}/>
+        <div className="sm:h-[60vh]">
+          <Sellers sectionTitles={sellerListTitles} sellerListSrc={sellerImagesSrc} sellerUrl={sellerUrl} />
         </div>
 
     </div>

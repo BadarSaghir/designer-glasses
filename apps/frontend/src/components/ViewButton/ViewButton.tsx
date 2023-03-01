@@ -41,8 +41,8 @@ const ViewButton = (props: Props) => {
       backgroundColor: props.bgColor,
       color: props.fontColor,
       borderColor:props.fontColor
-      
-    
+
+
     }}
   >
     <div className='flex  h-[100%] w-[100%] items-center gap-2 text-sm'>
