@@ -21,7 +21,7 @@ const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc
           <Brands brandImagesSrc={brandsImagesSrc} brandTitles={brandTitle} />
         </div>
         <div className="sm:flex-1">
-          <Sellers />
+          <Sellers sectionTitles={sellerListTitles} sellerListSrc={sellerImagesSrc}/>
         </div>
 
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Seller = () => {
+const Seller = ({imgSrc}:{imgSrc:string}) => {
   return (
     <div>Sellers</div>
   )
@@ -11,4 +11,4 @@ const Seller = () => {
 
 
 
-export default Seller
+export default Seller;

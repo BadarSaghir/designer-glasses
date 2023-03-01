@@ -1,35 +1,28 @@
+import  PhonelinkLockOutlined  from '@mui/icons-material/PhonelinkLockOutlined'
+import Tab from '@mui/material/Tab'
+import Tabs from '@mui/material/Tabs'
 import React from 'react'
+import FeaturesLayout from '../../Layout/FeaturesLayout'
+type Props ={
+  sellerListSrc:string[],
+  sectionTitles:string[]
+}
 
-
-const Sellers = () => {
+const Sellers = ({sellerListSrc}:Props) => {
   return (
-    <div>
+    <div className="h-100% flex flex-col bg">
 
-<div>sd</div>
-<div>sd</div>
+<FeaturesLayout>
+  <div>
+  <Tabs
+>
+  <Tab icon={<PhonelinkLockOutlined />} label="top" />
 
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
-<div>sd</div>
+</Tabs>
+  </div>
+  <div>d</div>
+  <div>d</div>
+</FeaturesLayout>
 
     </div>
   )
