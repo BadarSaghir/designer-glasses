@@ -14,17 +14,17 @@ type Props = {
 
 const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc,sellerListTitles}: Props) => {
   return (
-    <Box className="min-h-screen">
-      <Grid container direction={'column'} height="100%">
-        <Grid item xs={3}>
+    <div className="flex-col sm:h-screen">
+
+        <div className='h-[30vh] bg-red' >
           {' '}
           <Brands brandImagesSrc={brandsImagesSrc} brandTitles={brandTitle} />
-        </Grid>
-        <Grid item xs={9}>
+        </div>
+        <div className="flex-1">
           <Sellers />
-        </Grid>
-      </Grid>
-    </Box>
+        </div>
+
+    </div>
   );
 };
 

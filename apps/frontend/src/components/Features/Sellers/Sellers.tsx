@@ -3,7 +3,10 @@ import React from 'react'
 
 const Sellers = () => {
   return (
-    <div>Sellers</div>
+    <div>
+
+seller
+    </div>
   )
 }
 export default Sellers
