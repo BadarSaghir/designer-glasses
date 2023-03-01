@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import glasses from '../../assets/hero.jpg';
 import { INavItems } from '../../lib/navigation.interfaces';
 import Link from 'next/link';
-import IconButton from '@mui/material/Button';
 import { useTheme } from '@mui/material';
+import IconButton from '@mui/material/Button';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 
 type Props = PropsWithChildren & {

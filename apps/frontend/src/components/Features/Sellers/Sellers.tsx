@@ -5,7 +5,32 @@ const Sellers = () => {
   return (
     <div>
 
-seller
+<div>sd</div>
+<div>sd</div>
+
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+<div>sd</div>
+
     </div>
   )
 }

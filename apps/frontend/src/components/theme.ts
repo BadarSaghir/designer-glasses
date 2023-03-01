@@ -33,7 +33,7 @@ navbar:{
   text:"#DFCA9D",
   bg_logo:"#ffffff"
 },
-secondaryColor:"#ffe556",
+secondaryColor:"#fecf00",
 button:{
   heroBtnBgColor:"#3e369a",
   heroBtnTextColor:"#fdfdff"
