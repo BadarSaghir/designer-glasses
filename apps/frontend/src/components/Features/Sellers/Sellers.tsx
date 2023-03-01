@@ -33,15 +33,18 @@ const Sellers = ({ sellerListSrc, sectionTitles }: Props) => {
             ))}
           </Tabs>
         </div>
-        <div className="w-full">
+        <div className="w-full h-full">
           <TabContext value={value+""}>
             {Object.entries(sellerListSrc).map(([key, val], idx) => {
               return (
-                <TabPanel  key={key} value={idx+""}>
-                  <Grid container  className=" w-[100%]">
+                <TabPanel className='h-full'  key={key} value={idx+""}>
+                  <Grid container  className="h-full w-[100%]">
                   {val.map((src, i) => (
                   <Grid item  className="" xs={4} key={i} >
+                   
+                   
                     <Seller   imgSrc={src} />
+                   
                     </Grid>
                   ))}
                   </Grid>

@@ -14,8 +14,8 @@ const FeaturesLayout = ({children}:Props) => {
 
     </div>
 
-    <div  className=' w-full flex'>
-      <div className='flex h-11 gap-1 p-1 sm:h-16 md:h-24  items-center w-full justify-evenly'>
+    <div  className=' w-full h-full flex'>
+      <div className='flex h-full gap-1 p-1  items-center w-full justify-evenly'>
         {childrens[1]}</div>
       </div>
     <div className="">

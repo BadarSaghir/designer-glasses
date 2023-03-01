@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const Seller = ({imgSrc}:{imgSrc:string}) => {
   return (
-    <div><Image src={imgSrc}  width={50} height={50} alt={"Sellers"} /></div>
+    <div className="flex h-full w-full justify-center items center  "><Image className="" src={imgSrc}  width={160} height={90} alt={"Sellers"} /></div>
   )
 }
 
