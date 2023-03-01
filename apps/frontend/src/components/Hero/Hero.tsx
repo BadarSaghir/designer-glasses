@@ -42,7 +42,7 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
               direction="row"
               width={'100%'}
             >
-              <Grid
+              {/* <Grid
                 container
                 xs={5}
                 gap={2}
@@ -57,9 +57,9 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
                     </Grid>
                   );
                 })}
-              </Grid>
+              </Grid> */}
               <Grid item xs={2}></Grid>
-              <Grid
+              {/* <Grid
                 container
                 gap={1}
                 justifyContent="space-evenly"
@@ -74,7 +74,7 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
                     </Grid>
                   );
                 })}
-              </Grid>
+              </Grid> */}
             </Grid>
 
             <Grid
