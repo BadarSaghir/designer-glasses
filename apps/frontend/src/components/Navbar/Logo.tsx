@@ -6,10 +6,10 @@ type Props = {logo?:string} & React.ComponentProps<typeof Box> &PropsWithChildre
 
 const Logo = (props: Props) => {
   return (
-   <Box   {...props}>
+   <Box  height="100%"  {...props}>
       <Grid container  alignItems={"center"}  height="100%" justifyContent="center">
 
-        <Grid item>{props.children}</Grid>
+        <Grid height="100%"  item>{props.children}</Grid>
         </Grid>
 
       </Box>

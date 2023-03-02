@@ -40,9 +40,10 @@ const Navbar = ({ logo, navitems }: Props) => {
       logo={
       <Logo className='cursor-pointer' height={'100%'} color="black" >{logo}</Logo>
       }
+      bgColor={theme.navbar.bg}
         appbar={{
           sx: {
-            bgcolor: theme.navbar.bg,
+            bgcolor:"transparent",
             color:theme.navbar.text,
             padding:0,
 
@@ -51,6 +52,8 @@ const Navbar = ({ logo, navitems }: Props) => {
             },
           },
         }}
+       
+
       />
       <Grid
         sx={{
@@ -62,10 +65,9 @@ const Navbar = ({ logo, navitems }: Props) => {
           
         }}
         container
-        bgcolor="blue"
         height={54}
       >
-        <Grid item sm={2} xs={2}>
+        <Grid item sm={2} xs={2} pt={2}>
           <Logo className="cursor-pointer" height={'100%'} bgcolor={theme.navbar.bg_logo} onClick={()=>setActive(-1)} >
        <Link href="/"> {logo}</Link>
           </Logo>

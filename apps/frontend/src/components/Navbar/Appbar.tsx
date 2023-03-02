@@ -11,16 +11,18 @@ import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import CloseIcon from '@mui/icons-material/Close';
+import { StringDecoder } from 'string_decoder';
 
 type Props = {
   appbar?: React.ComponentProps<typeof AppBar>;
   items?: INavItems[];
   logo?: ReactNode;
+  bgColor:string,
   setActive: React.Dispatch<React.SetStateAction<number>>;
   active: number;
 };
 
-function Appbar({ appbar, items, logo, active, setActive }: Props) {
+function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
   const [anchor, setAnchor] = useState(false);
   const theme = useTheme();
 
@@ -33,28 +35,22 @@ function Appbar({ appbar, items, logo, active, setActive }: Props) {
       
         <Grid
           container
-          alignItems={'center'}
+          alignItems={'stretch'}
           justifyContent="space-between"
+        
           height="100%"
           // bgcolor="red"
         >
-          <Grid item bgcolor={theme.navbar.bg_logo} color="black" >
-            <IconButton
-              size="large"
-              aria-label="Logo"
-              disabled
-              sx={{
-                ':disabled': {
-                 color:"black"
-                },
-              }}
-            >
-              <Typography variant="h6" component="div">
-                {logo}
-              </Typography>
-            </IconButton>
+          <Grid item xs={2}   className="h-[100%] w-[100%]" bgcolor={theme.navbar.bg_logo} color="black" >
+          <div className='h-full w-full flex items-center justify-center pt-3'>
+            <div>
+            {logo}
+            </div>
+          </div>
+              
+          
           </Grid>
-          <Grid item>
+          <Grid item bgcolor={bgColor} className="flex justify-end" xs={10}>
             <IconButton
               size="large"
               color="inherit"
