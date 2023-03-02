@@ -3,13 +3,13 @@ import { Grid, useTheme } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import React, { useState } from 'react';
-import FeaturesLayout from '../../Layout/FeaturesLayout';
+import FeaturesLayout from '../Layout/FeaturesLayout';
 import TabPanel from '@mui/lab/TabPanel';
 import TabContext from '@mui/lab/TabContext';
 import style from "./Sellers.module.scss"
 import Seller from './Seller';
-import ViewButton from '../../ViewButton';
-import { SEE_ALL_SELLERS_BUTTON } from '../../strings';
+import ViewButton from '../ViewButton';
+import { SEE_ALL_SELLERS_BUTTON } from '../strings';
 type Props = {
   sellerListSrc: { new: string[]; best: string[] };
   sectionTitles: string[];
@@ -41,9 +41,9 @@ const theme = useTheme()
               return (
                 <TabPanel className='justify-center w-[100%]'  key={key} value={idx+""}>
                   <div className='w-[100%]  flex items-center justify-center'>
-                  <div  className="h-[100%]  w-[80%] md:w-[100%] lg:gap-12 gap-2 flex flex-wrap items-center justify-center">
+                  <div  className="h-[100%]  w-[80%] md:w-[100%] lg:gap-12 gap-8 flex flex-wrap items-center justify-center">
                   {val.map((src, i) => (
-                  <div className={`bg-white rounded-3xl w-[35vw] h-[17vh] p-4 lg:h-[22vh] lg:w-[22vw] ${i%2==0?style.displayNone:style.size}`}   key={i} >
+                  <div className={`bg-white rounded-3xl w-[30vw] h-[28vh] p-4 lg:h-[30vh] lg:w-[25vw] ${i%2==0?style.displayNone:style.size}`}   key={i} >
                    
                    
                     <Seller   imgSrc={src} />

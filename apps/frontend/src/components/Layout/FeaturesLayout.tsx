@@ -21,6 +21,9 @@ const FeaturesLayout = ({children}:Props) => {
     <div className="">
       {childrens[2]}
     </div>
+    <div className="">
+      {childrens[3]}
+    </div>
     </div>
   )
 }
