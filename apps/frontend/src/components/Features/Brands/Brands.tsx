@@ -20,7 +20,7 @@ const Brands = ({route,brandImagesSrc=['none','none','none','none','none','none'
 
         {brandTitles.map((txt,idx)=>{
 
-          return <div className="" key={idx} ><Typography letterSpacing={'0.5rem'} variant='h6' key={idx} color={(theme)=>theme.button.heroBtnBgColor}>{txt}</Typography></div>
+          return <div className="flex items-center justify-center" key={idx} ><Typography letterSpacing={'0.5rem'} variant='h6' key={idx} color={(theme)=>theme.button.heroBtnBgColor}>{txt}</Typography></div>
         })}
 
     </div>
