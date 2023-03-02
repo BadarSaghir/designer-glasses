@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Brands } from './Brands';
 import Sellers from './Sellers';
 import Grid from '@mui/material/Grid';
+import { useTheme } from '@mui/material';
 type Props = {
   brandsImagesSrc: string[],
   sellerImagesSrc: {new:string[],best:string[]},
@@ -13,6 +14,8 @@ type Props = {
 };
 
 const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc,sellerListTitles}: Props) => {
+  const theme = useTheme()
+  const color=theme.sellerBg
   return (
     <div className="flex-col min-h-[100vh] ">
 
@@ -20,8 +23,9 @@ const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc
           {' '}
           <Brands brandImagesSrc={brandsImagesSrc} brandTitles={brandTitle} />
         </div>
-        <div className="md:h-[70vh]">
+        <div className={`flex-grow ]`}>
           <Sellers sectionTitles={sellerListTitles} sellerListSrc={sellerImagesSrc} sellerUrl={sellerUrl} />
+         
         </div>
 
     </div>
