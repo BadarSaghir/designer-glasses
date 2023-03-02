@@ -14,8 +14,6 @@ type Props = {
 };
 
 const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc,sellerListTitles}: Props) => {
-  const theme = useTheme()
-  const color=theme.sellerBg
   return (
     <div className="flex-col min-h-[100vh] ">
 
