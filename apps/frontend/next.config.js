@@ -7,6 +7,7 @@ const { withNx } = require('@nrwl/next/plugins/with-nx');
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
+  
   images: {
     remotePatterns: [
       {
@@ -16,7 +17,9 @@ const nextConfig = {
         pathname: '/uploads/**',
       },
     ],
+
   },
+  
   nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr

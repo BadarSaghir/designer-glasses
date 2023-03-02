@@ -8,13 +8,19 @@ type Props = {
   variant:'text' | 'outlined' | 'contained',
   size:"large"|"medium" |"small",
   shadowColor:string,
+  fontSize?:string |number,
   route:string,
+  showIcon?:boolean
 }
 import IconButton from '@mui/material/Button';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import Link from 'next/link';
 ;
 const ViewButton = (props: Props) => {
+  const {showIcon} = props
+  let icon = showIcon
+  if(icon==undefined) icon=true
+  
  const shadow="0px 0px 9px 0px "+props.shadowColor
   return (
     <div className="rounded-full " style={
@@ -46,9 +52,9 @@ const ViewButton = (props: Props) => {
     }}
   >
     <div className='flex  h-[100%] w-[100%] items-center gap-2 text-sm'>
-      <div>{props.text}</div>
+      <div >{props.text}</div>
 
-    <PlayCircleFilledIcon style={{color:props.iconColor}} fontSize={props.size}  />
+  {icon && <PlayCircleFilledIcon style={{color:props.iconColor}} fontSize={props.size}  />}
     </div>
 
   </IconButton>
