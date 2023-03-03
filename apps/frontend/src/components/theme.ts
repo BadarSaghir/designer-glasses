@@ -36,9 +36,9 @@ paletes:{
 
 export const theme = createTheme({
 navbar:{
-  bg:"#42379c",
-  active:"#912356BB",
-  text:"#DFCA9D",
+  bg:"#14213d",
+  active:"#912356",
+  text:"#fca311",
   bg_logo:"#ffffff"
 },
 paletes:{
@@ -48,10 +48,10 @@ paletes:{
   whiteMain:"#e5e5e5",
 },
 sellerBg:"#ddeffb",
-secondaryColor:"#fecf00",
+secondaryColor:"#fca311",
 button:{
-  heroBtnBgColor:"#3e369a",
-  heroBtnTextColor:"#fdfdff"
+  heroBtnBgColor:"#14213d",
+  heroBtnTextColor:"#e5e5e5"
 }
 
 }as ThemeOptions);

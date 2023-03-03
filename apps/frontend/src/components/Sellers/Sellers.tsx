@@ -27,9 +27,22 @@ const theme = useTheme()
             value={value}
             onChange={(e, v) => setValue(v)}
             textColor="secondary"
-            indicatorColor="secondary"
             aria-label="New and Best Sellers"
+            sx={{
+              '& .MuiTabs-indicator': {
+                backgroundColor: theme.paletes.secondary,
+              },
+              '& .MuiTab-root': {
+                color:  theme.paletes.tertiary,
+                filter: 'saturate(40%)',
+
+              },
+              '& .Mui-selected': {
+                color:  theme.paletes.secondary,
+              },
+            }}
           >
+
             {sectionTitles.map((value, idx) => (
               <Tab key={idx} value={idx} label={value} />
             ))}

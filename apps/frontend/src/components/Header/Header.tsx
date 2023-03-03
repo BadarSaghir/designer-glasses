@@ -10,6 +10,7 @@ hreoImg:string
 }
 
 const Header = ({navData,logo,imageText,hreoImg}: Props) => {
+  
   return (
     <header className='flex flex-col h-screen '>
       <nav >
@@ -17,9 +18,10 @@ const Header = ({navData,logo,imageText,hreoImg}: Props) => {
       </nav>
       <section id='Hero'   style={{
       backgroundImage: `url(${hreoImg})`,
+      
 
 
-    }} className='flex-1 bgImg '>
+    }} className='flex-1 bgImg'>
       <Hero imageText={imageText} imgSrc={hreoImg}/>
       </section>
     </header>

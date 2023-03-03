@@ -11,15 +11,19 @@ type Props = {
 
 const FooterBox = styled('footer')(({theme})=>({
 backgroundColor:theme.sellerBg,
-alignItems:"center"
+alignItems:"center",
+color:theme.paletes.tertiary
 })) 
+
 const Footer = (props: Props) => {
   return (
     <FooterBox className="flex-col sm:flex-row flex h-[20vh] justify-between">
-    <div className="w-1/4">Item 1</div>
-    <div className="w-1/4">Item 2</div>
-    <div className="w-1/4">Item 3</div>
-    <div className="w-1/4">Item 4</div>
+    <div className="w-1/4 flex justify-center items-center">
+
+    </div>
+    <div className="w-1/4 flex justify-center items-center">Item 2</div>
+    <div className="w-1/4 flex justify-center items-center">Item 3</div>
+    <div className="w-1/4 flex justify-center items-center">Item 4</div>
   </FooterBox>
   )
 }
