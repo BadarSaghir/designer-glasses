@@ -1,4 +1,4 @@
-import { navItems,imageText, brandTitle, brandsImagesSrc, sellerImagesSrc, sellerListTitle } from "../components/data";
+import { navItems,imageText, brandTitle, brandsImagesSrc, sellerImagesSrc, sellerListTitle, socialData } from "../components/data";
 import { Styles } from "../components/Styles";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header/Header";
@@ -9,6 +9,7 @@ import Sellers from "../components/Sellers";
 import { useTheme } from "@mui/material";
 import Logo from "../assets/home/charmant logo.png"
 import HeaderImg from "../assets/home/header.png"
+
 
 const Index =()=>{
   const theme = useTheme()
@@ -23,7 +24,7 @@ const Index =()=>{
     </div>
     
     <Styles title=""/>
-    <Footer logo="" signupLink="string" social={[]} title=""/>
+    <Footer logo="" signupLink="string" social={socialData} title=""/>
     </UserLayout>
   );}
 

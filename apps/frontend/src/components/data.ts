@@ -10,7 +10,9 @@ import glasses3 from "../assets/home/glasses 3.png"
 import glasses4 from "../assets/home/glasses 4.png"
 import glasses5 from "../assets/home/glasses 5.png"
 import glasses6 from "../assets/home/glasses 6.png"
-
+import intaImg from "../assets/home/insta.png"
+import fbImg from "../assets/home/fb.png"
+import mailImg from "../assets/home/mail.png"
 
 export const navItems=[
   {
@@ -56,3 +58,4 @@ name:"WOMEN SUNGLASSES ",
   export const sellerImagesSrc=[glasses1.src,glasses2.src,glasses3.src,glasses4.src,glasses5.src,glasses6.src]
   export const brandTitle=["TOP BRAND"]
   export const sellerListTitle=["NEW ARRIVALS","BEST SELLER"]
+export const socialData =[{icon:fbImg.src,placeholder:"",url:""},{icon:intaImg.src,placeholder:"",url:""},{icon:mailImg.src,placeholder:"",url:""}]
