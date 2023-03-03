@@ -82,7 +82,7 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
               justifyContent={'center'}
               height="100%"
             >
-              <Grid top="50%" item position="relative">
+              <Grid top="40%" item position="relative">
                 <div
                   className="rounded-full"
                   style={{
