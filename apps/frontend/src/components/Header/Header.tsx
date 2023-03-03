@@ -1,8 +1,9 @@
+import { StaticImageData } from 'next/image';
 import React from 'react'
 import { Hero } from '../Hero'
 import { Navbar } from '../Navbar'
 
-type Props = {navData?:{name:string,link:string}[],logo:string;
+type Props = {navData?:{name:string,link:string}[],logo:StaticImageData;
 imageText:{name:string,link:string}[]}
 
 const Header = ({navData,logo,imageText}: Props) => {

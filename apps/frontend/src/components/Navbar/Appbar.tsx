@@ -39,6 +39,7 @@ function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
         alignItems={'stretch'}
         justifyContent="space-between"
         height="100%"
+      
         pr={2}
         // bgcolor="red"
       >
@@ -118,8 +119,8 @@ function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
 
         <Grid
           item
-          xs={3}
-          className="h-[100%] w-[100%]  min-w-[75px]"
+          xs={2}
+          className="h-[100%] w-[100%]  min-w-[65px]"
           bgcolor={theme.navbar.bg_logo}
           color="black"
         >
@@ -128,12 +129,12 @@ function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
           </div>
         </Grid>
         <Grid className="pb-3 flex-1" color={theme.paletes.primary}>
-          <div className="h-full w-full flex items-center gap-3 justify-end  pt-3 ">
+          <div className="h-full w-full flex items-center   gap-3 justify-end  pt-3 ">
             <SearchIcon />
             <ShoppingCartIcon />
-            <FavoriteBorderIcon />
-            <button type="button">SignIn</button>
-            <button type="button">Register</button>
+            {/* <FavoriteBorderIcon /> */}
+            <div  className='text-xs rounded-full' >SignIn</div>
+            <div className='text-xs rounded-full' >Register</div>
           </div>
         </Grid>
       </Grid>

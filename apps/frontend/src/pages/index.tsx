@@ -7,12 +7,14 @@ import { Features } from "../components/Features";
 import Box from "@mui/material/Box";
 import Sellers from "../components/Sellers";
 import { useTheme } from "@mui/material";
+import Logo from "../assets/home/charmant logo.png"
+import HeaderImg from "../assets/home/header.png"
 
 const Index =()=>{
   const theme = useTheme()
   return (
     <UserLayout>
-    <Header navData={navItems} imageText={imageText} logo={"Logo here"}/>
+    <Header navData={navItems} imageText={imageText} logo={Logo}/>
     <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={{best:sellerImagesSrc,new:sellerImagesSrc}} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={{new:"/sellers",best:"sellers"}}/>
     <div className={`flex-grow min-h-[100vh] `}>
           <Box className={"h-[100%] w-[100%] min-h-[100vh] flex items-center"} bgcolor={theme.sellerBg}>

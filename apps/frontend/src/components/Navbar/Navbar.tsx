@@ -9,9 +9,12 @@ import { INavItems } from '../../lib/navigation.interfaces';
 import Link from "next/link"
 import { useRouter } from 'next/router';
 import  Box from '@mui/material/Box';
+import { StaticImageData } from 'next/image';
+import Image from  "next/image"
+import FitbitIcon from '@mui/icons-material/Fitbit';
 
 type Props = {
-  logo: string,
+  logo: StaticImageData,
   navitems?: INavItems[],
 };
 const Navbar = ({ logo, navitems }: Props) => {
@@ -33,7 +36,7 @@ const Navbar = ({ logo, navitems }: Props) => {
     <Box bgcolor={theme.navbar.bg_logo} sx={
       {
         paddingBottom:{
-          sm:3
+          md:3
         }
 
       }
@@ -45,7 +48,7 @@ const Navbar = ({ logo, navitems }: Props) => {
       setActive={setActive}
       items={navitems}
       logo={
-      <Logo className='cursor-pointer' height={'100%'} color="black" >{logo}</Logo>
+        <FitbitIcon className='h-full'/>
       }
       bgColor={theme.navbar.bg}
         appbar={{
@@ -56,7 +59,7 @@ const Navbar = ({ logo, navitems }: Props) => {
             padding:0,
 
             display: {
-              sm: 'none',
+            md: 'none',
             },
           },
         }}
@@ -67,7 +70,7 @@ const Navbar = ({ logo, navitems }: Props) => {
         sx={{
 
           display: {
-            sm: 'flex',
+            md: 'flex',
             xs: 'none',
           },
           
@@ -75,10 +78,8 @@ const Navbar = ({ logo, navitems }: Props) => {
         container
         height={54}
       >
-        <Grid item sm={2} xs={2} pt={2}>
-          <Logo className="cursor-pointer" height={'100%'} bgcolor={theme.navbar.bg_logo} onClick={()=>setActive(-1)} >
-       <Link href="/"> {logo}</Link>
-          </Logo>
+        <Grid container item sm={2} xs={2} pt={2}>
+       <Link className=' h-full' href="/"> <FitbitIcon className='h-full'/></Link>
         </Grid>
         <Grid item sm={10} xs={10}>
           <Menu
