@@ -30,7 +30,14 @@ const Navbar = ({ logo, navitems }: Props) => {
 
   return (
     <div className='shadow-lg'>
-    <Box bgcolor={theme.navbar.bg_logo} paddingBottom={3} >
+    <Box bgcolor={theme.navbar.bg_logo} sx={
+      {
+        paddingBottom:{
+          sm:3
+        }
+
+      }
+    } >
      
       <Appbar
       
@@ -43,6 +50,7 @@ const Navbar = ({ logo, navitems }: Props) => {
       bgColor={theme.navbar.bg}
         appbar={{
           sx: {
+           
             bgcolor:"transparent",
             color:theme.navbar.text,
             padding:0,

@@ -11,18 +11,20 @@ import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import CloseIcon from '@mui/icons-material/Close';
-import { StringDecoder } from 'string_decoder';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import SearchIcon from '@mui/icons-material/Search';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Button from '@mui/material/Button';
 type Props = {
   appbar?: React.ComponentProps<typeof AppBar>;
   items?: INavItems[];
   logo?: ReactNode;
-  bgColor:string,
+  bgColor: string;
   setActive: React.Dispatch<React.SetStateAction<number>>;
   active: number;
 };
 
-function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
+function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
   const [anchor, setAnchor] = useState(false);
   const theme = useTheme();
 
@@ -31,61 +33,65 @@ function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
   }
 
   return (
-    <AppBar position="static" elevation={0} {...appbar}>
-      
+    <AppBar position="static" {...appbar}>
+      <Grid
+        container
+        alignItems={'stretch'}
+        justifyContent="space-between"
+        height="100%"
+        pr={2}
+        // bgcolor="red"
+      >
         <Grid
-          container
-          alignItems={'stretch'}
-          justifyContent=""
-        
-          height="100%"
-          // bgcolor="red"
+          item
+          bgcolor={bgColor}
+          className="flex justify-center min-w-[45px] "
+          xs={1}
         >
-         
-           <Grid item bgcolor={bgColor} className="flex justify-end" xs={1}>
-            <IconButton
-              size="large"
-              color="inherit"
-              aria-label="menu"
-              onClick={() => toggleDrawer(anchor)}
+          <IconButton
+            size="large"
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon             onClick={() => toggleDrawer(false)}
+ />
+            <SwipeableDrawer
+              anchor={'left'}
+              open={anchor}
+              onClose={() => toggleDrawer(false)}
+              onOpen={() => toggleDrawer(true)}
             >
-              <MenuIcon />
-              <SwipeableDrawer
-                anchor={'left'}
-                open={anchor}
-                onClose={() => toggleDrawer(anchor)}
-                onOpen={() => toggleDrawer(anchor)}
-              >
-                {/* <Menu items={items} active={active} setActive={setActive} /> */}
+              {/* <Menu items={items} active={active} setActive={setActive} /> */}
 
-                <Box width={'100vw'} height={'100vh'} bgcolor={theme.navbar.bg}>
-                  <Grid container height={'100%'} direction={'column'}>
-                    <Grid
-                      item
-                      container
-                      alignItems={'center'}
-                      paddingLeft={2}
-                      xs={1}
-                    >
-                      <CloseIcon
-                        className="cursor-pointer"
-                        sx={{ color: 'red' }}
-                      />
-                    </Grid>
-                    <Grid
-                      item
-                      container
-                      height="100%"
-                      xs={6}
-                      direction="column"
-                      alignItems="center"
-                      justifyContent={'space-evenly'}
-                    >
-                      {items?.map((item, idx) => {
-                        return (
-                          <div key={idx}>
+              <Box width={'50vw'} height={'100vh'} bgcolor={theme.navbar.bg}>
+                <Grid container height={'100%'} direction={'column'}>
+                  <Grid
+                    item
+                    container
+                    alignItems={'center'}
+                    paddingLeft={2}
+                    xs={1}
+                  >
+                    <CloseIcon
+                      onClick={() => toggleDrawer(true)}
+                      className="cursor-pointer"
+                      sx={{ color: 'red' }}
+                    />
+                  </Grid>
+                  <Grid
+                    item
+                    container
+                    height="100%"
+                    xs={6}
+                    direction="column"
+                    alignItems="center"
+                    justifyContent={'space-evenly'}
+                  >
+                    {items?.map((item, idx) => {
+                      return (
+                        <div key={idx}>
                           <Link
-                          className="font-bold border-solid border-red border-b-2"
+                            className="font-bold border-solid border-red border-b-2"
                             href={item.link}
                             style={{
                               color:
@@ -100,29 +106,37 @@ function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
                           >
                             {item.name}
                           </Link>
-                       
-                          </div>
-                        );
-                      })}
-                    </Grid>
+                        </div>
+                      );
+                    })}
                   </Grid>
-                </Box>
-              </SwipeableDrawer>
-            </IconButton>
-          </Grid>
-
-          <Grid item xs={2}   className="h-[100%] w-[100%]" bgcolor={theme.navbar.bg_logo} color="black" >
-          <div className='h-full w-full flex items-center justify-center pt-3'>
-            <div>
-            {logo}
-            </div>
-          </div>
-              
-          
-          </Grid>
-          <Grid></Grid>
+                </Grid>
+              </Box>
+            </SwipeableDrawer>
+          </IconButton>
         </Grid>
-      
+
+        <Grid
+          item
+          xs={3}
+          className="h-[100%] w-[100%]  min-w-[75px]"
+          bgcolor={theme.navbar.bg_logo}
+          color="black"
+        >
+          <div className="h-full w-full flex items-center justify-center pt-3">
+            <div>{logo}</div>
+          </div>
+        </Grid>
+        <Grid className="pb-3 flex-1" color={theme.paletes.primary}>
+          <div className="h-full w-full flex items-center gap-3 justify-end  pt-3 ">
+            <SearchIcon />
+            <ShoppingCartIcon />
+            <FavoriteBorderIcon />
+            <button type="button">SignIn</button>
+            <button type="button">Register</button>
+          </div>
+        </Grid>
+      </Grid>
     </AppBar>
   );
 }
