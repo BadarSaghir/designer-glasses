@@ -19,7 +19,7 @@ const Features = ({brandTitle,brandUrl,sellerUrl,brandsImagesSrc,sellerImagesSrc
   return (
     <div className="flex-col flex min-h-[100vh] ">
 
-        <div className='h-[30vh] bg-red' >
+        <div className='h-[30vh] bg-red pb-4' >
           {' '}
           <Brands brandImagesSrc={brandsImagesSrc} brandTitles={brandTitle} />
         </div>

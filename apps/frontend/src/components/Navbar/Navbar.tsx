@@ -78,10 +78,10 @@ const Navbar = ({ logo, navitems }: Props) => {
         container
         height={54}
       >
-        <Grid container item sm={2} xs={2} pt={2}>
+        <Grid container className='flex justify-center items-center pb-3' item sm={1} xs={1} pt={2}>
        <Link className=' h-full' href="/"> <FitbitIcon className='h-full'/></Link>
         </Grid>
-        <Grid item sm={10} xs={10}>
+        <Grid item sm={11} xs={11}>
           <Menu
           active={active}
           setActive={setActive}
