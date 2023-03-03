@@ -13,6 +13,12 @@ import glasses6 from "../assets/home/glasses 6.png"
 import intaImg from "../assets/home/insta.png"
 import fbImg from "../assets/home/fb.png"
 import mailImg from "../assets/home/mail.png"
+import cateye from "../assets/home/cat eye.png"
+import react from "../assets/home/rectangle.png"
+import round from "../assets/home/round.png"
+import square from "../assets/home/square.png"
+import lens1 from "../assets/home/color lense.png"
+import lens2 from "../assets/home/clear lense.png"
 
 export const navItems=[
   {
@@ -59,3 +65,16 @@ name:"WOMEN SUNGLASSES ",
   export const brandTitle=["TOP BRAND"]
   export const sellerListTitle=["NEW ARRIVALS","BEST SELLER"]
 export const socialData =[{icon:fbImg.src,placeholder:"",url:""},{icon:intaImg.src,placeholder:"",url:""},{icon:mailImg.src,placeholder:"",url:""}]
+
+export interface IStylesData{
+  title:string,
+  showcaseGlassess:{imgSrc:string,name:string}[],
+  showcaseLenses:{imgSrc:string,name:string}[],
+
+}
+
+export const stylesData:IStylesData={
+  title: "CHOOSE YOUR STYLE",
+  showcaseGlassess: [{name:"CAT EYE",imgSrc:cateye.src},{name:"RECTANGLE",imgSrc:react.src},{name:"ROUND",imgSrc:round.src},{name:"SQUARE",imgSrc:square.src}],
+  showcaseLenses: [{imgSrc:lens1.src,"name":"COLOUR CONTACT LENSES "},{imgSrc:lens2.src,"name":"CLEAR CONTACT LENSES "}]
+}

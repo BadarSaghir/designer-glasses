@@ -18,9 +18,7 @@ const Style = (props: Props) => {
           <div className="flex-1 flex  items-center justify-center w-full">
             <div>C</div>
           </div>
-          <div className="flex-1 flex  items-center justify-center w-full">
-            <div>D</div>
-          </div>
+         
         </div>
       </div>
     </div>
