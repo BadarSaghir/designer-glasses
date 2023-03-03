@@ -13,7 +13,7 @@ module.exports = {
   ],
   theme: { screens: {
     'sm': '640px',
-    'px1017':'1033px',
+    'px1017':'999px',
     // => @media (min-width: 640px) { ... }
 
     'md': '768px',
@@ -21,7 +21,7 @@ module.exports = {
 
     'lg': '1024px',
     // => @media (min-width: 1024px) { ... }
-
+    "px1190":"1190px",
     'xl': '1280px',
     // => @media (min-width: 1280px) { ... }
 

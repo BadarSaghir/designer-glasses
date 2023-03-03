@@ -44,11 +44,11 @@ function Card({ src, title }: CardProps) {
         backgroundPosition: 'center bottom',
       }}
     >
-      <div className="w-[100%] flex flex-col bg-[#000000] opacity-80 items-center">
+      <div className="w-[100%] flex flex-col bg-[#000000] opacity-80 items-center py-4">
         <div className="font-bold sm:text-2xl  text-[#e5e5e5] ">
           <h5>{title}</h5>
         </div>
-        <div className="flex gap-3 flex-wrap justify-center p-2">
+        <div className="flex  gap-3 items-center px1017:flex-col px1190:flex-row flex-wrap justify-center p-2">
           <div className="">
             {' '}
             <Button
