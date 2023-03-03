@@ -1,8 +1,7 @@
 import React from 'react';
+import { IStylesData } from '../data';
 
-type Props = {
-  title: '';
-};
+type Props = IStylesData
 
 const Style = (props: Props) => {
   return (

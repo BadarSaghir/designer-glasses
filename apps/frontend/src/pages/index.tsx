@@ -1,4 +1,4 @@
-import { navItems,imageText, brandTitle, brandsImagesSrc, sellerImagesSrc, sellerListTitle, socialData } from "../components/data";
+import { navItems,imageText, brandTitle, brandsImagesSrc, sellerImagesSrc, sellerListTitle, socialData, stylesData } from "../components/data";
 import { Styles } from "../components/Styles";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header/Header";
@@ -23,7 +23,7 @@ const Index =()=>{
           </Box>
     </div>
     
-    <Styles title=""/>
+    <Styles {...stylesData}/>
     <Footer logo="" signupLink="string" social={socialData} title=""/>
     </UserLayout>
   );}
