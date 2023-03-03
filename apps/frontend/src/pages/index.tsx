@@ -14,7 +14,7 @@ const Index =()=>{
   const theme = useTheme()
   return (
     <UserLayout>
-    <Header navData={navItems} imageText={imageText} logo={Logo}/>
+    <Header navData={navItems}  hreoImg={HeaderImg.src} imageText={imageText} logo={Logo}/>
     <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={{best:sellerImagesSrc,new:sellerImagesSrc}} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={{new:"/sellers",best:"sellers"}}/>
     <div className={`flex-grow min-h-[100vh] `}>
           <Box className={"h-[100%] w-[100%] min-h-[100vh] flex items-center"} bgcolor={theme.sellerBg}>

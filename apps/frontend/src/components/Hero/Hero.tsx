@@ -19,20 +19,15 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
   const rightText = imageText?.slice(2, 4);
   // console.log(imageText);
   return (
-    <Box height="100%">
+    <Box height="100%"  
+    
+    className="h-[100%] w-[100%]"
+   >
       <Grid container height="100%" direction="column">
         <Grid container direction="row" item xs={12}>
           <Grid
-            container
-            direction="column"
-            className="h-[100%] w-[100%]"
-            style={{
-              backgroundImage: `url(${glasses.src})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center bottom'
-
-            }}
+           container
+           direction="column"
           >
             <Grid
               xs={4}
