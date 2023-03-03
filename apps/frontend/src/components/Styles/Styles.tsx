@@ -6,7 +6,7 @@ type Props = IStylesData;
 
 const Style = (props: Props) => {
   return (
-    <div className="min-h-screen flex justify-center pt-12 items-center">
+    <div className="min-h-screen flex justify-center py-12 px-2 items-center">
       <div className="flex-grow  ">
         <div className="h-full w-full  flex flex-col items-center">
           <div className=" flex items-center justify-center w-full">
@@ -35,7 +35,7 @@ const Style = (props: Props) => {
           </div>
           <div className=" flex  items-center justify-center w-full">
             {props.showcaseLenses.map((item, idx) => (
-              <div className='flex flex-col' key={idx}>
+              <div className='flex items-center text-center flex-col' key={idx}>
                 <div>
                   <Image
                     src={item.imgSrc}
@@ -45,7 +45,8 @@ const Style = (props: Props) => {
                   />{' '}
                 
                 </div>
-                
+                <TextGlasses>{item.name}</TextGlasses>
+
               </div>
             ))}
           </div>
