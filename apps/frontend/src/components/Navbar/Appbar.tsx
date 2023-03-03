@@ -36,21 +36,13 @@ function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
         <Grid
           container
           alignItems={'stretch'}
-          justifyContent="space-between"
+          justifyContent=""
         
           height="100%"
           // bgcolor="red"
         >
-          <Grid item xs={2}   className="h-[100%] w-[100%]" bgcolor={theme.navbar.bg_logo} color="black" >
-          <div className='h-full w-full flex items-center justify-center pt-3'>
-            <div>
-            {logo}
-            </div>
-          </div>
-              
-          
-          </Grid>
-          <Grid item bgcolor={bgColor} className="flex justify-end" xs={10}>
+         
+           <Grid item bgcolor={bgColor} className="flex justify-end" xs={1}>
             <IconButton
               size="large"
               color="inherit"
@@ -59,7 +51,7 @@ function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
             >
               <MenuIcon />
               <SwipeableDrawer
-                anchor={'right'}
+                anchor={'left'}
                 open={anchor}
                 onClose={() => toggleDrawer(anchor)}
                 onOpen={() => toggleDrawer(anchor)}
@@ -118,6 +110,17 @@ function Appbar({ appbar,bgColor, items, logo, active, setActive }: Props) {
               </SwipeableDrawer>
             </IconButton>
           </Grid>
+
+          <Grid item xs={2}   className="h-[100%] w-[100%]" bgcolor={theme.navbar.bg_logo} color="black" >
+          <div className='h-full w-full flex items-center justify-center pt-3'>
+            <div>
+            {logo}
+            </div>
+          </div>
+              
+          
+          </Grid>
+          <Grid></Grid>
         </Grid>
       
     </AppBar>
