@@ -21,7 +21,7 @@ const nextConfig = {
     unoptimized:process.env.GITHUB?true:false
 
   },
-  basePath:process.env.GITHUB?"/designer-glasses":"/",
+  basePath:process.env.GITHUB?"/designer-glasses":"",
   assetPrefix:process.env.GITHUB?"/designer-glasses":"/",
  
   
