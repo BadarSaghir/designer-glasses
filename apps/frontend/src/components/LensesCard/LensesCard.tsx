@@ -58,8 +58,8 @@ function LensesCard() {
     <div className="min-h-screen flex min-w-full pt-8">
       <div className="flex-grow flex flex-col text-center items-center ">
         <Title>{data.title}</Title>
-        <div className="grid  grid-cols-2 w-[100%] h-[100%] p-28 gap-8">
-          <div className="flex flex-1 h-full gap-4 flex-col sm:justify-center sm:items-center sm:pt-10">
+        <div className="sm:grid gap-8 flex pt-6 flex-col sm:flex-none  sm:grid-cols-2 w-[100%] h-[100%] sm:p-28 sm:gap-8">
+          <div className="flex items-center pt-6 flex-1 h-full gap-4 flex-col sm:justify-center sm:items-center sm:pt-10">
             {btnValues.map((v, idx) => {
               return (
                 <div key={idx} className="flex h-[100px] ">
@@ -89,7 +89,7 @@ function LensesCard() {
           {data.BottomImages.map((data, idx) => (
             <div
               key={idx}
-              className="flex h-72 sm:h-full  flex-col justify-center items-center gap-4 "
+              className="flex h-72 sm:h-full px-12  flex-col justify-center items-center gap-4 pb-14"
             >
               <div className='h-[100%] w-full relative'>
                 <Image
@@ -108,7 +108,9 @@ function LensesCard() {
             </div>
           ))}
         </div>
+        <br className='h-11'/>
       </div>
+     
     </div>
   );
 }
