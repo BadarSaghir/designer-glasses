@@ -14,18 +14,17 @@ jobs:
         
       # a standard step for GitHub actions on Node
       # https://github.com/actions/setup-node
+      
+       
       - uses: actions/setup-node@v3
         with:
-          # update the Node version to meet your needs
           node-version: 16
-          cache: npm
-          cache-dependency-path: package-lock.json
-
+      - uses: pnpm/action-setup@v2
 
       - name: Build
         run: |
           npm ci
-          
+          pnmp install
           npm run export:github
           touch dist/apps/frontend/github/exported/.nojekyll
 
