@@ -8,7 +8,8 @@
     "next:dev": "nx run frontend:serve:development",
     "next:prod": "nx run frontend:build:production && nx run frontend:serve:production",
     "dev": "concurrently --kill-others \"npm run nest:dev\"  \"npm run next:dev\"",
-    "start": "concurrently --kill-others \"npm run nest:prod\"  \"npm run next:prod\""
+    "start": "concurrently --kill-others \"npm run nest:prod\"  \"npm run next:prod\"",
+    "export:github":" export GITHUB=true && nx run frontend:export:github"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "react-dom": "18.2.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
+    "sharp": "^0.31.3",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

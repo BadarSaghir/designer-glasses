@@ -6,7 +6,6 @@ const { withNx } = require('@nrwl/next/plugins/with-nx');
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
-// console.log(process.env)
 const nextConfig = {
   
   images: {
@@ -18,12 +17,11 @@ const nextConfig = {
         pathname: '/uploads/**',
       },
     ],
-    unoptimized:process.env.GITHUB?true:false
+    unoptimized : true,
 
   },
-  basePath:process.env.GITHUB?"/designer-glasses":"/",
-  assetPrefix:process.env.GITHUB?"/designer-glasses":"/",
- 
+ basePath:"/designer-glasses",
+ assetPrefix:"/designer-glasses",
   
   nx: {
     // Set this to true if you would like to to use SVGR

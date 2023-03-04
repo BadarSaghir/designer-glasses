@@ -43,6 +43,14 @@
         "buildTarget": "frontend:build:production"
       }
     },
+    "export:github": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "frontend:build:production",
+        "outputPath": "dist/apps/frontend/github"
+
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
