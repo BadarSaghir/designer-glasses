@@ -22,7 +22,7 @@ const nextConfig = {
 
   },
   basePath:process.env.GITHUB?"/designer-glasses":"",
-  assetPrefix:process.env.GITHUB?"/designer-glasses":"/",
+  assetPrefix:process.env.GITHUB?"/designer-glasses":undefined,
  
   
   nx: {

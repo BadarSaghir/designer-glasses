@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import React, { ReactNode, useState } from 'react';
 import { INavItems } from '../../lib/navigation.interfaces';
 import MenuIcon from '@mui/icons-material/Menu';
-import IconButton from '@mui/material/IconButton';
+import IconButton from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
