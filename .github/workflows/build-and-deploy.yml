@@ -1,5 +1,4 @@
 name: Node.js CI
-
 on:
   push:
     branches: [ main ]
@@ -20,10 +19,13 @@ jobs:
           # update the Node version to meet your needs
           node-version: 16
           cache: npm
+          cache-dependency-path: package-lock.json
+
 
       - name: Build
         run: |
           npm ci
+          
           npm run export:github
           touch dist/apps/frontend/github/exported/.nojekyll
 
