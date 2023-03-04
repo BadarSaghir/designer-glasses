@@ -9,11 +9,16 @@ import Sellers from "../components/Sellers";
 import { useTheme } from "@mui/material";
 import Logo from "../assets/home/charmant logo.png"
 import HeaderImg from "../assets/home/header.png"
+import Head from "next/head";
 
 
 const Index =()=>{
   const theme = useTheme()
-  return (
+  return (<>
+  <Head>
+    <meta  name="description" content="Designer glasses will help you choose the best glasses and lenses for you eyes by delivering them in your home" />
+    <title>Designer Glasses</title>
+  </Head>
     <UserLayout>
     <Header navData={navItems}  hreoImg={HeaderImg.src} imageText={imageText} logo={Logo}/>
     <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={{best:sellerImagesSrc,new:sellerImagesSrc}} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={{new:"/sellers",best:"sellers"}}/>
@@ -26,6 +31,7 @@ const Index =()=>{
     <Styles {...stylesData}/>
     <Footer logo="" signupLink="string" social={socialData} title=""/>
     </UserLayout>
+    </>
   );}
 
 export default Index
