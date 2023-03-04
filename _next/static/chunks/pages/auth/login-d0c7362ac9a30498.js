@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[344],{7502:function(n,u,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/auth/login",function(){return i(346)}])},346:function(n,u,i){"use strict";i.r(u);var t=i(7458);i(2983);let _=()=>(0,t.jsx)("div",{children:"login"});u.default=_}},function(n){n.O(0,[774,888,179],function(){return n(n.s=7502)}),_N_E=n.O()}]);

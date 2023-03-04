@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[575],{1078:function(n,u,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/sunGlasses",function(){return e(1651)}])},1651:function(n,u,e){"use strict";e.r(u);var s=e(7458);e(2983);let _=()=>(0,s.jsx)("div",{children:"index"});u.default=_}},function(n){n.O(0,[774,888,179],function(){return n(n.s=1078)}),_N_E=n.O()}]);
