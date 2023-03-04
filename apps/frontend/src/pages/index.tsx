@@ -10,6 +10,7 @@ import { useTheme } from "@mui/material";
 import Logo from "../assets/home/charmant logo.png"
 import HeaderImg from "../assets/home/header.png"
 import Head from "next/head";
+import LensesCard from "../components/LensesCard";
 
 
 const Index =()=>{
@@ -29,6 +30,7 @@ const Index =()=>{
     </div>
     
     <Styles {...stylesData}/>
+    <LensesCard />
     <Footer logo="" signupLink="string" social={socialData} title=""/>
     </UserLayout>
     </>

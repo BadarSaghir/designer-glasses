@@ -19,6 +19,9 @@ import round from "../assets/home/round.png"
 import square from "../assets/home/square.png"
 import lens1 from "../assets/home/color lense.png"
 import lens2 from "../assets/home/clear lense.png"
+import img5 from "../assets/home/img 5.jpg"
+import img6 from "../assets/home/img 6.jpg"
+import diagramn from "../assets/home/diagram.png"
 
 export const navItems=[
   {
@@ -77,4 +80,23 @@ export const stylesData:IStylesData={
   title: "CHOOSE YOUR STYLE",
   showcaseGlassess: [{name:"CAT EYE",imgSrc:cateye.src},{name:"RECTANGLE",imgSrc:react.src},{name:"ROUND",imgSrc:round.src},{name:"SQUARE",imgSrc:square.src}],
   showcaseLenses: [{imgSrc:lens1.src,"name":"COLOUR CONTACT LENSES "},{imgSrc:lens2.src,"name":"CLEAR CONTACT LENSES "}]
+}
+
+export interface ICLenses{
+  title:string;
+  topImages:string[];
+  BottomImages:{name:string,imgsrc:string,url:string}[]
+}
+export const iCLenses:ICLenses={
+  title: "CHOOSE YOUR LENSES LIKE",
+  topImages: [diagramn.src,"Digram"],
+  BottomImages: [{
+    name: "HOW TO CHOOSE EYE\nGLASSES?",
+    imgsrc: img5.src,
+    url: ""
+  },{
+    name: "EYE GLASSES FOR YOUR\nFACE STYLE",
+    imgsrc:img6.src,
+    url: ""
+  }]
 }
