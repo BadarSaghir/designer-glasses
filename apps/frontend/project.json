@@ -16,9 +16,13 @@
         "development": {
           "outputPath": "apps/frontend"
         },
+        "github":{
+          "outputPath": "dist/apps/frontend/github"
+        },
         "production": {}
       }
     },
+    
     "serve": {
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
@@ -46,8 +50,8 @@
     "export:github": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "frontend:build:production",
-        "outputPath": "dist/apps/frontend/github"
+        "buildTarget": "frontend:build:github"
+        
 
       }
     },
