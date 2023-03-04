@@ -29,7 +29,7 @@ jobs:
       - name: Build
         run: |
           npm ci
-          
+          pnpm install
           npm run export:github
           touch dist/apps/frontend/github/exported/.nojekyll
 
