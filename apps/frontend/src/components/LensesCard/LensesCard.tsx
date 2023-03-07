@@ -93,13 +93,14 @@ function LensesCard() {
             >
               <div className='h-[100%] w-full relative'>
                 <Image
-                  className="h-[100%] w-full rounded-3xl"
-                  alt={data.name}
+                  className="h-[100%] aspect-video min-w-[220px] w-full rounded-3xl"
+                  alt={data.name} 
                   src={data.imgsrc}
                   width={600}
+                  
                   height={1200}
                 />
-                <div className='md:absolute md:block top-[90%] md:top-[90%] hidden left-[30%]  md:left-[30%] lg:left-[40%] '>
+                <div className='relative hidden ms:block md:block  top-[-10%] '>
                 <ViewButton bgColor={theme.paletes.tertiary} fontColor={theme.navbar.bg_logo} route="" shadowColor={theme.paletes.whiteMain} size={"small"} fontSize={"10px"} text={"VIEW MORE"} variant={"contained"} />
                 </div>
               </div>

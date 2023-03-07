@@ -24,8 +24,8 @@ const Style = (props: Props) => {
                       src={item.imgSrc}
                       alt={item.name}
                       className={'h-[100%] w-[100%]'}
-                      height={1200}
-                      width={2400}
+                      height={300}
+                      width={600}
                     />
                   </div>
                   <TextGlasses>{item.name}</TextGlasses>
@@ -35,12 +35,12 @@ const Style = (props: Props) => {
           </div>
           <div className=" flex  items-center justify-center w-full">
             {props.showcaseLenses.map((item, idx) => (
-              <div className='flex items-center text-center flex-col' key={idx}>
+              <div className='flex items-center justify-center text-center flex-col' key={idx}>
                 <div>
                   <Image
                     src={item.imgSrc}
-                    height={800}
-                    width={400}
+                    height={1200}
+                    width={600}
                     alt={item.name}
                   />{' '}
                 
