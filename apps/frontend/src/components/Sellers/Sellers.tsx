@@ -28,9 +28,18 @@ const theme = useTheme()
             onChange={(e, v) => setValue(v)}
             textColor="secondary"
             aria-label="New and Best Sellers"
+            TabIndicatorProps={{ children: <span  /> }}
+
             sx={{
               '& .MuiTabs-indicator': {
-                backgroundColor: theme.paletes.secondary,
+                display: "flex",
+                justifyContent: "center",
+                backgroundColor: "transparent",
+                "& > span": {
+                  // maxWidth: 40,
+                  width: "20%",
+                  backgroundColor: theme.paletes.secondary,
+                }
               },
               '& .MuiTab-root': {
                 color:  theme.paletes.tertiary,
@@ -44,7 +53,9 @@ const theme = useTheme()
           >
 
             {sectionTitles.map((value, idx) => (
-              <Tab key={idx} value={idx} label={value} />
+            
+              <Tab key={idx} value={idx} label={value} style={idx==0?{borderRight:`1px solid ${theme.paletes.secondary}`}:{borderLeft:`1px solid ${theme.paletes.secondary}`}} />
+              
             ))}
           </Tabs>
         </div>
@@ -54,9 +65,9 @@ const theme = useTheme()
               return (
                 <TabPanel className='justify-center w-[100%]'  key={key} value={idx+""}>
                   <div className='w-[100%]  flex items-center justify-center'>
-                  <div  className="h-[100%]  w-[80%] md:w-[100%] lg:gap-12 gap-8 flex flex-wrap items-center justify-center">
+                  <div  className="h-[100%]  w-[80%] md:w-[80%] lg:gap-12 gap-8 flex flex-wrap items-center justify-center">
                   {val.map((src, i) => (
-                  <div className={`bg-white rounded-3xl w-[30vw] h-[28vh] p-4 lg:h-[30vh] lg:w-[25vw] ${i%2==0?style.displayNone:style.size}`}   key={i} >
+                  <div className={`bg-white rounded-3xl w-[30vw] h-[30vw] p-4 lg:h-[18vw] lg:w-[18vw] ${i%2==0?style.displayNone:style.size}`}   key={i} >
                    
                    
                     <Seller   imgSrc={src} />

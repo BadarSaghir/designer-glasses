@@ -52,7 +52,7 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             <Link
               href={item.link}
               style={{
-                color: active === idx ? theme.navbar.active : theme.navbar.text,
+                color: active === idx ? theme.navbar.active : theme.navbar.bg,
               }}
               onClick={() => {
                 setActive(idx);

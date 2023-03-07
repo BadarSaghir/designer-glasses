@@ -32,10 +32,10 @@ const Navbar = ({ logo, navitems }: Props) => {
   
 
   return (
-    <div className='shadow-lg'>
+    <div className='shadow-lg h-[100%]'>
     <Box bgcolor={theme.navbar.bg_logo} sx={
       {
-        paddingBottom:{
+        paddingY:{
           md:3
         }
 
@@ -76,9 +76,9 @@ const Navbar = ({ logo, navitems }: Props) => {
           
         }}
         container
-        height={54}
+        height={64}
       >
-        <Grid container className='flex justify-center items-center pb-3' item sm={1} xs={1} pt={2}>
+        <Grid container className='flex justify-center  items-center ' item sm={1} xs={1} >
        <Link className=' h-full' href="/"> <FitbitIcon className='h-full'/></Link>
         </Grid>
         <Grid item sm={11} xs={11}>
@@ -86,7 +86,7 @@ const Navbar = ({ logo, navitems }: Props) => {
           active={active}
           setActive={setActive}
             items={navitems}
-            boxProps={{ bgcolor: theme.navbar.bg, color: theme.navbar.text }}
+            boxProps={{ bgcolor: theme.navbar.bg_logo, color: theme.navbar.bg }}
           />
         </Grid>
       </Grid>

@@ -5,18 +5,19 @@ import Card, { CardProps } from './Card';
 import { useTheme } from '@mui/material';
 
 function Glasses() {
+ 
   const glasses: CardProps[] = [
     {
       src: menGlasses,
       title: 'Men',
     },
     {
-      src: childGlasses,
-      title: 'Child',
-    },
-    {
       src: womenGlasses,
       title: 'Women',
+    },
+    {
+      src: childGlasses,
+      title: 'Child',
     },
   ];
   const theme = useTheme();
