@@ -20,10 +20,7 @@ type Props = {
 
 
 const InputBG= styled('div')(({theme})=>({
-  backgroundColor:`${theme.paletes.secondary}`,
-  filter:"brightness(150%)"
-
- 
+border:"0.5px solid gray"  
 
 }))
 
@@ -41,8 +38,8 @@ function Menu({ items, boxProps, active, setActive }: Props) {
   const theme = useTheme();
   return (
     <Box
-      className="flex text-xs sm:text-base font-bold justify-evenly items-center"
-      style={{ color: theme.navbar.text }}
+      className="flex text-xs sm:text-base font-bold justify-evenly items-center px-14"
+      style={{ color: theme.paletes.secondary }}
       height="100%"
       {...boxProps}
     >
@@ -52,7 +49,7 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             <Link
               href={item.link}
               style={{
-                color: active === idx ? theme.navbar.active : theme.navbar.bg,
+                color: active === idx ? theme.navbar.active :theme.paletes.secondary ,
               }}
               onClick={() => {
                 setActive(idx);
@@ -64,10 +61,10 @@ function Menu({ items, boxProps, active, setActive }: Props) {
           );
         })}
       </div>
-      <div className="flex gap-2 justify-center items-center  pr-2">
+      <div className="flex gap-8 justify-center items-center  pr-2">
         <InputBG className=" rounded-2xl text-xs  placeholder:text-white">
           <IconButton
-            endIcon={<SearchIcon style={{ color: theme.navbar.text }} />}
+            endIcon={<SearchIcon style={{ color: theme.paletes.secondary }} />}
             sx={{ p: '10px' }}
             aria-label="search"
           >
@@ -75,7 +72,6 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             
              style={{
               height: '1px',
-              color:"white",
             }}
            
               className="rounded-2xl px-4"
@@ -94,9 +90,9 @@ function Menu({ items, boxProps, active, setActive }: Props) {
 
         <ShoppingCart />
 
-        <div>
+        <div className='hidden'>
           <ViewButton
-            bgColor={theme.paletes.tertiary}
+            bgColor={theme.paletes.secondary}
             fontColor={theme.navbar.bg_logo}
             showIcon={false}
             route=""
@@ -107,9 +103,9 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             fontSize={5}
           />
         </div>
-        <div>
+        <div className='hidden'>
           <ViewButton
-            bgColor={theme.paletes.tertiary}
+            bgColor={theme.paletes.secondary}
             fontColor={theme.navbar.bg_logo}
             showIcon={false}
             route=""

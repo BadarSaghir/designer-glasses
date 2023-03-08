@@ -11,24 +11,19 @@ import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 type Props = PropsWithChildren & {
   imgSrc?: string;
   imageText?: INavItems[];
+  isShopNow?: boolean;
 };
 
-const Hero = ({ imgSrc = '', imageText }: Props) => {
+const Hero = ({ imgSrc = '', imageText, isShopNow = true }: Props) => {
   const theme = useTheme();
   const leftText = imageText?.slice(0, 2);
   const rightText = imageText?.slice(2, 4);
   // console.log(imageText);
   return (
-    <Box height="100%"  
-    
-    className="h-[100%] w-[100%]"
-   >
+    <Box height="100%" className="h-[100%] w-[100%]">
       <Grid container height="100%" direction="column">
         <Grid container direction="row" item xs={12}>
-          <Grid
-           container
-           direction="column"
-          >
+          <Grid container direction="column">
             <Grid
               xs={4}
               container
@@ -71,51 +66,49 @@ const Hero = ({ imgSrc = '', imageText }: Props) => {
                 })}
               </Grid> */}
             </Grid>
-
-            <Grid
-              item
-              container
-              direction={'column'}
-              xs={8}
-              alignItems="center"
-              position="relative"
-              justifyContent={'center'}
-              height="100%"
-            >
-              <Grid top="40%" item position="relative">
-                <div
-                  className="rounded-full"
-                  style={{
-                    WebkitBoxShadow: '4px 4px 11px 1px rgb(0 0 0 / 75%)',
-                    MozBoxShadow: '4px 4px 11px 1px rgb(0 0 0 / 75%)',
-                    boxShadow: '4px 4px 11px 1px rgb(0 0 0 / 75%)',
-                  }}
-                >
-                  <IconButton
-                    variant="contained"
-                    className="font-bold rounded-full"
-
-
+            {isShopNow && (
+              <Grid
+                item
+                container
+                direction={'column'}
+                xs={8}
+                alignItems="center"
+                position="relative"
+                justifyContent={'center'}
+                height="100%"
+              >
+                <Grid top="40%" item position="relative">
+                  <div
+                    className="rounded-full"
                     style={{
-                      backgroundColor: theme.button.heroBtnBgColor,
-                      color: theme.button.heroBtnTextColor,
-                      WebkitBoxShadow: 'inset 0px 0px 10px 0px #00000092',
-                      MozBoxShadow: 'inset 0px 0px 10px 0px #00000092',
-                      boxShadow: 'inset 0px 0px 10px 0px #00000092',
+                      WebkitBoxShadow: '4px 4px 11px 1px rgb(0 0 0 / 75%)',
+                      MozBoxShadow: '4px 4px 11px 1px rgb(0 0 0 / 75%)',
+                      boxShadow: '4px 4px 11px 1px rgb(0 0 0 / 75%)',
                     }}
                   >
-                    <div className='flex  h-[100%] w-[100%] items-center gap-2 text-sm'>
-                      <div>SHOP NOW</div>
+                    <IconButton
+                      variant="contained"
+                      className="font-bold rounded-full"
+                      style={{
+                        backgroundColor: theme.button.heroBtnBgColor,
+                        color: theme.button.heroBtnTextColor,
+                        WebkitBoxShadow: 'inset 0px 0px 10px 0px #00000092',
+                        MozBoxShadow: 'inset 0px 0px 10px 0px #00000092',
+                        boxShadow: 'inset 0px 0px 10px 0px #00000092',
+                      }}
+                    >
+                      <div className="flex  h-[100%] w-[100%] items-center gap-2 text-sm">
+                        <div>SHOP NOW</div>
 
-                    <PlayCircleFilledIcon fontSize='large'  />
-                    </div>
-                  </IconButton>
-                </div>
+                        <PlayCircleFilledIcon fontSize="large" />
+                      </div>
+                    </IconButton>
+                  </div>
+                </Grid>
               </Grid>
-            </Grid>
+            )}
           </Grid>
         </Grid>
-
       </Grid>
     </Box>
   );
