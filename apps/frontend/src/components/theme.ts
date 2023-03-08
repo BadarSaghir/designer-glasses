@@ -43,8 +43,9 @@ navbar:{
 },
 paletes:{
   primary:"#000000",
-  secondary:"#14213d",
+  secondary:"#284177",
   tertiary:"#fca311",
+  
   whiteMain:"#e5e5e5",
 },
 sellerBg:"#ddeffb",

@@ -47,6 +47,10 @@ module.exports = {
       backgound:colors.gray,
       foreground:colors.white,
       text:colors.black,
+      primaryMain:"#000000",
+      secondaryMain:"#284177",
+      tertiaryMain:"#fca311",
+      whiteMain:"#e5e5e5",
       
 
     },

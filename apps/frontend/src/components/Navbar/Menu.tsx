@@ -86,9 +86,9 @@ function Menu({ items, boxProps, active, setActive }: Props) {
           </IconButton>
         </InputBG>
         {/* <FavoriteBorder /> */}
-        <FavoriteBorderIcon />
+        <FavoriteBorderIcon sx={{color:theme.paletes.secondary}} />
 
-        <ShoppingCart />
+        <ShoppingCart  sx={{color:theme.paletes.secondary}} />
 
         <div className='hidden'>
           <ViewButton
