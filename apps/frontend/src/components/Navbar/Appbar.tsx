@@ -132,7 +132,7 @@ function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
           <div className="h-full w-full flex items-center   gap-3 justify-end  pt-3 ">
             <SearchIcon />
             <ShoppingCartIcon />
-            {/* <FavoriteBorderIcon /> */}
+            <FavoriteBorderIcon />
             <div  className='text-xs rounded-full' >SignIn</div>
             <div className='text-xs rounded-full' >Register</div>
           </div>

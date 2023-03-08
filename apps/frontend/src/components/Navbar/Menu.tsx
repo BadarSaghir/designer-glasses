@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Button from '@mui/material/Button';
 import ViewButton from '../ViewButton';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Theme } from '@mui/material';
 
 type Props = {
@@ -89,7 +89,8 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             />
           </IconButton>
         </InputBG>
-        <FavoriteBorder />
+        {/* <FavoriteBorder /> */}
+        <FavoriteBorderIcon />
 
         <ShoppingCart />
 

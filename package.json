@@ -9,10 +9,11 @@
     "next:prod": "nx run frontend:build:production && nx run frontend:serve:production",
     "dev": "concurrently --kill-others \"npm run nest:dev\"  \"npm run next:dev\"",
     "start": "concurrently --kill-others \"npm run nest:prod\"  \"npm run next:prod\"",
-    "export:github":" export GITHUB=true && nx run frontend:export:github"
+    "export:github": " export GITHUB=true && nx run frontend:export:github"
   },
   "private": true,
   "dependencies": {
+    "@coreui/coreui": "^4.2.6",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",
@@ -23,14 +24,18 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
     "@nrwl/next": "15.7.2",
+    "@trendyol-js/react-carousel": "^3.0.2",
     "axios": "^1.0.0",
+    "framer-motion": "^10.1.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "sharp": "^0.31.3",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "tw-elements": "1.0.0-beta1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
@@ -55,6 +60,7 @@
     "@typescript-eslint/parser": "^5.36.1",
     "autoprefixer": "^10.4.13",
     "babel-jest": "28.1.1",
+    "coreui": "link:@types/@coreui/coreui",
     "cypress": "^12.2.0",
     "eslint": "~8.15.0",
     "eslint-config-next": "13.1.1",
