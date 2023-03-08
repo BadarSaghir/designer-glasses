@@ -26,23 +26,23 @@ import diagramn from "../assets/home/diagram.png"
 export const navItems=[
   {
     name:"Glasses",
-    link:"/glasses"
+    link:"/glasses?q=all"
   },
   {
     name:"Sun Glasses",
-    link:"/sunGlasses"
+    link:"/glasse?q=sun"
   },
   {
     name:"Brands",
-    link:"/brands"
+    link:"/glasses?q=brands"
   },
   {
     name:"Contact Lenses",
-    link:"/lenses"
+    link:"/glassesq=lenses"
   },
   {
     name:"Sale",
-    link:"/sale"
+    link:"/glasses?q=sale"
   }
 ];
 export const imageText=[  {
