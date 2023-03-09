@@ -21,7 +21,6 @@ const Filter: FunctionComponent = () => {
   //   FilterFrameType,
   //   FilterSize,
   // ];
-
   const [items, setItems] = useRecoilState(filterAtom);
   return (
     <div className="w-full h-full  flex flex-col items-center">

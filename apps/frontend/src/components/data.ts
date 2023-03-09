@@ -38,7 +38,7 @@ export const navItems = [
   },
   {
     name: 'Contact Lenses',
-    link: '/glassesq=lenses',
+    link: '/glasses?q=lenses',
   },
   {
     name: 'Sale',
@@ -48,19 +48,19 @@ export const navItems = [
 export const imageText = [
   {
     name: 'MEN GLASSES',
-    link: '/',
+    link: '/glasses',
   },
   {
     name: 'MEN SUNGLASSES ',
-    link: '/',
+    link: '/glasses',
   },
   {
     name: 'WOMEN GLASSES',
-    link: '/',
+    link:'/glasses',
   },
   {
     name: 'WOMEN SUNGLASSES ',
-    link: '/',
+    link: '/glasses',
   },
 ];
 
