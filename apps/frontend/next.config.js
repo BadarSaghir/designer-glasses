@@ -17,6 +17,12 @@ const nextConfig = {
         port: '',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+        port: '',
+        pathname: '**',
+      },
     ],
     unoptimized:process.env.GITHUB?true:false
 

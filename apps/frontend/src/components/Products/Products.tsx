@@ -6,6 +6,9 @@ import MenuItem from '@mui/material/MenuItem';
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
 import { filterAtomState, IFilterAtom } from '../../recoil/atom/filterAtom';
+import { products } from '../../dumyData/products.data';
+import Product from './Product';
+
 // interface ProductsProps {
 
 // }
@@ -46,6 +49,12 @@ const Products: FunctionComponent = () => {
           CLEAR Filter
         </FilterSortButton>
       </FilterContainer>
+      <div className="bg-emerald-900 grid gap-4 grid-cols-1   sm:grid-cols-2  lg:grid-cols-3 p-24 md:gap-6 lg:gap-24 h-full w-full">
+        {products.map((val, idx) => (
+         
+         idx<6? <Product key={idx} {...val} />:<></>
+        ))}
+      </div>
     </div>
   );
 };

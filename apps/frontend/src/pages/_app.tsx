@@ -4,6 +4,7 @@ import './styles.css';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '../components/theme';
 import { RecoilRoot } from "recoil";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 
 function CustomApp({ Component, pageProps }: AppProps) {
