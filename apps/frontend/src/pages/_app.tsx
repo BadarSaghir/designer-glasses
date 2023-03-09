@@ -3,6 +3,8 @@ import Head from 'next/head';
 import './styles.css';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '../components/theme';
+import { RecoilRoot } from "recoil";
+
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +15,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme}>
           
       <main className="app">
+        <RecoilRoot>
           <Component {...pageProps} />
+          </RecoilRoot>
       </main>
         </ThemeProvider>
     </>
