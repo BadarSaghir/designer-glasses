@@ -21,15 +21,15 @@ const Filter: FunctionComponent = () => {
 
  const [items,setItems] =useRecoilState(filterAtom)
   return (
-    <div className="w-full h-ful  flex flex-col items-center">
+    <div className="w-full h-full  flex flex-col items-center">
       <h2 className="text-secondaryMain text-opacity-95  text-lg font-bold">
         {'Filter By'.toUpperCase()}
       </h2>
-      <div>
+      <div className='w-full'>
         {/* {items.((item, idx) => (
           <MainItem key={idx} list={item.list} title={item.title} />
         ))} */}
-      {Object.entries(items).map(([key,value],idx)=><div key={key}>he</div>)}
+      {Object.entries(items).map(([key,value],idx)=><MainItem list={value.list} title={value.title} type={value.filter} isHorizontal={value.filter=="size"?false:true} key={key}/>)}
       </div>
       {/* <div> {state.color.selectedColor}</div> */}
     </div>
