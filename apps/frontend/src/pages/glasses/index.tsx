@@ -16,13 +16,7 @@ const Index = () => {
 
         <div className="md:flex-[4] flex-col flex md:flex md:pt-12">
           
-         <div>bground</div>
-         <div>bground</div>
-         <div>bground</div>
-         <div>bground</div>
-         <div>bground</div>
-         <div>bground</div>
-         <div>bground</div>
+
 
         </div>
       </ProductsLayout>
