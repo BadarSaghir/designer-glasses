@@ -14,12 +14,13 @@ type Props = {
 
 const Header = ({ navData, logo, imageText, hreoImg,isShopNow=true }: Props) => {
   return (
-    <header className="flex flex-col h-screen ">
+    <header className="flex relative z-50 flex-col h-screen ">
       <nav>
         <Navbar navitems={navData} logo={logo} />
       </nav>
       <section
         id="Hero"
+
         style={{
           backgroundImage: `url(${hreoImg})`,
         }}

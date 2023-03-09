@@ -21,7 +21,7 @@ const GlassesLayout = ({
   showHeader = false,
 }: PropsWithChildren & { header?: string; showHeader?: boolean }) => {
   return (
-    <div className="flexflex-col">
+    <div className="flexflex-col ">
       {showHeader ? (
         <Header
           navData={navItems}

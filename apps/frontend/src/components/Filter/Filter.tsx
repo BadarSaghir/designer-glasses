@@ -7,7 +7,10 @@ import {
   FilterShape,
   FilterSize,
 } from '../data';
-import { filterAtom } from '../../recoil/atom/filterAtom';
+import {
+  filterAtomState as filterAtom,
+  IFilterAtom,
+} from '../../recoil/atom/filterAtom';
 import { useRecoilState } from 'recoil';
 
 const Filter: FunctionComponent = () => {
@@ -19,17 +22,27 @@ const Filter: FunctionComponent = () => {
   //   FilterSize,
   // ];
 
- const [items,setItems] =useRecoilState(filterAtom)
+  const [items, setItems] = useRecoilState(filterAtom);
   return (
     <div className="w-full h-full  flex flex-col items-center">
       <h2 className="text-secondaryMain text-opacity-95  text-lg font-bold">
         {'Filter By'.toUpperCase()}
       </h2>
-      <div className='w-full'>
+      <div className="w-full relative md:block grid xs:grid-cols-2">
         {/* {items.((item, idx) => (
           <MainItem key={idx} list={item.list} title={item.title} />
         ))} */}
-      {Object.entries(items).map(([key,value],idx)=><MainItem list={value.list} title={value.title} type={value.filter} isHorizontal={value.filter=="size"?false:true} key={key}/>)}
+        {Object.entries(items as IFilterAtom).map(([key, value], idx) => (
+          <MainItem
+            current={value.selected}
+            filterKey={key}
+            list={value.list}
+            title={value.title}
+            type={value.filter}
+            isHorizontal={value.filter == 'size' ? false : true}
+            key={key}
+          />
+        ))}
       </div>
       {/* <div> {state.color.selectedColor}</div> */}
     </div>

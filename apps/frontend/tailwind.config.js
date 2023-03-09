@@ -18,6 +18,7 @@ module.exports = {
   plugins: [require("tw-elements/dist/plugin")]
   ,
   theme: { screens: {
+    'xs':'222px',
     'sm': '640px',
     'px1017':'999px',
     // => @media (min-width: 640px) { ... }

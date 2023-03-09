@@ -10,9 +10,20 @@ import {
   FilterShape,
   FilterSize,
 } from '../../components/data';
+
+export type  IFilterAtom={
+
+  [K in 'gender' | 'shape'|'color'|'frameType'|'size']: {
+    title: string,
+    selected: number,
+    list:string[]
+    filter: FilterTypes
+    
+  }
+}
 // interface FilterState {
-  export const filterAtom = atom({
-    key: "todoListState",
+  export const filterAtomState = atom<IFilterAtom>({
+    key: "FilterState",
     default:  {
       gender: {
         title: FilterGender.title,
@@ -54,6 +65,7 @@ import {
   });
 
 
+  
 // }
 
 // export const useFilterStore = create(
