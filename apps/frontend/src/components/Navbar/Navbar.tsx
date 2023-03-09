@@ -23,7 +23,7 @@ const Navbar = ({ logo, navitems }: Props) => {
 
   const [active, setActive]=useState(-1)
   const router= useRouter()
-  console.log(router.pathname)
+  // console.log(router.pathname)
   useEffect(()=>{
     navitems?.forEach((item,idx)=>{
    if(router.pathname===item.link)setActive(idx)
