@@ -4,6 +4,7 @@ import heroImg from '../../assets/page2/img.png';
 import { useTheme } from '@mui/material';
 import ProductsLayout from '../../components/Layout/ProductsLayout';
 import Filter from '../../components/Filter/Filter';
+import Products from '../../components/Products/Products';
 
 const Index = () => {
   return (
@@ -12,11 +13,9 @@ const Index = () => {
         <div className={`md:bg-tertiaryMain flex md:bg-opacity-40 md:flex-1 md:pt-12`}>
          <Filter />
         </div>
-
-
         <div className="md:flex-[4] flex-col flex md:flex md:pt-12">
           
-
+          <Products/>
 
         </div>
       </ProductsLayout>
