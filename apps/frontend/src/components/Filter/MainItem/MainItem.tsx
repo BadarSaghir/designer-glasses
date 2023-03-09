@@ -1,6 +1,6 @@
 import { Divider, styled } from '@mui/material';
 import { FilterTypes } from '../../../lib/FilterTypes';
-
+import style from "./MainItem.module.scss"
 type Props = {
   title: string;
   list: string[];
@@ -15,6 +15,9 @@ const List = styled('ul')(({ theme }) => ({
 }));
 const ListItem= styled('li')(({ theme }) => ({
   listStyle: 'none',
+  // content:"2022",
+ 
+  
 
 
 }));
@@ -34,6 +37,17 @@ const Title=styled('h3')(({theme})=>(
   }
 ))
 
+interface CircleProps {
+  color: string
+}
+const Circle = styled('div')<CircleProps>(({ color }) => ({
+  backgroundColor: color,
+  borderRadius: '50%',
+  height: '5px',
+  width: '5px',
+}));
+
+
 function MainItem({ list, title, isHorizontal = false, type }: Props) {
   return (
     <div className='width-full'>
@@ -42,9 +56,9 @@ function MainItem({ list, title, isHorizontal = false, type }: Props) {
       <List>
         <div>
 
-        {type=="text"&&list.map((val,idx)=> <ListItem key={idx}>{val}</ListItem>)}
-        {type=="size"&&list.map((val,idx)=> <ListItem key={idx}>{val}</ListItem>)}
-        {type=="color"&&list.map((val,idx)=> <ListItem key={idx}>{val}</ListItem>)}
+        {type=="text"&&list.map((val,idx)=> <ListItem className={style.item} key={idx}>{val}</ListItem>)}
+        {type=="color"&& <div className='grid grid-col-4'>  {list.map((val,idx)=>  <Circle color={val}  className={style.item} key={idx}>{val}</Circle>)} </div>}
+        {type=="size"&& <div className='flex'>  {list.map((val,idx)=>  <Circle color={val}  className={style.item} key={idx}>{val}</Circle>)} </div>}
 
         </div>
       </List>
