@@ -30,7 +30,7 @@ export const navItems = [
   },
   {
     name: 'Sun Glasses',
-    link: '/glasse?q=sun',
+    link: '/glasses?q=sun',
   },
   {
     name: 'Brands',
