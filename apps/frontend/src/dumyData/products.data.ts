@@ -12,7 +12,7 @@ export const products: ProductModel[] = [
     ],
     advertisment: {
       link: '',
-      title: '',
+      title: 'Armani 2020',
       tryOn: false,
       type: 'new',
     },

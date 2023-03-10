@@ -49,7 +49,7 @@ const Products: FunctionComponent = () => {
           CLEAR Filter
         </FilterSortButton>
       </FilterContainer>
-      <div className="bg-emerald-900 grid gap-4 grid-cols-1   sm:grid-cols-2  lg:grid-cols-3 p-24 md:gap-6 lg:gap-24 h-full w-full">
+      <div className="grid  gap-2 grid-cols-1 px399:grid-cols-2 pl-[20%] pr-[20%] pt-5  sm:grid-cols-2 px1260:grid-cols-3   sm:p-24 md:gap-6 lg:gap-6 h-full w-full">
         {products.map((val, idx) => (
          
          idx<6? <Product key={idx} {...val} />:<></>

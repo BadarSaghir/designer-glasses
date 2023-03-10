@@ -20,7 +20,13 @@ module.exports = {
   theme: { screens: {
     'xs':'222px',
     'sm': '640px',
+    'px1000':"1000px",
+    'px1025':"1025px",
+'px399':"399px",
+
+    'px1014':"1014px",
     'px1017':'999px',
+    'px1260':"1260px",
     // => @media (min-width: 640px) { ... }
 
     'md': '768px',
