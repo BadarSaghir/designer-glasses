@@ -25,13 +25,13 @@ function Product({
   const [timer, setTimer] = useState<NodeJS.Timer | null>(null);
 
   return (
-    <div className=" bg-white cursor-pointer relative h-[200px] w-[150px] border-solid border-black border-[1px] sm:[200px]   aspect-square sm:w-[200px] md:h-[200px]  flex flex-col justify-center items-center lg:min-w-[280px]  lg:min-h-[280px]">
-      <div className="flex-1  aspect-square  border-solid border-black items-center justify-center relative ">
+    <div className=" bg-white cursor-pointer relative h-[200px] w-[150px]  sm:[200px]   aspect-square sm:w-[200px] md:h-[200px]  flex flex-col justify-center items-center lg:min-w-[280px]  lg:min-h-[280px]">
+      <div className="flex-1  aspect-square  items-center justify-center relative ">
         {images.map((value, idx) => (
           <>
             {selected == idx && (
               <motion.div
-                className="px1025:h-[180px] relative  sm:h-[100px] sm:w-[100px] px1025:w-[180px]    border-solid border-black border-[1px] h-[100px] w-[100px]"
+                className="px1025:h-[180px] relative  sm:h-[100px] sm:w-[100px] px1025:w-[180px]    h-[100px] w-[100px]"
                 key={idx}
                 initial={{ x: 0 }}
                 animate={{ x: [-20, 0] }}
