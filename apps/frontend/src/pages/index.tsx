@@ -15,12 +15,14 @@ import LensesCard from "../components/LensesCard";
 
 const Index =()=>{
   const theme = useTheme()
+  
   return (<>
   <Head>
     <meta  name="description" content="Designer glasses will help you choose the best glasses and lenses for you eyes by delivering them in your home" />
     <title>Designer Glasses</title>
   </Head>
     <UserLayout>
+      
     <Header navData={navItems}  hreoImg={HeaderImg.src} imageText={imageText} logo={Logo}/>
     <Features brandTitle={brandTitle} brandsImagesSrc={brandsImagesSrc} sellerImagesSrc={{best:sellerImagesSrc,new:sellerImagesSrc}} sellerListTitles={sellerListTitle} brandUrl={"/brand"} sellerUrl={{new:"/sellers",best:"sellers"}}/>
     <div className={`flex-grow min-h-[100vh] `}>

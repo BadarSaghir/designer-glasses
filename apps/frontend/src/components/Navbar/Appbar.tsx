@@ -102,6 +102,7 @@ function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
                             }}
                             onClick={() => {
                               setActive(idx);
+                              toggleDrawer(true)
                             }}
                             key={idx}
                           >

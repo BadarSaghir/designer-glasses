@@ -25,7 +25,7 @@ function Product({
   const [timer, setTimer] = useState<NodeJS.Timer | null>(null);
 
   return (
-    <div className=" bg-white cursor-pointer relative h-[200px] w-[150px]  sm:[200px]   aspect-square sm:w-[200px] md:h-[200px]  flex flex-col justify-center items-center lg:min-w-[280px]  lg:min-h-[280px]">
+    <div className=" bg-white cursor-pointer relative h-[200px] w-[90%]  sm:[200px]   aspect-square sm:w-[200px] md:h-[200px]  flex flex-col justify-center items-center lg:min-w-[280px]  lg:min-h-[280px]">
       <div className="flex-1  aspect-square  items-center justify-center relative ">
         {images.map((value, idx) => (
           <>

@@ -13,7 +13,7 @@ export const products: ProductModel[] = [
     advertisment: {
       link: '',
       title: 'Armani 2020',
-      tryOn: false,
+      tryOn: true,
       type: 'new',
     },
     genders: ['men', 'women', 'childrens'],
@@ -35,7 +35,7 @@ export const products: ProductModel[] = [
     advertisment: {
       link: '',
       title: '',
-      tryOn: false,
+      tryOn: true,
       type: 'sale',
     },
     genders: ['men', 'women', 'childrens'],
