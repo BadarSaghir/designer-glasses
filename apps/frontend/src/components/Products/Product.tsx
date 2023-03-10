@@ -3,6 +3,11 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+// import {Favfil} from '@mui/icons-material';
+
+
 function Product({
   advertisment,
   colors,
@@ -52,7 +57,9 @@ function Product({
                   <div>
                     {advertisment.type && <Button  size='small' className='bg-tertiaryMain text-secondaryMain bg-opacity-30 font-bold'>{advertisment.type}</Button>}
                   </div>
-                  <div>1</div>
+                { fav? <div><FavoriteBorderIcon className='text-secondaryMain text-opacity-60' /></div>:
+                  <div><FavoriteIcon className='text-secondaryMain bgse text-opacity-60' /></div>
+            }
                 </div>
                 <Image
                   className="h-full w-full aspect-auto"
