@@ -71,7 +71,7 @@ const Products = ({ products }: ProductsProps) => {
           CLEAR Filter
         </FilterSortButton>
       </FilterContainer>
-      <div className=" flex flex-col justify-center items-center px399:grid  gap-12 grid-cols-1 px399:grid-cols-2 pl-[20%] pr-[20%] pt-5  sm:grid-cols-2 px1260:grid-cols-3   sm:p-24 md:gap-6 lg:gap-6 h-full w-full">
+      <div className=" flex flex-col justify-center items-center px399:grid  gap-12 grid-cols-1 px399:grid-cols-2 pl-[20%] pr-[20%] pt-5  sm:grid-cols-2 px1260:grid-cols-3   sm:p-24 md:gap-6 lg:gap-12 h-full w-full">
         {products.map((val, idx) =>
           idx < 6 ? <Product key={idx} {...val} /> : <></>
         )}
@@ -81,9 +81,11 @@ const Products = ({ products }: ProductsProps) => {
         className='flex gap-3 text-secondaryMain font-semibold'
           breakLabel="..."
           nextLabel="next >"
+          activeLinkClassName=' text-tertiaryMain'
+          selectedPageRel={"a"}
           onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          pageCount={pageCount}
+          pageRangeDisplayed={6}
+          pageCount={9}
           previousLabel="< previous"
           renderOnZeroPageCount={()=>null}
         />{' '}
