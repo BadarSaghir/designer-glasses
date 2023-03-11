@@ -10,7 +10,7 @@ import ViewButton from '../ViewButton';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Theme } from '@mui/material';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import AccountBoxIcon from '@mui/icons-material/AccountCircle';
 
 type Props = {
   items?: { name: string; link: string }[];
