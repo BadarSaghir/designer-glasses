@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
-import styles from './SiteMapModule.module.scss';
+import SiteLink from './SiteLinks';
+import styles from './SiteMap.module.scss';
 type SitemapCardProps = {
   list?: { element: string; link: string }[];
   title?: string;
@@ -13,11 +14,11 @@ const SitemapCard = ({
   title,
 }: SitemapCardProps) => {
   return (
-    <div className={`${className} ${styles.layout}`}>
-      <h3>{title}</h3>
+    <div className={`${className} pt-0 pl-0 ${styles.layout}`}>
+      <h3 className='text-tertiaryMain text-lg font-extrabold'>{title}</h3>
       <div>
         {list?.map((val, idx) => (
-          <div key={idx}>{val.element}</div>
+          <SiteLink link={val.link} name={val.element} key={idx} />
         ))}
       </div>
 
