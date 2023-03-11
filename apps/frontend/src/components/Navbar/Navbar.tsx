@@ -14,7 +14,7 @@ import Image from  "next/image"
 import FitbitIcon from '@mui/icons-material/Fitbit';
 
 type Props = {
-  logo: StaticImageData,
+  logo?: StaticImageData,
   navitems?: INavItems[],
 };
 const Navbar = ({ logo, navitems }: Props) => {

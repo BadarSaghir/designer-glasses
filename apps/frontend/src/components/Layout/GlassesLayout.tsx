@@ -13,7 +13,7 @@ import {
 import Logo from '../../assets/home/charmant logo.png';
 import HeaderImg from '../../assets/home/header.png';
 import { Navbar } from '../Navbar';
-import { StaticImageData } from 'next/image';
+import { Footer } from '../Footer';
 
 const GlassesLayout = ({
   children,
@@ -35,6 +35,7 @@ const GlassesLayout = ({
       )}
 
       {children}
+      <div className='mt-[3.08rem]'><Footer logo='' signupLink="" title={''} social={[]}/></div>
     </div>
   );
 };
