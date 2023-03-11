@@ -10,6 +10,7 @@ import ViewButton from '../ViewButton';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Theme } from '@mui/material';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 type Props = {
   items?: { name: string; link: string }[];
@@ -90,18 +91,8 @@ function Menu({ items, boxProps, active, setActive }: Props) {
 
         <ShoppingCart  sx={{color:theme.paletes.secondary}} />
 
-        <div className='hidden'>
-          <ViewButton
-            bgColor={theme.paletes.secondary}
-            fontColor={theme.navbar.bg_logo}
-            showIcon={false}
-            route=""
-            size="small"
-            shadowColor="transparent"
-            text="  Sign In"
-            variant="contained"
-            fontSize={5}
-          />
+        <div className=''>
+         <AccountBoxIcon className='text-secondaryMain' />
         </div>
         <div className='hidden'>
           <ViewButton

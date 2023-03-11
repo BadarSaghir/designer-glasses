@@ -15,6 +15,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Button from '@mui/material/Button';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 type Props = {
   appbar?: React.ComponentProps<typeof AppBar>;
   items?: INavItems[];
@@ -134,8 +135,9 @@ function Appbar({ appbar, bgColor, items, logo, active, setActive }: Props) {
             <SearchIcon />
             <ShoppingCartIcon />
             <FavoriteBorderIcon />
-            <div  className='text-xs rounded-full' >SignIn</div>
-            <div className='text-xs rounded-full' >Register</div>
+            <AccountBoxIcon />
+            {/* <div  className='text-xs rounded-full' >SignIn</div> */}
+            {/* <div className='text-xs rounded-full' >Register</div> */}
           </div>
         </Grid>
       </Grid>
