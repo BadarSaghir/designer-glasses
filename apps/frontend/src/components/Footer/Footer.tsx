@@ -11,6 +11,7 @@ import {
   FilterSize,
 } from '../data';
 import ContactItem from './ContactItem';
+import SocialIcons from './SocialIcons';
 type Props = {
   logo: string;
   title: string;
@@ -58,45 +59,52 @@ const Footer = (props: Props) => {
   }
   const theme = useTheme();
   return (
-    <FooterBox>
-      <div className="flex  flex-col md:flex-row h-[100%] justify-between gap-y-6   md:gap-12">
-        <div className="md:w-[200px] md:flex md:justify-center flex pl-8  flex-wrap md:flex-col  lg:w-[456px] h-[100%]">
-          {contacts.map((props, idx) => (
-            <ContactItem
-              icon={props.icon}
-              label={props.label}
-              link={props.link}
-              value={props.value}
-              key={idx}
-            />
-          ))}
-        </div>
-        {/* <div className='flex'>
+    <div className='flex flex-col bg-secondaryMain'>
+      <FooterBox>
+        <div className="flex  flex-col md:flex-row h-[100%] justify-between gap-y-6   md:gap-12">
+          <div className="md:w-[200px] md:flex md:justify-center flex pl-8  flex-wrap md:flex-col  lg:w-[456px] h-[100%]">
+            {contacts.map((props, idx) => (
+              <ContactItem
+                icon={props.icon}
+                label={props.label}
+                link={props.link}
+                value={props.value}
+                key={idx}
+              />
+            ))}
+          </div>
+          {/* <div className='flex'>
       {filters.map((filter,idx)=>
       <SitemapCard className='flex-1' title={filter.title} key={idx}  list={filterToSiteMap(filter)}></SitemapCard>)}
       </div> */}
-        <div className="flex flex-wrap gap-4   justify-center  sm:items-baseline">
-          {filters.map((group, groupIdx) => (
-            <div className="flex gap-4 justify-center  sm:items-baseline" key={groupIdx}>
-              {group.map((filter, filterIdx) => (
-                <SitemapCard
-                  title={filter.title}
-                  key={filterIdx}
-                  list={filterToSiteMap(filter)}
-                ></SitemapCard>
-              ))}
-            </div>
-          ))}
-          {/* {filters.map((filter, idx) => (
+          <div className="flex flex-wrap gap-4   justify-center min-w-[160px]  sm:items-baseline">
+            {filters.map((group, groupIdx) => (
+              <div
+                className="flex gap-4 justify-center  sm:items-baseline"
+                key={groupIdx}
+              >
+                {group.map((filter, filterIdx) => (
+                  <SitemapCard
+                    className="text-left"
+                    title={filter.title}
+                    key={filterIdx}
+                    list={filterToSiteMap(filter)}
+                  ></SitemapCard>
+                ))}
+              </div>
+            ))}
+            {/* {filters.map((filter, idx) => (
             <SitemapCard
               title={filter.title}
               key={idx}
               list={filterToSiteMap(filter)}
             ></SitemapCard>
           ))} */}
+          </div>
         </div>
-      </div>
-    </FooterBox>
+      </FooterBox>
+      <SocialIcons />
+    </div>
   );
 };
 
