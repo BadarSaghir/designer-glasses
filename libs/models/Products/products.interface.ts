@@ -10,6 +10,14 @@ export interface ProductModel{
     shape:string[],
     frameType:string[]
     date:string;
+    distance?:number,
+    lensWidth?:number
+    templatelenght?:number
+    bridgeHeight?:number,
+    lensHeight?:number,
+    multifocal?:[],
+biofocal?:[],
+    pormotion?:[],
     advertisment:Advertisment;
 
 }
