@@ -9,46 +9,50 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Footer } from '../../components/Footer';
 import { navItems } from '../../components/data';
 import { Navbar } from '../../components/Navbar';
-import Logo from "../../assets/page2/img.png"
+import Logo from '../../assets/page2/img.png';
 import SingleProductLayout from '../../components/Layout/SingleProductLayout';
-
+import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
 const ProductPage = () => {
-    
-    
-    return(
- <div>
-         <Navbar navitems={navItems} logo={Logo} />
-         <SingleProductLayout>
-            
-         </SingleProductLayout>
-         <Footer logo={''} title={''} social={[]} signupLink={''}/>
+  return (
+    <div>
+      <Navbar navitems={navItems} logo={Logo} />
+      <SingleProductLayout>h</SingleProductLayout>
+      <Footer logo={''} title={''} social={[]} signupLink={''} />
+    </div>
+  );
+};
 
-</div>
-)};
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
 
+    fallback: true, // See the "fallback" section below
+  };
+};
 
-export const getStaticPaths:GetStaticPaths= async()=>{
-    return {
-    paths:[],
-     
-      fallback: true// See the "fallback" section below
-    };
-  }
+export const getStaticProps: GetStaticProps<
+  { [key: string]: any },
+  { id: string },
+  { product: ProductModel | null }
+> = async ({ params }) => {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  // const res = await fetch('https://.../posts')
 
-export const getStaticProps:GetStaticProps=async(context)=> {
-    // Call an external API endpoint to get posts.
-    // You can use any data fetching library
-    // const res = await fetch('https://.../posts')
+  // const posts = await res.json()
+  let product: ProductModel | null = null;
+  let id = 0;
+  if (params?.id) id = +params.id;
+  if (products[id]) product = products[id];
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      product: product as ProductModel,
 
-    // const posts = await res.json()
-  
-    // By returning { props: { posts } }, the Blog component
-    // will receive `posts` as a prop at build time
-    return {
-      props: {
-        // posts,
-      },
-    }
-  }
+      // posts,
+    },
+  };
+};
 
 export default ProductPage;
