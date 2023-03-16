@@ -47,7 +47,7 @@ function Index() {
                                     </div>
                                     <div className="md:flex items-center py-8 border-t border-gray-200">
                                         <div className="w-1/4">
-                                            <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller2.png" alt className="w-full h-full object-center object-cover" />
+                                            <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller2.png" alt="" className="w-full h-full object-center object-cover" />
                                         </div>
                                         <div className="md:pl-3 md:w-3/4 w-full">
                                             <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
@@ -73,7 +73,7 @@ function Index() {
                                     </div>
                                     <div className="md:flex items-center py-8 border-t border-b border-gray-200">
                                         <div className="h-full w-1/4">
-                                            <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller1.png" alt className="w-full h-full object-center object-cover" />
+                                            <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller1.png" alt="" className="w-full h-full object-center object-cover" />
                                         </div>
                                         <div className="md:pl-3 md:w-3/4 w-full">
                                             <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
