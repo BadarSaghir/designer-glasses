@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[613],{4464:function(n,u,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/auth/signup",function(){return i(7463)}])},7463:function(n,u,i){"use strict";i.r(u);var t=i(7458);i(2983);let _=n=>(0,t.jsx)("div",{children:"signup"});u.default=_}},function(n){n.O(0,[774,888,179],function(){return n(n.s=4464)}),_N_E=n.O()}]);
