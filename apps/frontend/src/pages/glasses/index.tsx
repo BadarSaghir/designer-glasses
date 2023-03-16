@@ -5,6 +5,8 @@ import ProductsLayout from '../../components/Layout/ProductsLayout';
 import Filter from '../../components/Filter/Filter';
 import Products from '../../components/Products/Products';
 import { products } from '../../dumyData/products.data';
+
+
 const Index = () => (
   <GlassesLayout header={heroImg.src} showHeader={true}>
     <ProductsLayout>

@@ -8,7 +8,7 @@ import {
   sellerImagesSrc,
   sellerListTitle,
   socialData,
-  stylesData,
+  stylesData
 } from '../data';
 import Logo from '../../assets/home/charmant logo.png';
 import HeaderImg from '../../assets/home/header.png';

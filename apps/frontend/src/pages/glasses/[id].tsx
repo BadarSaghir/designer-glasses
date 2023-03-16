@@ -12,6 +12,7 @@ import { Navbar } from '../../components/Navbar';
 import Logo from '../../assets/page2/img.png';
 import SingleProductLayout from '../../components/Layout/SingleProductLayout';
 import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
+
 const ProductPage = ({product}:{product:ProductModel}) => {
   return (
     <div>
