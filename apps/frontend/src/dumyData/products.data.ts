@@ -5,11 +5,14 @@ export const products: ProductModel[] = [
     name: 'GUCCI 1010',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    prices:['300Rs','200Rs','400Rs'],
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',
       'https://png.pngtree.com/png-vector/20201011/ourmid/pngtree-simple-style-elegant-black-glasses-png-image_2351998.jpg',
     ],
+    warranties:['Free Lenses Anti Reflection','Money Back Grantee','Free Shipping'],
+
     advertisment: {
       link: '',
       title: 'Armani 2020',
@@ -25,8 +28,10 @@ export const products: ProductModel[] = [
     id: '2',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-
+    prices:['300Rs','200Rs'],
     name: 'GUCCI 1010',
+    warranties:['Free Lenses Anti Reflection','Money Back Grantee','Free Shipping'],
+
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',

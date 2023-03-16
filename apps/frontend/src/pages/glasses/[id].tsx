@@ -12,11 +12,12 @@ import { Navbar } from '../../components/Navbar';
 import Logo from '../../assets/page2/img.png';
 import SingleProductLayout from '../../components/Layout/SingleProductLayout';
 import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
-const ProductPage = () => {
+const ProductPage = ({product}:{product:ProductModel}) => {
   return (
     <div>
       <Navbar navitems={navItems} logo={Logo} />
-      <SingleProductLayout>h</SingleProductLayout>
+      <SingleProductLayout product={product}>h</SingleProductLayout>
+      {/* {JSON.stringify(product)} */}
       <Footer logo={''} title={''} social={[]} signupLink={''} />
     </div>
   );

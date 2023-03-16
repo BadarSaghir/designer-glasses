@@ -2,7 +2,7 @@
 export interface ProductModel{
     id:string;
     name:string,
-    
+    prices?:string[],
     sku:string[];
     genders:string[];
     colors:string[];
@@ -15,9 +15,9 @@ export interface ProductModel{
     templatelenght?:number
     bridgeHeight?:number,
     lensHeight?:number,
-    multifocal?:[],
-biofocal?:[],
-    pormotion?:[],
+    multifocal?:string[],
+    warranties?:string[],
+biofocal?:string[],
     advertisment:Advertisment;
 
 }
