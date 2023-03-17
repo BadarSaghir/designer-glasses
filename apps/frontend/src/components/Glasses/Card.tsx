@@ -34,7 +34,7 @@ function Card({ src, title }: CardProps) {
 
   return (
     <div
-      className="  lg:h-[70%] lg:w-[80%] w-[100%] h-52  flex justify-end  items-center flex-col "
+      className="  lg:h-[70%] lg:w-[80%] w-[100%] h-52  min-w-[320px] flex justify-end  items-center flex-col "
       style={{
         backgroundImage: `url(${src.src})`,
         backgroundRepeat: 'no-repeat',

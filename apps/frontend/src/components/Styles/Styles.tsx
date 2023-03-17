@@ -1,3 +1,4 @@
+import { Divider } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import { IStylesData } from '../data';
@@ -34,11 +35,11 @@ const Style = (props: Props) => {
               ))}
             </div>
           </div>
-          <div className=" flex  items-center justify-around w-full">
+          <div className="flex-col md:flex-row flex  items-center justify-around w-full">
             {props.showcaseLenses.map((item, idx) => (
-              <div className='flex items-center justify-center text-center gap-8  flex-col' key={idx}>
+              <div className='flex items-center justify-center shadow-md p-8 md:shadow-none text-center gap-8  flex-col' key={idx}>
                 <div className=' flex-1'>
-                  <div></div>
+                  
                   <Image
                   style={{}}
                   className="h-[100%] w-[100%]"
@@ -51,6 +52,7 @@ const Style = (props: Props) => {
                 </div>
                 <TextGlasses className='text-lg'>{item.name}</TextGlasses>
 
+               
               </div>
             ))}
           </div>
