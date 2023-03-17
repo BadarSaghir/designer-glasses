@@ -10,6 +10,7 @@ type Props = {
   shadowColor:string,
   fontSize?:string |number,
   route:string,
+  className?:string,
   showIcon?:boolean
 }
 import IconButton from '@mui/material/Button';
@@ -32,6 +33,7 @@ const ViewButton = (props: Props) => {
     }>
 <Link href={props.route}>
     <IconButton
+
     variant={props.variant}
     sx={
       {
@@ -40,7 +42,7 @@ const ViewButton = (props: Props) => {
         }
       }
     }
-    className={`font-bold  rounded-full  shadow-[${props.fontColor}]`}
+    className={`font-bold  rounded-full  shadow-[${props.fontColor}] ${props.className}`}
 
 
     style={{

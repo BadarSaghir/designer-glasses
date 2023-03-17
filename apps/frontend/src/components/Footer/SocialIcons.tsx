@@ -10,25 +10,24 @@ const SocialIconsContainer = styled('div')({
   display: 'flex',
   borderRadius: '8px',
   padding: '26px',
-  justifyContent:"center",
-  color:"white"
-  
+  justifyContent: 'center',
+  color: 'white',
 });
 
 const SocialIcons = () => {
   return (
-    <SocialIconsContainer className='text-white'>
+    <SocialIconsContainer >
       <IconButton>
-        <FacebookIcon className='text-white' />
+        <FacebookIcon />
       </IconButton>
       <IconButton>
-        <TwitterIcon className='text-white' />
+        <TwitterIcon />
       </IconButton>
       <IconButton>
-        <InstagramIcon  className='text-white'/>
+        <InstagramIcon />
       </IconButton>
       <IconButton>
-        <PinterestIcon  className='text-white' />
+        <PinterestIcon  />
       </IconButton>
     </SocialIconsContainer>
   );

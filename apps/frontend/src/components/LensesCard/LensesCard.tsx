@@ -64,6 +64,7 @@ function LensesCard() {
               return (
                 <div key={idx} className="flex h-[100px] ">
                   <ViewButton
+                  className='' 
                     text={'Driver Near'}
                     bgColor={v.bgColor}
                     fontColor={v.fontColor}
@@ -101,7 +102,7 @@ function LensesCard() {
                   height={1200}
                 />
                 <div className='relative hidden ms:block md:block  top-[-10%] '>
-                <ViewButton bgColor={theme.paletes.tertiary} fontColor={theme.navbar.bg_logo} route="" shadowColor={'transparent'} size={"small"} fontSize={"10px"} text={"VIEW MORE"} variant={"contained"} />
+                <ViewButton  bgColor={theme.paletes.tertiary} fontColor={theme.navbar.bg_logo} route="" shadowColor={'transparent'} size={"small"} fontSize={"10px"} text={"VIEW MORE"} variant={"contained"} />
                 </div>
               </div>
 
