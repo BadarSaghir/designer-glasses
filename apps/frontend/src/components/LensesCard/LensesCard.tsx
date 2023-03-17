@@ -3,6 +3,7 @@ import { iCLenses } from '../data';
 import { Title } from '../Styles/components';
 import ViewButton from '../ViewButton';
 import Image from 'next/image';
+import { useState } from 'react';
 function getbtnConfig(theme: Theme) {
   const btnProps = [
     {
@@ -27,9 +28,14 @@ function getbtnConfig(theme: Theme) {
     },
     {
       text: 'PROGRESSIVE',
-      bgColor: theme.paletes.tertiary,
-      fontColor: theme.paletes.secondary,
-      variant: 'contained',
+      // bgColor: theme.paletes.tertiary,
+      bgColor: '#ffffff',
+      fontColor: theme.paletes.tertiary,
+
+      // fontColor: theme.paletes.secondary,
+      // variant: 'contained',
+      variant: 'outlined',
+
       size: 'large',
       shadowColor: 'transparent',
       route: '',
@@ -51,36 +57,45 @@ function getbtnConfig(theme: Theme) {
 
 function LensesCard() {
   const data = iCLenses;
-  const theme = useTheme();
+  const theme= useTheme()
+  const seletedTheme= {
+    bgColor: theme.paletes.tertiary,
+    fontColor: theme.paletes.secondary,
+    variant: 'contained',
+    size: 'large',
+  };
+  const [selected, setSelected] = useState(2);
   const btnValues = getbtnConfig(theme);
 
   return (
-    <div className="min-h-screen flex min-w-full pt-8">
+    <div className="min-h-screen flex min-w-full pt-8 pb-16">
       <div className="flex-grow flex flex-col text-center items-center ">
-        <Title>{data.title}</Title>
-        <div className="sm:grid gap-8 flex pt-6 flex-col sm:flex-none  sm:grid-cols-2 w-[100%] h-[100%] sm:p-28 sm:gap-8">
-          <div className="flex items-center pt-6 flex-1 h-full gap-4 flex-col sm:justify-center sm:items-center sm:pt-10">
+        <Title className="text-[2rem] pb-10">{data.title}</Title>
+        <div className="sm:grid gap-8 flex flex-col sm:flex-none  sm:grid-cols-2 w-[100%] h-[100%]  sm:gap-8">
+          <div className="hidden md:flex items-center flex-1 h-full gap-4 flex-col sm:justify-center sm:items-center sm:pt-10">
             {btnValues.map((v, idx) => {
               return (
-                <div key={idx} className="flex h-[100px] ">
+                <div key={idx} className="flex h-[100px] " onClick={()=>{setSelected(idx)}}>
                   <ViewButton
-                  className='' 
-                    text={'Driver Near'}
-                    bgColor={v.bgColor}
-                    fontColor={v.fontColor}
-                    variant={v.variant as 'text' | 'contained' | 'outlined'}
-                    size={v.size as 'small' | 'medium' | 'large'}
+                    txtclassName="text-[2rem]"
+                    className=" md:h-20 md:w-80"
+                    text={v.text}
+                    bgColor={idx===selected?seletedTheme.bgColor:v.bgColor}
+                    fontColor={idx===selected?seletedTheme.fontColor:v.fontColor}
+                    variant={idx===selected?seletedTheme.variant as "contained":v.variant as 'text' | 'contained' | 'outlined'}
+                    size={idx===selected?seletedTheme.size as "small":v.size as 'small' | 'medium' | 'large'}
                     shadowColor={v.shadowColor}
                     route={v.route}
                     showIcon={v.showIcon}
+                  
                   />
                 </div>
               );
             })}
           </div>
-          <div className="flex flex-1 h-[100%] relative  gap-4 flex-col justify-center items-center pt-10">
+          <div className="hidden md:flex flex-1 h-[100%] relative  gap-4 flex-col justify-center items-center pt-10">
             <Image
-              className="h-full w-full"
+              className="h-[80%] w-[80%] mr-12"
               alt={data.topImages[1]}
               src={data.topImages[0]}
               width={600}
@@ -92,27 +107,36 @@ function LensesCard() {
               key={idx}
               className="flex h-72 sm:h-full px-12  flex-col justify-center items-center gap-4 pb-14"
             >
-              <div className='h-[100%] w-full relative'>
+              <div className="h-[100%] w-[80%] relative">
                 <Image
-                  className="h-[100%] aspect-video min-w-[220px]  w-full rounded-3xl"
-                  alt={data.name} 
+                  className="h-[100%] min-w-[220px]  w-full rounded-3xl"
+                  alt={data.name}
                   src={data.imgsrc}
                   width={600}
-                  
                   height={1200}
                 />
-                <div className='relative hidden ms:block md:block  top-[-10%] '>
-                <ViewButton  bgColor={theme.paletes.tertiary} fontColor={theme.navbar.bg_logo} route="" shadowColor={'transparent'} size={"small"} fontSize={"10px"} text={"VIEW MORE"} variant={"contained"} />
+                <div className="relative hidden ms:block md:block  top-[-10%] ">
+                  <ViewButton
+                    bgColor={theme.paletes.tertiary}
+                    fontColor={theme.navbar.bg_logo}
+                    route=""
+                    shadowColor={'transparent'}
+                    size={'small'}
+                    fontSize={'10px'}
+                    text={'VIEW MORE'}
+                    variant={'contained'}
+                  />
                 </div>
               </div>
 
-              <Title color={theme.paletes.secondary}><pre> {data.name} </pre></Title>
+              <Title color={theme.paletes.secondary}>
+                <pre> {data.name} </pre>
+              </Title>
             </div>
           ))}
         </div>
-        <br className='h-11'/>
+        <br className="h-11" />
       </div>
-     
     </div>
   );
 }

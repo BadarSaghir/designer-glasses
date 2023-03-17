@@ -10,6 +10,8 @@ type Props = {
   shadowColor:string,
   fontSize?:string |number,
   route:string,
+  txtclassName?:string,
+
   className?:string,
   showIcon?:boolean
 }
@@ -31,7 +33,7 @@ const ViewButton = (props: Props) => {
       WebkitBoxShadow:shadow,
       }
     }>
-<Link href={props.route}>
+
     <IconButton
 
     variant={props.variant}
@@ -53,14 +55,14 @@ const ViewButton = (props: Props) => {
 
     }}
   >
-    <div className='flex  h-[100%] w-[100%] items-center gap-2 text-sm'>
-      <div >{props.text}</div>
+    <div className='flex  h-[100%] w-[100%] items-center justify-center gap-2 text-sm'>
+      <div className=''><div className={props.txtclassName}>{props.text}</div></div>
 
   {icon && <PlayCircleFilledIcon style={{color:props.iconColor}} fontSize={props.size}  />}
     </div>
 
   </IconButton>
-  </Link>
+
     </div>
   )
 }

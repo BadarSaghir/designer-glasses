@@ -28,7 +28,7 @@ function Glasses() {
         className="font-bold shadow-black text-lg tracking-widest"
         style={{ color: theme.paletes.tertiary }}
       >
-        {'Glasses For All'.toUpperCase()}
+     <div className='text-[2rem]'>  {'Glasses For All'.toUpperCase()}</div> 
       </div>
       <div className="h-[100%] w-[100%] gap-2 px1017:gap-0 flex flex-col px1017:flex-row  items-center ">
         {glasses.map((src, idx) => (

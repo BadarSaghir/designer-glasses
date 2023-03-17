@@ -11,7 +11,7 @@ const Style = (props: Props) => {
       <div className="flex-grow ">
         <div className="h-full w-full  gap-12 flex flex-col items-center">
           <div className=" flex items-center justify-center w-full">
-            <Title className="text-lg sm:text-xl">{props.title}</Title>
+            <Title className="text-[2rem] ">{props.title}</Title>
           </div>
           <div className=" flex  items-center justify-center w-full">
             <div className="flex flex-wrap gap-2 sm:gap-0 flex-col items-center sm:flex-row w-full">
