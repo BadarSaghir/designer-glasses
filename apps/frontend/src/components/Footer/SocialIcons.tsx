@@ -20,10 +20,10 @@ const SocialIcons = () => {
   return (
     <SocialIconsContainer >
       <IconButton>
-        <FacebookIcon />
+        <FacebookIcon className='text-primary-600' />
       </IconButton>
       <IconButton>
-        <TwitterIcon />
+        <TwitterIcon className='text-[#00acee]' />
       </IconButton>
       <IconButton>
         <InstagramIcon />

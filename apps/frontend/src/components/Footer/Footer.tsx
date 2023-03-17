@@ -59,7 +59,9 @@ const Footer = (props: Props) => {
   }
   const theme = useTheme();
   return (
-    <div className='flex flex-col bg-secondaryMain'>
+    <div className='flex flex-col '>
+            <SocialIcons />
+
       <FooterBox>
         <div className="flex  flex-col md:flex-row h-[100%] justify-between gap-y-6   md:gap-12">
           <div className="md:w-[200px] md:flex md:justify-center flex pl-8  flex-wrap md:flex-col  lg:w-[456px] h-[100%]">
@@ -103,7 +105,6 @@ const Footer = (props: Props) => {
           </div>
         </div>
       </FooterBox>
-      <SocialIcons />
     </div>
   );
 };
