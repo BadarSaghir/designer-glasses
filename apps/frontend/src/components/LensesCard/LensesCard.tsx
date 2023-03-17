@@ -68,7 +68,7 @@ function LensesCard() {
   const btnValues = getbtnConfig(theme);
 
   return (
-    <div className="min-h-screen flex min-w-full pt-8 pb-28">
+    <div className="min-h-screen hidden md:flex  min-w-full pt-8 md:pb-28 ">
       <div className="flex-grow flex flex-col text-center items-center ">
         <Title className="text-[2rem] pb-10">{data.title}</Title>
         <div className="sm:grid gap-8 gap-y-28 flex flex-col sm:flex-none  sm:grid-cols-2 w-[100%] h-[100%]  sm:gap-x-8">
