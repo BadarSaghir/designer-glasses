@@ -109,7 +109,7 @@ function LensesCard() {
             >
               <div className="h-[220px] w-[220px] md:h-[80%]  md:w-[80%] aspect-video relative">
                 <Image
-                  className="h-[100%] min-w-[220px]  w-full rounded-3xl"
+                  className="h-[100%] min-w-[220px]  w-full rounded-[20%]"
                   alt={data.name}
                   src={data.imgsrc}
                   width={600}
