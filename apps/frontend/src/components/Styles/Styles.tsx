@@ -17,7 +17,7 @@ const Style = (props: Props) => {
               {props.showcaseGlassess.map((item, idx) => (
                 <div
                   className="flex shadow-md md:shadow-none pt-6  flex-col sm:flex-1 items-center pb-4 h-52 w-64 
-                  gap-4"
+                  gap-10"
                   key={idx}
                 >
                   <div className={'h-[50%] w-[80%]'}>
@@ -29,7 +29,7 @@ const Style = (props: Props) => {
                       width={900}
                     />
                   </div>
-                  <TextGlasses>{item.name}</TextGlasses>
+                  <TextGlasses className='text-lg'>{item.name}</TextGlasses>
                 </div>
               ))}
             </div>
