@@ -54,9 +54,9 @@ module.exports = {
       backgound:colors.gray,
       foreground:colors.white,
       text:colors.black,
-      primaryMain:"#000000",
-      secondaryMain:"#284177",
-      tertiaryMain:"#fca311",
+      primaryMain:"#284177",
+      secondaryMain:"#143d59",
+      tertiaryMain:"#f4b41a",
       whiteMain:"#e5e5e5",
       
 
