@@ -7,8 +7,8 @@ type Props = IStylesData;
 const Style = (props: Props) => {
   return (
     <div className="min-h-screen flex justify-center py-12 px-2 items-center">
-      <div className="flex-grow  ">
-        <div className="h-full w-full  flex flex-col items-center">
+      <div className="flex-grow ">
+        <div className="h-full w-full  gap-12 flex flex-col items-center">
           <div className=" flex items-center justify-center w-full">
             <Title className="text-lg sm:text-xl">{props.title}</Title>
           </div>
@@ -16,7 +16,8 @@ const Style = (props: Props) => {
             <div className="flex flex-wrap gap-2 sm:gap-0 flex-col items-center sm:flex-row w-full">
               {props.showcaseGlassess.map((item, idx) => (
                 <div
-                  className="flex shadow-md md:shadow-none  flex-col sm:flex-1 items-center pb-4 w-64    justify-between"
+                  className="flex shadow-md md:shadow-none pt-6  flex-col sm:flex-1 items-center pb-4 h-52 w-64 
+                  gap-4"
                   key={idx}
                 >
                   <div className={'h-[50%] w-[80%]'}>
@@ -24,8 +25,8 @@ const Style = (props: Props) => {
                       src={item.imgSrc}
                       alt={item.name}
                       className={'h-[100%] w-[100%]'}
-                      height={300}
-                      width={600}
+                      height={600}
+                      width={900}
                     />
                   </div>
                   <TextGlasses>{item.name}</TextGlasses>
@@ -35,9 +36,10 @@ const Style = (props: Props) => {
           </div>
           <div className=" flex  items-center justify-center w-full">
             {props.showcaseLenses.map((item, idx) => (
-              <div className='flex items-center justify-center text-center flex-col' key={idx}>
-                <div>
+              <div className='flex items-center justify-center text-center  flex-col' key={idx}>
+                <div className='flex-1 '>
                   <Image
+                  style={{}}
                     src={item.imgSrc}
                     height={1200}
                     width={600}
