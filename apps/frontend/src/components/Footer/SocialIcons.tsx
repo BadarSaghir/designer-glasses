@@ -6,6 +6,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import Linkdelin from "@mui/icons-material/LinkedIn"
+import style from "./Social.module.scss"
 // import TickTokIcon from "@mui/icons-material/GM"
 
 const SocialIconsContainer = styled('div')({
@@ -26,7 +27,7 @@ const SocialIcons = () => {
         <TwitterIcon className='text-[#00acee]' />
       </IconButton>
       <IconButton>
-        <InstagramIcon />
+        <InstagramIcon className={style.insta} />
       </IconButton>
       <IconButton>
         <PinterestIcon  />
