@@ -11,28 +11,26 @@ function Card({ src, title }: CardProps) {
   const theme = useTheme();
   const shadow = '0px 0px 9px 0px ' + theme.paletes.tertiary;
   const shadowHover = '0px 0px 9px 0px ' + theme.paletes.secondary;
-  const mainColor ={
+  const mainColor = {
     borderColor: theme.paletes.tertiary,
     backgroundColor: theme.paletes.secondary,
     color: theme.paletes.tertiary,
     boxShadow: shadow,
     MozBoxShadow: shadow,
     WebkitBoxShadow: shadow,
-  }
-  const hoverColor=
-    {
-        backgroundColor: theme.paletes.secondary,
-        color: theme.paletes.whiteMain,
-        boxShadow: shadowHover,
-        MozBoxShadow: shadowHover,
-        WebkitBoxShadow: shadowHover,
-        borderColor: theme.paletes.whiteMain,
-      }
-      const glassesButtons =[title+' Glasses',"Sun"]
-  
+  };
+  const hoverColor = {
+    backgroundColor: theme.paletes.secondary,
+    color: theme.paletes.whiteMain,
+    boxShadow: shadowHover,
+    MozBoxShadow: shadowHover,
+    WebkitBoxShadow: shadowHover,
+    borderColor: theme.paletes.whiteMain,
+  };
+  const glassesButtons = [title + ' Glasses', 'Sun'];
+
   const [styleShadows, setStyleShadows] = useState(mainColor);
   const [styleShadows2, setStyleShadows2] = useState(mainColor);
-
 
   return (
     <div
@@ -55,7 +53,7 @@ function Card({ src, title }: CardProps) {
               onMouseEnter={() => {
                 setStyleShadows(hoverColor);
               }}
-              onMouseLeave={()=>setStyleShadows(mainColor)}
+              onMouseLeave={() => setStyleShadows(mainColor)}
               variant="outlined"
               className="font-bold rounded-full px-3 text-sm "
               style={{
@@ -72,24 +70,26 @@ function Card({ src, title }: CardProps) {
           </div>
           <div>
             {' '}
-            <Button
-              onMouseEnter={() => {
-                setStyleShadows2(hoverColor);
-              }}
-              onMouseLeave={()=>setStyleShadows2(mainColor)}
-              variant="outlined"
-              className="font-bold rounded-full px-3 text-sm "
-              style={{
-                ...styleShadows2,
-              }}
-              sx={{
-                height: '40px',
-                p: 1,
-                fontSize: '0.6rem',
-              }}
-            >
-              Sun Glasses
-            </Button>
+            {title.toUpperCase() !== 'CHILD'.toUpperCase() && (
+              <Button
+                onMouseEnter={() => {
+                  setStyleShadows2(hoverColor);
+                }}
+                onMouseLeave={() => setStyleShadows2(mainColor)}
+                variant="outlined"
+                className="font-bold rounded-full px-3 text-sm "
+                style={{
+                  ...styleShadows2,
+                }}
+                sx={{
+                  height: '40px',
+                  p: 1,
+                  fontSize: '0.6rem',
+                }}
+              >
+                Sun Glasses
+              </Button>
+            )}
           </div>
         </div>
       </div>
