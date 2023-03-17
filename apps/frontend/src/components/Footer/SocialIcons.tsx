@@ -30,10 +30,10 @@ const SocialIcons = () => {
         <InstagramIcon className={style.insta} />
       </IconButton>
       <IconButton>
-        <PinterestIcon  />
+        <PinterestIcon  className='text-[#E60023]' />
       </IconButton>
       <IconButton>
-        <Linkdelin  />
+        <Linkdelin  className='text-[#0e76a8]' />
       </IconButton>
     </SocialIconsContainer>
   );
