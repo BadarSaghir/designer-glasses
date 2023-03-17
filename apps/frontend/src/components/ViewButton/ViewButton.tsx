@@ -11,6 +11,7 @@ type Props = {
   fontSize?:string |number,
   route:string,
   txtclassName?:string,
+  roundnes?:string,
 
   className?:string,
   showIcon?:boolean
@@ -20,14 +21,17 @@ import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import Link from 'next/link';
 ;
 const ViewButton = (props: Props) => {
+  let roundnes=" 9999px"
+  if(props.roundnes)roundnes=props.roundnes
   const {showIcon} = props
   let icon = showIcon
   if(icon==undefined) icon=true
   
  const shadow="0px 0px 9px 0px "+props.shadowColor
   return (
-    <div className="rounded-full " style={
+    <div className={``} style={
       {
+        borderRadius:roundnes,
       boxShadow:shadow,
       MozBoxShadow:shadow,
       WebkitBoxShadow:shadow,
@@ -44,10 +48,12 @@ const ViewButton = (props: Props) => {
         }
       }
     }
-    className={`font-bold  rounded-full  shadow-[${props.fontColor}] ${props.className}`}
+    className={`font-bold shadow-[${props.fontColor}] ${props.className}`}
 
 
     style={{
+      borderRadius:roundnes,
+
       backgroundColor: props.bgColor,
       color: props.fontColor,
       borderColor:props.fontColor

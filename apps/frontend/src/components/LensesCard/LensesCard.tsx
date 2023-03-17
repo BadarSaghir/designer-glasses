@@ -68,10 +68,10 @@ function LensesCard() {
   const btnValues = getbtnConfig(theme);
 
   return (
-    <div className="min-h-screen flex min-w-full pt-8 pb-16">
+    <div className="min-h-screen flex min-w-full pt-8 pb-28">
       <div className="flex-grow flex flex-col text-center items-center ">
         <Title className="text-[2rem] pb-10">{data.title}</Title>
-        <div className="sm:grid gap-8 flex flex-col sm:flex-none  sm:grid-cols-2 w-[100%] h-[100%]  sm:gap-8">
+        <div className="sm:grid gap-8 gap-y-28 flex flex-col sm:flex-none  sm:grid-cols-2 w-[100%] h-[100%]  sm:gap-x-8">
           <div className="hidden md:flex items-center flex-1 h-full gap-4 flex-col sm:justify-center sm:items-center sm:pt-10">
             {btnValues.map((v, idx) => {
               return (
@@ -79,6 +79,7 @@ function LensesCard() {
                   <ViewButton
                     txtclassName="text-[2rem]"
                     className=" md:h-20 md:w-80"
+                    roundnes='20px'
                     text={v.text}
                     bgColor={idx===selected?seletedTheme.bgColor:v.bgColor}
                     fontColor={idx===selected?seletedTheme.fontColor:v.fontColor}
