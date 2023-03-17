@@ -107,7 +107,7 @@ function LensesCard() {
               key={idx}
               className="flex h-72 sm:h-full px-12  flex-col justify-center items-center gap-4 pb-14"
             >
-              <div className="h-[100%] w-[80%] relative">
+              <div className="h-[220px] w-[220px] md:h-[80%]  md:w-[80%] aspect-video relative">
                 <Image
                   className="h-[100%] min-w-[220px]  w-full rounded-3xl"
                   alt={data.name}
