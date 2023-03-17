@@ -21,19 +21,19 @@ const SocialIcons = () => {
   return (
     <SocialIconsContainer >
       <IconButton>
-        <FacebookIcon className='text-primary-600' />
+        <FacebookIcon fontSize='large' className='text-primary-600' />
       </IconButton>
       <IconButton>
-        <TwitterIcon className='text-[#00acee]' />
+        <TwitterIcon  fontSize='large' className='text-[#00acee]' />
       </IconButton>
       <IconButton>
-        <InstagramIcon className={style.insta} />
+        <InstagramIcon  fontSize='large' className={style.insta} />
       </IconButton>
       <IconButton>
-        <PinterestIcon  className='text-[#E60023]' />
+        <PinterestIcon  fontSize='large' className='text-[#E60023]' />
       </IconButton>
       <IconButton>
-        <Linkdelin  className='text-[#0e76a8]' />
+        <Linkdelin  fontSize='large' className='text-[#0e76a8]' />
       </IconButton>
     </SocialIconsContainer>
   );
