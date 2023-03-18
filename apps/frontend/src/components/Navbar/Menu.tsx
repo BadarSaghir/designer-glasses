@@ -11,7 +11,9 @@ import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Theme } from '@mui/material';
 import AccountBoxIcon from '@mui/icons-material/AccountCircle';
-
+import useMenu from '../../hooks/useMenu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuMui from "@mui/material/Menu"
 type Props = {
   items?: { name: string; link: string }[];
   boxProps?: React.ComponentProps<typeof Box>;
@@ -36,6 +38,8 @@ const styles = (theme: Theme) => createStyles({
 
 function Menu({ items, boxProps, active, setActive }: Props) {
   const [search, setSearch] = useState('');
+  const { anchorEl, open, handleClick, handleClose } = useMenu();
+
   const theme = useTheme();
   return (
     <Box
@@ -92,7 +96,13 @@ function Menu({ items, boxProps, active, setActive }: Props) {
         <ShoppingCart  sx={{color:theme.paletes.secondary}} />
 
         <div className=''>
-         <AccountBoxIcon className='text-secondaryMain' />
+        <IconButton onClick={handleClick}>
+        <AccountBoxIcon />
+      </IconButton>
+      <MenuMui anchorEl={anchorEl} open={open} onClose={handleClose}>
+        <MenuItem onClick={handleClose}>Sign Up</MenuItem>
+        <MenuItem onClick={handleClose}>Login</MenuItem>
+      </MenuMui>
         </div>
         <div className='hidden'>
           <ViewButton
