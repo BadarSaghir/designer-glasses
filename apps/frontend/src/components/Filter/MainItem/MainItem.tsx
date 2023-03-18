@@ -8,7 +8,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import CheckboxIcon from '@mui/material/Checkbox';
-
+import {RangeFilter} from "./RangeItem"
 import React from 'react';
 
 type Props = {
@@ -243,66 +243,7 @@ function MainItem({
             )}
 
             {type == 'size' && (
-            <> <div className="hidden md:flex text-xs gap-2 text-center">
-                {' '}
-                {list.map((val, idx) => (
-                  <ListItem
-                  selected={current.includes(idx)}
-                  onClick={setFilter(
-                      filterKey as
-                        | 'size'
-                        | 'color'
-                        | 'gender'
-                        | 'shape'
-                        | 'frameType',
-                      idx
-                    )}
-                    className={`w-8 h-8 flex justify-center rounded-sm items-center cursor-pointer ${
-                      current.includes(idx)
-                      ? 'bg-secondaryMain' : 'bg-tertiaryMain'
-                    } `}
-                    color={val}
-                    key={idx}
-                  >
-                    {val}
-                  </ListItem>
-                ))}{' '}
-              </div>
-              <StyledMenu
-                className='md:hidden'
-                  id="demo-customized-menu"
-                  MenuListProps={{
-                    'aria-labelledby': 'demo-customized-button',
-                  }}
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                >
-                  {' '}
-                  {list.map((val, idx) => (
-                    <div key={idx}>
-                      <MenuItem onClick={handleClose} disableRipple>
-                        <ListItem
-                    selected={current.includes(idx)}
-                    onClick={setFilter(
-                            filterKey as
-                              | 'size'
-                              | 'color'
-                              | 'gender'
-                              | 'shape'
-                              | 'frameType',
-                            idx
-                          )}
-                          className={style.item + '  pr-8 pl-2 py-2 text-sm w-[100%] md:hidden rounded-lg'}
-                          key={idx}
-                        >
-                          {val}
-                        </ListItem>{' '}
-                      </MenuItem>
-                    </div>
-                  ))}
-                </StyledMenu>
-              </>
+            <RangeFilter />
             )}
           </div>
           <div>
