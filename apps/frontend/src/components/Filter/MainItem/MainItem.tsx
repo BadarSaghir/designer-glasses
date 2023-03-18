@@ -79,7 +79,7 @@ function MainItem({
     setAnchorEl(null);
   };
   const setFilter = (
-    key: 'gender' | 'shape' | 'color' | 'frameType' | 'size',
+    key: 'gender' | 'shape' | 'color' | 'frameType' | 'size'|'price',
     idx: number
   ) => {
     return () => {
@@ -243,6 +243,9 @@ function MainItem({
             )}
 
             {type == 'size' && (
+            <RangeFilter />
+            )}
+              {type == 'price' && (
             <RangeFilter />
             )}
           </div>

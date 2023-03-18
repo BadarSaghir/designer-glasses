@@ -13,7 +13,7 @@ import {
 
 export type  IFilterAtom={
 
-  [K in 'gender' | 'shape'|'color'|'frameType'|'size']: {
+  [K in 'gender' | 'shape'|'color'|'frameType'|'size'|'price']: {
     title: string,
     selected: number[],
     list:string[]
@@ -58,6 +58,13 @@ export type  IFilterAtom={
         selected: [],
         list: FilterSize.list,
         filter:"size" as FilterTypes
+
+      },
+      price: {
+        title: FilterSize.title,
+        selected: [],
+        list: FilterSize.list,
+        filter:"price" as FilterTypes
 
       },
     },
