@@ -12,7 +12,10 @@ import {
   IFilterAtom,
 } from '../../recoil/atom/filterAtom';
 import { useRecoilState } from 'recoil';
+import { styled } from '@mui/material';
+import { FilterHideState } from '../../recoil/atom/filterHideAtom';
 
+const FilerBox = styled('div')({});
 const Filter: FunctionComponent = () => {
   // const items = [
   //   FilterGender,
@@ -23,8 +26,10 @@ const Filter: FunctionComponent = () => {
   // ];
   const [items, setItems] = useRecoilState(filterAtom);
   return (
-    <div className="w-full h-full  flex flex-col items-center">
-      <h2 className="text-secondaryMain text-opacity-95  text-lg font-bold">
+    <FilerBox
+      className="w-full h-full  flex-col items-center"
+    >
+      <h2 className="text-secondaryMain text-center text-opacity-95  text-lg font-bold">
         {'Filter By'.toUpperCase()}
       </h2>
       <div className="w-full relative md:block grid xs:grid-cols-2">
@@ -44,7 +49,7 @@ const Filter: FunctionComponent = () => {
         ))}
       </div>
       {/* <div> {state.color.selectedColor}</div> */}
-    </div>
+    </FilerBox>
   );
 };
 

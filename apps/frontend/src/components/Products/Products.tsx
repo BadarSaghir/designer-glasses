@@ -4,12 +4,13 @@ import { FilterContainer, FilterHideButton, FilterSortButton } from './styles';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import React from 'react';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import { filterAtomState, IFilterAtom } from '../../recoil/atom/filterAtom';
 import Product from './Product';
 import Pagination from '@mui/material/Pagination';
 import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
 import ReactPaginate from 'react-paginate';
+import { FilterHideState } from '../../recoil/atom/filterHideAtom';
 
 interface ProductsProps {
   products: ProductModel[];
@@ -37,18 +38,18 @@ const Products = ({ products }: ProductsProps) => {
   };
 
   // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
+  const [hideState, setHideState] = useRecoilState(FilterHideState);
 
   return (
-    <div className="w-full h-full flex flex-col pb-24">
-      <FilterContainer>
-        <FilterHideButton variant="text" onClick={() => setShow(!show)}>
-          {show ? 'HIDE FILTER' : 'SHOW FILTER'}
+    <div className="w-full h-full  flex flex-col ">
+      <FilterContainer >
+        <FilterHideButton variant="text" onClick={() => setHideState((state)=>!state)}>
+          {!hideState ? 'HIDE FILTER' : 'SHOW FILTER'}
         </FilterHideButton>
         <FilterSortButton
           // show={show}
           sx={{
-            display: `${show ? 'block' : 'none'}`,
+            display: 'block' ,
           }}
           variant="contained"
           onClick={handleReset}
@@ -56,21 +57,12 @@ const Products = ({ products }: ProductsProps) => {
         >
           CLEAR Filter
         </FilterSortButton>
-        <FilterSortButton
-          // show={show}
-          sx={{
-            display: `${show ? 'block' : 'none'}`,
-          }}
-          variant="contained"
-          onClick={handleReset}
-          className="bg-secondaryMain"
-        >
-          {}
-        </FilterSortButton>
+       
       </FilterContainer>
-      <div className=" flex flex-col justify-center items-center px399:grid  gap-12 grid-cols-1 px399:grid-cols-2 pl-[20%] pr-[20%] pt-5  sm:grid-cols-2 px1260:grid-cols-3   sm:p-24 md:gap-6 lg:gap-12 h-full w-full">
+      <div className=" flex flex-col lg:h-[200vh] justify-items-center items-center px399:grid md:grid-rows-3  gap-12 grid-cols-1  pl-[20%] pr-[20%] pt-5 sm:grid-cols-1 px1260:grid-cols-3  md:grid-cols-1 md:grid-r lg:grid-cols-3 px1014:grid-cols-1  sm:p-24 md:gap-6 lg:gap-2 h-full w-full">
+        
         {products.map((val, idx) =>
-          idx < 6 ? <Product key={idx} {...val} /> : <div key={idx}></div>
+          idx < 9 ? <Product key={idx} {...val} /> : <div key={idx}></div>
         )}
       </div>
       <div className="w-full flex items-center justify-center">
