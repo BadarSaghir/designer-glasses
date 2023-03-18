@@ -7,6 +7,8 @@ import style from './MainItem.module.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
+import CheckboxIcon from '@mui/material/Checkbox';
+
 import React from 'react';
 
 type Props = {
@@ -29,9 +31,7 @@ const ListItem = styled('div')<ISelected>(({ selected, theme }) => ({
   // content:"2022",
   cursor: 'pointer',
   paddingLeft: '3px',
-  color: selected ? theme.paletes.tertiary : '',
 
-  backgroundColor: selected ? theme.paletes.secondary : '',
   // border:`${selected?"2px solid "+theme.paletes.tertiary:""}`
 }));
 
@@ -135,7 +135,11 @@ function MainItem({
                     className={style.item + ' hidden  rounded-md py-1 pl-2 md:block'}
                     key={idx}
                   >
-                    {val}
+                   <CheckboxIcon className='text-tertiaryMain'   sx={(theme)=>({
+          '&.Mui-checked': {
+            color: theme.paletes.secondary,
+          },
+        })} checked={current.includes(idx)} /> {val}
                   </ListItem>
                 ))}
                 <StyledMenu
@@ -153,6 +157,7 @@ function MainItem({
                     <div key={idx}>
                       <MenuItem onClick={handleClose} disableRipple>
                         <ListItem
+
                     selected={current.includes(idx)}
                     onClick={setFilter(
                             filterKey as
@@ -166,7 +171,11 @@ function MainItem({
                           className={style.item + ' pr-8 pl-2 py-2 rounded-lg'}
                           key={idx}
                         >
-                          {val}
+                           <CheckboxIcon className='text-tertiaryMain'   sx={(theme)=>({
+          '&.Mui-checked': {
+            color: theme.paletes.secondary,
+          },
+        })} checked={current.includes(idx)} /> {val}
                         </ListItem>{' '}
                       </MenuItem>
                     </div>

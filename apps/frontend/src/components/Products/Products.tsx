@@ -26,7 +26,7 @@ const Products = ({ products }: ProductsProps) => {
           ...state,
           [key as keyof IFilterAtom]: {
             ...state[key as keyof IFilterAtom],
-            selected: -1,
+            selected:[],
           },
         };
       }
