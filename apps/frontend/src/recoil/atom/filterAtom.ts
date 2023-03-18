@@ -61,9 +61,9 @@ export type  IFilterAtom={
 
       },
       price: {
-        title: FilterSize.title,
+        title: "Price",
         selected: [],
-        list: FilterSize.list,
+        list: [],
         filter:"price" as FilterTypes
 
       },
