@@ -8,7 +8,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import CheckboxIcon from '@mui/material/Checkbox';
-import {RangeFilter} from "./RangeItem"
+import { RangeFilter } from './RangeItem';
 import React from 'react';
 
 type Props = {
@@ -79,7 +79,7 @@ function MainItem({
     setAnchorEl(null);
   };
   const setFilter = (
-    key: 'gender' | 'shape' | 'color' | 'frameType' | 'size'|'price',
+    key: 'gender' | 'shape' | 'color' | 'frameType' | 'size' | 'price',
     idx: number
   ) => {
     return () => {
@@ -103,21 +103,21 @@ function MainItem({
     <div className="width-full">
       <div className="text-secondaryMain flex flex-col px-[18%] py-4 text-sm w-full font-bold">
         <Title>{title}</Title>
-       {(type=='text' || type=='color') &&
-         <Button
-         id="demo-customized-button"
-         aria-controls={open ? 'demo-customized-menu' : undefined}
-         aria-haspopup="true"
-         aria-expanded={open ? 'true' : undefined}
-         variant="contained"
-         className="text-tertiaryMain md:hidden bg-secondaryMain"
-         disableElevation
-         onClick={handleClick}
-         endIcon={<KeyboardArrowDownIcon />}
-       >
-         {'Select Filters'}
-       </Button>
-       }
+        {(type == 'text' || type == 'color') && (
+          <Button
+            id="demo-customized-button"
+            aria-controls={open ? 'demo-customized-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            variant="contained"
+            className="text-tertiaryMain md:hidden bg-secondaryMain"
+            disableElevation
+            onClick={handleClick}
+            endIcon={<KeyboardArrowDownIcon />}
+          >
+            {'Select Filters'}
+          </Button>
+        )}
         <List>
           <div>
             {type == 'text' && (
@@ -134,18 +134,26 @@ function MainItem({
                         | 'frameType',
                       idx
                     )}
-                    className={style.item + ' hidden  rounded-md py-1 pl-2 md:block'}
+                    className={
+                      style.item + ' hidden  rounded-md py-1 pl-2 md:block'
+                    }
                     key={idx}
                   >
-                   <CheckboxIcon className='text-tertiaryMain'   sx={(theme)=>({
-          '&.Mui-checked': {
-            color: theme.paletes.secondary,
-          },
-        })} checked={current.includes(idx)} /> {val}
+                    <CheckboxIcon
+                      className="text-tertiaryMain"
+                      sx={(theme) => ({
+                        height:15,
+                        '&.Mui-checked': {
+                          color: theme.paletes.secondary,
+                        },
+                      })}
+                      checked={current.includes(idx)}
+                    />{' '}
+                    {val}
                   </ListItem>
                 ))}
                 <StyledMenu
-                className='md:hidden'
+                  className="md:hidden"
                   id="demo-customized-menu"
                   MenuListProps={{
                     'aria-labelledby': 'demo-customized-button',
@@ -159,9 +167,8 @@ function MainItem({
                     <div key={idx}>
                       <MenuItem onClick={handleClose} disableRipple>
                         <ListItem
-
-                    selected={current.includes(idx)}
-                    onClick={setFilter(
+                          selected={current.includes(idx)}
+                          onClick={setFilter(
                             filterKey as
                               | 'size'
                               | 'color'
@@ -173,11 +180,16 @@ function MainItem({
                           className={style.item + ' pr-8 pl-2 py-2 rounded-lg'}
                           key={idx}
                         >
-                           <CheckboxIcon className='text-tertiaryMain'   sx={(theme)=>({
-          '&.Mui-checked': {
-            color: theme.paletes.secondary,
-          },
-        })} checked={current.includes(idx)} /> {val}
+                          <CheckboxIcon
+                            className="text-tertiaryMain"
+                            sx={(theme) => ({
+                              '&.Mui-checked': {
+                                color: theme.paletes.secondary,
+                              },
+                            })}
+                            checked={current.includes(idx)}
+                          />{' '}
+                          {val}
                         </ListItem>{' '}
                       </MenuItem>
                     </div>
@@ -191,8 +203,8 @@ function MainItem({
                   <div className="md:grid md:grid-cols-4 md:gap-1 md:w-24  hidden">
                     {list.map((val, idx) => (
                       <Circle
-                      selected={current.includes(idx)}
-                      onClick={setFilter(
+                        selected={current.includes(idx)}
+                        onClick={setFilter(
                           filterKey as
                             | 'size'
                             | 'color'
@@ -209,7 +221,7 @@ function MainItem({
                   </div>
                 }
                 <StyledMenu
-                className='md:hidden'
+                  className="md:hidden"
                   id="demo-customized-menu"
                   MenuListProps={{
                     'aria-labelledby': 'demo-customized-button',
@@ -219,12 +231,16 @@ function MainItem({
                   onClose={handleClose}
                 >
                   {' '}
-                  <MenuItem className='flex justify-center items-center' onClick={handleClose} disableRipple>
+                  <MenuItem
+                    className="flex justify-center items-center"
+                    onClick={handleClose}
+                    disableRipple
+                  >
                     <div className="grid grid-cols-4 gap-1 w-24 ">
                       {list.map((val, idx) => (
                         <Circle
-                        selected={current.includes(idx)}
-                        onClick={setFilter(
+                          selected={current.includes(idx)}
+                          onClick={setFilter(
                             filterKey as
                               | 'size'
                               | 'color'
@@ -244,12 +260,8 @@ function MainItem({
               </>
             )}
 
-            {type == 'size' && (
-            <RangeFilter />
-            )}
-              {type == 'price' && (
-            <RangeFilter />
-            )}
+            {type == 'size' && <RangeFilter />}
+            {type == 'price' && <RangeFilter />}
           </div>
           <div>
             {/* <StyledMenu
