@@ -54,6 +54,7 @@ function RangeFilter() {
             label="Min Price"
             size="small"
             value={value[0]}
+           style={{marginRight:8}}
             onChange={handleInputChange}
             inputProps={{
               min: 7,

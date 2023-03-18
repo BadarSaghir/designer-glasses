@@ -119,7 +119,7 @@ function Product({
             </h3>
             {advertisment.tryOn &&
             <Button
-              className="lg:w-56 h-11 w-24 text-xs flex-1 hover:bg-secondaryMain hover:text-tertiaryMain bg-tertiaryMain bg-opacity-60 text-secondaryMain font-bold"
+              className="lg:w-24 h-11 w-24 text-xs flex-1 hover:bg-secondaryMain hover:text-tertiaryMain bg-tertiaryMain bg-opacity-60 text-secondaryMain font-bold"
               variant="contained"
             >
               Try Now
