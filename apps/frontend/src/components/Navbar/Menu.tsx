@@ -111,7 +111,7 @@ function Menu({ items, boxProps, active, setActive }: Props) {
           onClick={ ()=>setModal("login")}
           />
 
-          <AuthModal isOpen={modalValue==="login"} onRequestClose={()=>setModal("none")}/>
+          <AuthModal />
 
         </div>
         <div className="hidden">
