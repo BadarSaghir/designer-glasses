@@ -12,9 +12,9 @@ export const FilterContainer = styled('div')({
 export const FilterHideButton = styled(Button)({
     fontWeight:"bolder"
 });
-export const FilterSortButton = styled(Button)<{show:boolean}>(({theme,show=true})=>({
+export const FilterSortButton = styled(Button)(({theme})=>({
     backgroundColor:theme.paletes.secondary,
-    display:show?"block":"none",
+   
     color:theme.navbar.bg_logo
 }));
 

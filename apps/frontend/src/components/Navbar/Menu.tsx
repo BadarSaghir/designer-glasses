@@ -13,7 +13,10 @@ import { Theme } from '@mui/material';
 import AccountBoxIcon from '@mui/icons-material/AccountCircle';
 import useMenu from '../../hooks/useMenu';
 import MenuItem from '@mui/material/MenuItem';
-import MenuMui from "@mui/material/Menu"
+import MenuMui from '@mui/material/Menu';
+import { useRecoilState } from 'recoil';
+import { modalState } from '../../recoil/atom/authAtom';
+import AuthModal from './AuthModal/AuthModal';
 type Props = {
   items?: { name: string; link: string }[];
   boxProps?: React.ComponentProps<typeof Box>;
@@ -21,15 +24,13 @@ type Props = {
   active: number;
 };
 
+const InputBG = styled('div')(({ theme }) => ({
+  border: '0.5px solid gray',
+}));
 
-const InputBG= styled('div')(({theme})=>({
-border:"0.5px solid gray"  
-
-}))
-
-
-const styles = (theme: Theme) => createStyles({
-  input: {
+const styles = (theme: Theme) =>
+  createStyles({
+    input: {
       '&::placeholder': {
         fontStyle: 'italic',
       },
@@ -38,7 +39,18 @@ const styles = (theme: Theme) => createStyles({
 
 function Menu({ items, boxProps, active, setActive }: Props) {
   const [search, setSearch] = useState('');
-  const { anchorEl, open, handleClick, handleClose } = useMenu();
+  const [anchorEl, setAnchorEl] = useState<null | SVGSVGElement>(null);
+
+  const [modalValue, setModal] = useRecoilState(modalState);
+  const handleOpenMenu = (event: {
+    currentTarget: React.SetStateAction<SVGSVGElement | null>;
+  }) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
 
   const theme = useTheme();
   return (
@@ -54,7 +66,10 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             <Link
               href={item.link}
               style={{
-                color: active === idx ? theme.navbar.active :theme.paletes.secondary ,
+                color:
+                  active === idx
+                    ? theme.navbar.active
+                    : theme.paletes.secondary,
               }}
               onClick={() => {
                 setActive(idx);
@@ -74,35 +89,32 @@ function Menu({ items, boxProps, active, setActive }: Props) {
             aria-label="search"
           >
             <InputBase
-            
-             style={{
-              height: '1px',
-            }}
-           
+              style={{
+                height: '1px',
+              }}
               className="rounded-2xl px-4"
-             
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value);
               }}
-             
               placeholder="Search"
             />
           </IconButton>
         </InputBG>
         {/* <FavoriteBorder /> */}
-        <FavoriteBorderIcon sx={{color:theme.paletes.secondary}} />
+        <FavoriteBorderIcon sx={{ color: theme.paletes.secondary }} />
 
-        <ShoppingCart  sx={{color:theme.paletes.secondary}} />
+        <ShoppingCart sx={{ color: theme.paletes.secondary }} />
 
-        <div className='cursor-pointer'>
-        <AccountBoxIcon  onClick={(e)=>handleClick(e)}/>
-      <MenuMui anchorEl={anchorEl} open={open} onClose={handleClose}>
-        <MenuItem onClick={handleClose}>Sign Up</MenuItem>
-        <MenuItem onClick={handleClose}>Login</MenuItem>
-      </MenuMui>
+        <div className="cursor-pointer">
+          <AccountBoxIcon
+          onClick={ ()=>setModal("login")}
+          />
+
+          <AuthModal isOpen={modalValue==="login"} onRequestClose={()=>setModal("none")}/>
+
         </div>
-        <div className='hidden'>
+        <div className="hidden">
           <ViewButton
             bgColor={theme.paletes.secondary}
             fontColor={theme.navbar.bg_logo}

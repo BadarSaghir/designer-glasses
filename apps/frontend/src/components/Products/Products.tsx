@@ -26,7 +26,7 @@ const Products = ({ products }: ProductsProps) => {
           ...state,
           [key as keyof IFilterAtom]: {
             ...state[key as keyof IFilterAtom],
-            selected:[],
+            selected: [],
           },
         };
       }
@@ -39,23 +39,6 @@ const Products = ({ products }: ProductsProps) => {
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
-  const endOffset = itemOffset + 6;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = products.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(products.length / 6);
-
-  // Invoke when user click to request another page.
-  const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * 6) % products.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-  };
-
   return (
     <div className="w-full h-full flex flex-col pb-24">
       <FilterContainer>
@@ -63,7 +46,10 @@ const Products = ({ products }: ProductsProps) => {
           {show ? 'HIDE FILTER' : 'SHOW FILTER'}
         </FilterHideButton>
         <FilterSortButton
-          show={show}
+          // show={show}
+          sx={{
+            display: `${show ? 'block' : 'none'}`,
+          }}
           variant="contained"
           onClick={handleReset}
           className="bg-secondaryMain"
@@ -78,16 +64,16 @@ const Products = ({ products }: ProductsProps) => {
       </div>
       <div className="w-full flex items-center justify-center">
         <ReactPaginate
-        className='flex gap-3 text-secondaryMain font-semibold'
+          className="flex gap-3 text-secondaryMain font-semibold"
           breakLabel="..."
           nextLabel="next >"
-          activeLinkClassName=' text-tertiaryMain'
-          selectedPageRel={"a"}
-          onPageChange={handlePageClick}
+          activeLinkClassName=" text-tertiaryMain"
+          selectedPageRel={'a'}
+          // onPageChange={(e)=>{void}}
           pageRangeDisplayed={6}
           pageCount={9}
           previousLabel="< previous"
-          renderOnZeroPageCount={()=>null}
+          renderOnZeroPageCount={() => null}
         />{' '}
       </div>
     </div>
