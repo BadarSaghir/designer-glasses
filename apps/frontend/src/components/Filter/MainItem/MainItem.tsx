@@ -14,7 +14,7 @@ type Props = {
   list: string[];
   isHorizontal?: boolean;
   type: FilterTypes;
-  current: number;
+  current: number[];
   filterKey: string;
 };
 interface ISelected {
@@ -66,7 +66,7 @@ function MainItem({
   title,
   isHorizontal = true,
   type,
-  current = -1,
+  current = [],
   filterKey,
 }: Props) {
   const setFilterState = useSetRecoilState(filterAtomState);
@@ -84,13 +84,18 @@ function MainItem({
   ) => {
     return () => {
       console.log('clicked', key, idx);
-      setFilterState((state) => ({
-        ...state,
-        [key]: {
-          ...state[key],
-          selected: idx,
-        },
-      }));
+      setFilterState((state) => {
+        const isSelected = state[key].selected.includes(idx);
+        return {
+          ...state,
+          [key]: {
+            ...state[key],
+            selected: isSelected
+              ? state[key].selected.filter((item) => item !== idx)
+              : [...state[key].selected, idx],
+          },
+        };
+      });
     };
   };
 
@@ -109,7 +114,7 @@ function MainItem({
           onClick={handleClick}
           endIcon={<KeyboardArrowDownIcon />}
         >
-          {current >= 0 ? list[current] : 'Select'}
+          {'Select Filters'}
         </Button>
         <List>
           <div>
@@ -117,7 +122,7 @@ function MainItem({
               <>
                 {list.map((val, idx) => (
                   <ListItem
-                    selected={idx === current}
+                    selected={current.includes(idx)}
                     onClick={setFilter(
                       filterKey as
                         | 'size'
@@ -148,8 +153,8 @@ function MainItem({
                     <div key={idx}>
                       <MenuItem onClick={handleClose} disableRipple>
                         <ListItem
-                          selected={idx === current}
-                          onClick={setFilter(
+                    selected={current.includes(idx)}
+                    onClick={setFilter(
                             filterKey as
                               | 'size'
                               | 'color'
@@ -175,8 +180,8 @@ function MainItem({
                   <div className="md:grid md:grid-cols-4 md:gap-1 md:w-24  hidden">
                     {list.map((val, idx) => (
                       <Circle
-                        selected={idx === current}
-                        onClick={setFilter(
+                      selected={current.includes(idx)}
+                      onClick={setFilter(
                           filterKey as
                             | 'size'
                             | 'color'
@@ -207,8 +212,8 @@ function MainItem({
                     <div className="grid grid-cols-4 gap-1 w-24 ">
                       {list.map((val, idx) => (
                         <Circle
-                          selected={idx === current}
-                          onClick={setFilter(
+                        selected={current.includes(idx)}
+                        onClick={setFilter(
                             filterKey as
                               | 'size'
                               | 'color'
@@ -233,8 +238,8 @@ function MainItem({
                 {' '}
                 {list.map((val, idx) => (
                   <ListItem
-                    selected={idx === current}
-                    onClick={setFilter(
+                  selected={current.includes(idx)}
+                  onClick={setFilter(
                       filterKey as
                         | 'size'
                         | 'color'
@@ -244,7 +249,8 @@ function MainItem({
                       idx
                     )}
                     className={`w-8 h-8 flex justify-center rounded-sm items-center cursor-pointer ${
-                      current == idx ? 'bg-secondaryMain' : 'bg-tertiaryMain'
+                      current.includes(idx)
+                      ? 'bg-secondaryMain' : 'bg-tertiaryMain'
                     } `}
                     color={val}
                     key={idx}
@@ -268,8 +274,8 @@ function MainItem({
                     <div key={idx}>
                       <MenuItem onClick={handleClose} disableRipple>
                         <ListItem
-                          selected={idx === current}
-                          onClick={setFilter(
+                    selected={current.includes(idx)}
+                    onClick={setFilter(
                             filterKey as
                               | 'size'
                               | 'color'

@@ -15,7 +15,7 @@ export type  IFilterAtom={
 
   [K in 'gender' | 'shape'|'color'|'frameType'|'size']: {
     title: string,
-    selected: number,
+    selected: number[],
     list:string[]
     filter: FilterTypes
     
@@ -27,35 +27,35 @@ export type  IFilterAtom={
     default:  {
       gender: {
         title: FilterGender.title,
-        selected: -1,
+        selected: [],
         list: FilterGender.list,
         filter:"text" as FilterTypes
         
       },
       shape: {
         title: FilterShape.title,
-        selected: -1,
+        selected: [],
         list: FilterShape.list,
         filter:"text" as FilterTypes
 
       },
       color: {
         title: FilterColor.title,
-        selected: -1,
+        selected: [],
         list: FilterColor.list,
         filter:"color" as FilterTypes
 
       },
       frameType: {
         title: FilterFrameType.title,
-        selected: -1,
+        selected: [],
         list: FilterFrameType.list,
         filter:"text" as FilterTypes
 
       },
       size: {
         title: FilterSize.title,
-        selected: -1,
+        selected: [],
         list: FilterSize.list,
         filter:"size" as FilterTypes
 
