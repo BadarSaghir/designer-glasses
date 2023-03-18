@@ -9,7 +9,9 @@ import LoginForm from './LoginForm';
 import RegisterForm from './Register';
 
 const customStyles = {
+  overlay: { zIndex: 99 },
   content: {
+    zIndex:81,
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -37,14 +39,15 @@ export default function AuthModal() {
   }
 
   return (
-    <div className=''>
+    <div style={{zIndex:81}} className="z-[100]">
       {/* <button onClick={openModal}>Open Modal</button> */}
       <Modal
+    //  className="z-[100]"
         isOpen={modal=="login"||modal=="signup"}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
-        className={''}
+       
       >
         <div className="flex  text-secondaryMain ">
           <Button

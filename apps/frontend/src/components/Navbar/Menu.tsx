@@ -60,7 +60,7 @@ function Menu({ items, boxProps, active, setActive }: Props) {
       height="100%"
       {...boxProps}
     >
-      <div className="flex  flex-1 justify-evenly items-center">
+      <div className="flex flex-1 justify-evenly items-center">
         {items?.map((item, idx) => {
           return (
             <Link
@@ -85,7 +85,7 @@ function Menu({ items, boxProps, active, setActive }: Props) {
         <InputBG className=" rounded-2xl text-xs  placeholder:text-white">
           <IconButton
             endIcon={<SearchIcon style={{ color: theme.paletes.secondary }} />}
-            sx={{ p: '10px' }}
+            sx={{ p: '6px' }}
             aria-label="search"
           >
             <InputBase
