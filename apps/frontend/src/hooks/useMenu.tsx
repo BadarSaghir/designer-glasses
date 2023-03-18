@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
 interface UseMenu {
-  anchorEl: null | HTMLElement;
+  anchorEl: null | SVGSVGElement;
   open: boolean;
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick: (event: React.MouseEvent<SVGSVGElement>) => void;
   handleClose: () => void;
 }
 
 const useMenu = (): UseMenu => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | SVGSVGElement>(null);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: React.MouseEvent<SVGSVGElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
