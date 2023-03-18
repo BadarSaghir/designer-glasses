@@ -42,7 +42,7 @@ export type  IFilterAtom={
       brands: {
         title: "Brands",
         selected: [],
-        list: [],
+        list: ["Carrera","CK","Nike","Tomford","Rayban","Montblanc","Gucci","Burberry","Prada","Guess","Charmant","Elle","Esprit","Lacoste","Polariod","Emreldzegna"],
         filter:"text" as FilterTypes
 
       },
