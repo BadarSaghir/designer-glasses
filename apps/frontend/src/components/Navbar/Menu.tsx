@@ -95,7 +95,7 @@ function Menu({ items, boxProps, active, setActive }: Props) {
 
         <ShoppingCart  sx={{color:theme.paletes.secondary}} />
 
-        <div className=''>
+        <div className='cursor-pointer'>
         <AccountBoxIcon  onClick={(e)=>handleClick(e)}/>
       <MenuMui anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem onClick={handleClose}>Sign Up</MenuItem>
