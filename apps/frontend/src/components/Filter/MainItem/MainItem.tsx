@@ -103,19 +103,21 @@ function MainItem({
     <div className="width-full">
       <div className="text-secondaryMain flex flex-col px-[18%] py-4 text-sm w-full font-bold">
         <Title>{title}</Title>
-        <Button
-          id="demo-customized-button"
-          aria-controls={open ? 'demo-customized-menu' : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}
-          variant="contained"
-          className="text-tertiaryMain md:hidden bg-secondaryMain"
-          disableElevation
-          onClick={handleClick}
-          endIcon={<KeyboardArrowDownIcon />}
-        >
-          {'Select Filters'}
-        </Button>
+       {(type=='text' || type=='color') &&
+         <Button
+         id="demo-customized-button"
+         aria-controls={open ? 'demo-customized-menu' : undefined}
+         aria-haspopup="true"
+         aria-expanded={open ? 'true' : undefined}
+         variant="contained"
+         className="text-tertiaryMain md:hidden bg-secondaryMain"
+         disableElevation
+         onClick={handleClick}
+         endIcon={<KeyboardArrowDownIcon />}
+       >
+         {'Select Filters'}
+       </Button>
+       }
         <List>
           <div>
             {type == 'text' && (
