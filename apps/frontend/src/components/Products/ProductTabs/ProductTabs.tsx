@@ -26,7 +26,7 @@ export default function ProductInfoTabs({
         <Tab label="Frame & Measurements" />
         <Tab label="Shipping & Returns" />
       </Tabs>
-      <div className='p-16 overflow-hidden text-opacity-75 min-h-[340px] w-[100%] rounded-2xl mt-8 bg-tertiaryMain bg-opacity-80'>
+      <div className='p-16 overflow-hidden text-opacity-75 min-h-[340px] w-[100%] rounded-2xl bg-opacity-30 mt-8 bg-tertiaryMain'>
       {value === 0 && (
         // Content for Description tab
         <div className="">
