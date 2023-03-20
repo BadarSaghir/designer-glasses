@@ -15,10 +15,7 @@ function Glasses() {
       src: womenGlasses,
       title: 'Women',
     },
-    {
-      src: childGlasses,
-      title: 'Child',
-    },
+  
   ];
   const theme = useTheme();
 
@@ -34,7 +31,7 @@ function Glasses() {
         {glasses.map((src, idx) => (
           <div
             key={idx}
-            className="flex-1 flex justify-center items-center h-[100%]"
+            className="flex-1 flex w-[100%] items-center h-[650px]"
           >
             <Card src={src.src} title={src.title} />
           </div>
