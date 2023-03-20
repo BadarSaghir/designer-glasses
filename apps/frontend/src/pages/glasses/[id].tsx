@@ -15,6 +15,7 @@ import { ProductModel } from '@designer-glasses/libs/models/Products/products.in
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 import InfoIcon from '@mui/icons-material/Info';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import ProductInfoTabs from '../../components/Products/ProductTabs/ProductTabs';
 const iconsWarranty = [
   <AssuredWorkloadIcon key={0} className="text-primaryMain" />,
   <InfoIcon key={1} className="text-primaryMain" />,
@@ -27,13 +28,17 @@ const ProductPage = ({ product }: { product: ProductModel }) => {
       <Navbar navitems={navItems} logo={Logo} />
       <SingleProductLayout product={product}>
         <div className="w-[100%] bg-tertiaryMain justify-evenly bg-opacity-30 flex flex-wrap items-center md:h-[104px] p-3 text-start">
-          {product?.promises && Object.entries(product.promises).map(([key, val], idx) => {
+          {product?.promises &&
+            Object.entries(product.promises).map(([key, val], idx) => {
               return (
                 <div
                   className="text-secondaryMain font-bold flex items-center justify-center gap-1 "
                   key={idx}
                 >
-                  <div className="h-[100%] flex text-lg items-baseline"> {iconsWarranty[idx]}</div>
+                  <div className="h-[100%] flex text-lg items-baseline">
+                    {' '}
+                    {iconsWarranty[idx]}
+                  </div>
                   <div className="h-[100%] flex gap-1 mt-1">
                     <div> {val.status.toLocaleUpperCase()}</div>
                     <div className="h-[100%]"> {val.endstring}</div>
@@ -41,6 +46,11 @@ const ProductPage = ({ product }: { product: ProductModel }) => {
                 </div>
               );
             })}
+
+        
+        </div>
+        <div className='flex  px-[20%]'>
+        <ProductInfoTabs product={product} />
         </div>
       </SingleProductLayout>
       <Footer logo={''} title={''} social={[]} signupLink={''} />
