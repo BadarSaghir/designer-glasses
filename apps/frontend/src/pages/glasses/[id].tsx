@@ -49,7 +49,7 @@ const ProductPage = ({ product }: { product: ProductModel }) => {
 
         
         </div>
-        <div className='flex  px-[20%]'>
+        <div className='flex mt-14  px-[20%]'>
         <ProductInfoTabs product={product} />
         </div>
       </SingleProductLayout>
