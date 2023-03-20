@@ -17,8 +17,9 @@ const ProductPage = ({product}:{product:ProductModel}) => {
   return (
     <div>
       <Navbar navitems={navItems} logo={Logo} />
-      <SingleProductLayout product={product}>h</SingleProductLayout>
-      {/* {JSON.stringify(product)} */}
+      <SingleProductLayout product={product}>
+        {/* <p className='' >Divi</p> */}
+      </SingleProductLayout>
       <Footer logo={''} title={''} social={[]} signupLink={''} />
     </div>
   );
