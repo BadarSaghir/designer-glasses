@@ -1,4 +1,4 @@
-import { Children, PropsWithChildren } from 'react';
+import { Children, PropsWithChildren, useState } from 'react';
 import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -8,19 +8,20 @@ function SingleProductLayout({
   children,
   product,
 }: PropsWithChildren & { product?: ProductModel }) {
+
+  const [selectedImage,setSelectedImage]= useState(0)
   return (
     <div className="flex col  pt-6 pb-16 w-[100%]">
       <div className="flex   flex-col justify-center p-4 md:justify-between md:flex-row w-[100%]  md:pl-28 md:p-16 md:pr-72">
-        <div className="   w-[100%] aspect-square md:p-8 flex items-center justify-center bg-white  md:w-[600px]">
+        <div className=" gap-4 flex-col  w-[100%] aspect-square md:p-8 flex items-center justify-center bg-white  md:w-[600px]">
           <div
             className="flex-1 w-[100%] h-[100%] flex flex-col justify-between"
             style={{
-              backgroundImage: `url(${product?.images[0]})`,
+              backgroundImage: `url(${product?.images[selectedImage]})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
             }}
           >
-
             <div className="w-[100%] flex justify-between px-4 py-2">
               <div
                 className="bg-danger-200 w-28 text-secondaryMain font-semibold text-opacity-70 text-center px-2 py-1 rounded-md
@@ -28,14 +29,36 @@ function SingleProductLayout({
               >
                 {product?.advertisment.type.toLocaleUpperCase()}
               </div>
-              <div className='cursor-pointer opacity-70'>
+              <div className="cursor-pointer opacity-70">
                 {/* <FavoriteIcon fontSize='large'  sx={(theme)=>({color:theme.paletes.secondary})}/> */}
-              <FavoriteBorderIcon fontSize='large' sx={(theme)=>({color:theme.paletes.secondary})}/></div>
-
+                <FavoriteBorderIcon
+                  fontSize="large"
+                  sx={(theme) => ({ color: theme.paletes.secondary })}
+                />
+              </div>
             </div>{' '}
-            <div className='flex w-[100%] justify-center pb-4'>
-              <div className='text-lg cursor-pointer font-bold text-secondaryMain border-solid border-tertiaryMain border-[2px] rounded-lg  text-opacity-70 px-3'>{"TRY ON"}</div>
+            <div className="flex w-[100%] justify-center pb-4">
+              <div className="text-lg cursor-pointer font-bold text-secondaryMain border-solid border-tertiaryMain border-[2px] rounded-lg  text-opacity-70 px-3">
+                {'TRY ON'}
+              </div>
             </div>
+          </div>
+          <div className='images flex justify-evenly gap-6 pb-3 w-[100%]'>
+            {product?.images.map((item,idx)=>{
+              if(idx<=3)
+               return  <div
+               onClick={(e)=>{setSelectedImage(idx)}}
+               key={idx}
+                 className="flex-1 cursor-pointer  w-24 h-24 flex flex-col justify-between"
+                 style={{
+                   backgroundImage: `url(${item})`,
+                   backgroundRepeat: 'no-repeat',
+                   backgroundSize: '100% 100%',
+                 }}
+               ></div>
+
+            })}
+       
           </div>
         </div>
         <div className="flex  text-2xl justify-center items-center flex-col">
@@ -68,7 +91,7 @@ function SingleProductLayout({
                 className=" text-base font-bold text-secondaryMain text-opacity-80"
                 key={idx}
               >
-               {<CheckIcon fontSize='small' color='info'/>} {ads}
+                {<CheckIcon fontSize="small" color="info" />} {ads}
               </div>
             ))}
           </div>
