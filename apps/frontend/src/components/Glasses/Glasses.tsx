@@ -31,7 +31,7 @@ function Glasses() {
         {glasses.map((src, idx) => (
           <div
             key={idx}
-            className="flex-1 flex w-[100%] items-center h-[650px]"
+            className="flex-1 flex w-[100%] justify-center items-center h-[650px]"
           >
             <Card src={src.src} title={src.title} />
           </div>
