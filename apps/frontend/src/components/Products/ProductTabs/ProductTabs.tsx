@@ -15,6 +15,8 @@ export default function ProductInfoTabs({
     setValue(newValue);
   };
 
+
+
   return (
     <div className="flex flex-col overflow-hidden w-[100%]">
       <Tabs
@@ -37,13 +39,15 @@ export default function ProductInfoTabs({
       )}
       {value === 1 && (
         // Content for Frame & Measurements tab
-        <div className="">
-          <h6 className="text-secondaryMain font-bold">About {product.name}</h6>
-          <div className="text-secondaryMain flex">
-            <div className=''> {product.description}</div> 
-          
-            <div> {product.description}</div>
-          </div>
+        <div className="h-[100%]">
+          <h6 className="text-secondaryMain font-bold ">About {product.name}</h6>
+          {/* <div className="text-secondaryMain hidden text-justify sm:flex-row sm:flex h-[100%]">
+            <div className='pr-3'> {product.description}</div> 
+            <Divider orientation="vertical"  flexItem/>
+            <div className='pl-3'> {product.description}</div>
+          </div> */}
+      <ProductMeasurement className='text-secondaryMain hidden text-justify sm:flex-row sm:flex h-[100%]' upper={{className:"pr-3 text-justify"}} lower={{className:"pl-3 text-justify"}} orientation='vertical'  product={product}   />
+      <ProductMeasurement className='text-secondaryMain flex flex-col text-justify sm:flex-row sm:hidden h-[100%]' upper={{className:"pb-3 text-justify"}} lower={{className:"pt-3 text-justify"}} orientation='horizontal'  product={product}   />
         </div>
       )}
     
@@ -51,3 +55,12 @@ export default function ProductInfoTabs({
     </div>
   );
 }
+
+    function ProductMeasurement({product,orientation,upper,lower,className}:{product:ProductModel,className:string,orientation:"vertical"|"horizontal",upper:{className:string},lower:{className:string}} ) {
+      return (<div className={className}>
+            <div className={upper.className}> {product.description}</div> 
+            <Divider orientation={orientation} flexItem />
+            <div className={lower.className}> {product.description}</div>
+          </div>);
+    }
+  
