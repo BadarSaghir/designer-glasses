@@ -65,14 +65,14 @@ function SingleProductLayout({
           </div>
           <div className="images flex justify-evenly gap-6 pb-3 w-[100%]">
             {product?.images.map((item, idx) => {
-              if (idx <= 3)
+              if (idx <= 2)
                 return (
                   <div
                     onClick={(e) => {
                       setSelectedImage(idx);
                     }}
                     key={idx}
-                    className="flex-1 cursor-pointer  w-24 h-24 flex flex-col justify-between"
+                    className="cursor-pointer  w-32 h-32 flex flex-col justify-between"
                     style={{
                       backgroundImage: `url(${item})`,
                       backgroundRepeat: 'no-repeat',
