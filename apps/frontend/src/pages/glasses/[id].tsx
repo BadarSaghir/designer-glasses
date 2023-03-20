@@ -12,17 +12,35 @@ import { Navbar } from '../../components/Navbar';
 import Logo from '../../assets/page2/img.png';
 import SingleProductLayout from '../../components/Layout/SingleProductLayout';
 import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
+import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
+import InfoIcon from '@mui/icons-material/Info';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+const iconsWarranty = [
+  <AssuredWorkloadIcon key={0} className="text-primaryMain" />,
+  <InfoIcon key={1} className="text-primaryMain" />,
+  <VerifiedUserIcon key={1} className="text-primaryMain" />,
+];
 // import 'bootstrap/dist/css/bootstrap.min.css';
-const ProductPage = ({product}:{product:ProductModel}) => {
+const ProductPage = ({ product }: { product: ProductModel }) => {
   return (
     <div>
       <Navbar navitems={navItems} logo={Logo} />
       <SingleProductLayout product={product}>
-        <div className='w-[100%] bg-tertiaryMain justify-evenly bg-opacity-30 flex flex-wrap items-center min-h-12 p-3 text-start' >
-       {product.warranties?.map((val,idx)=>{
-        return <div className='text-secondaryMain font-bold  '  key={idx}>{val.toLocaleUpperCase()}</div>
-
-          })}
+        <div className="w-[100%] bg-tertiaryMain justify-evenly bg-opacity-30 flex flex-wrap items-center md:h-[104px] p-3 text-start">
+          {product?.promises && Object.entries(product.promises).map(([key, val], idx) => {
+              return (
+                <div
+                  className="text-secondaryMain font-bold flex items-center justify-center gap-1 "
+                  key={idx}
+                >
+                  <div className="h-[100%] flex text-lg items-baseline"> {iconsWarranty[idx]}</div>
+                  <div className="h-[100%] flex gap-1 mt-1">
+                    <div> {val.status.toLocaleUpperCase()}</div>
+                    <div className="h-[100%]"> {val.endstring}</div>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </SingleProductLayout>
       <Footer logo={''} title={''} social={[]} signupLink={''} />

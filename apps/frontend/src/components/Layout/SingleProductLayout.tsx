@@ -5,12 +5,14 @@ import CircleIcon from '@mui/icons-material/Circle';
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 function SingleProductLayout({
   children,
   product,
 }: PropsWithChildren & { product?: ProductModel }) {
   const [selectedImage, setSelectedImage] = useState(0);
-  const len = product?.images.length ||0;
+  const len = product?.images.length || 0;
+
   return (
     <div className="flex flex-col  pt-6 pb-16 w-[100%]">
       <div className="flex   flex-col justify-center p-4 md:justify-around md:flex-row w-[100%]  md:pl-28 md:p-16 md:pr-72">
@@ -39,15 +41,19 @@ function SingleProductLayout({
               </div>
             </div>{' '}
             <div className="w-[100%] flex justify-between">
-              <div className='cursor-pointer'  onClick={() =>
-                    setSelectedImage((prevSelectedImage) => (prevSelectedImage - 1 + len) % len)
-
-                }>
+              <div
+                className="cursor-pointer"
+                onClick={() =>
+                  setSelectedImage(
+                    (prevSelectedImage) => (prevSelectedImage - 1 + len) % len
+                  )
+                }
+              >
                 {' '}
                 <ArrowBackIosNewIcon />{' '}
               </div>
               <div
-              className='cursor-pointer'
+                className="cursor-pointer"
                 onClick={() =>
                   setSelectedImage(
                     (prevSelectedImage) => (prevSelectedImage + 1) % len
@@ -72,7 +78,7 @@ function SingleProductLayout({
                       setSelectedImage(idx);
                     }}
                     key={idx}
-                    className="cursor-pointer  w-32 h-32 flex flex-col justify-between"
+                    className="cursor-pointer  w-36 h-20 flex flex-col justify-between"
                     style={{
                       backgroundImage: `url(${item})`,
                       backgroundRepeat: 'no-repeat',
@@ -82,7 +88,6 @@ function SingleProductLayout({
                 );
             })}
           </div>
-
         </div>
         <div className="flex  text-2xl justify-center items-center flex-col">
           <div className="text-tertiaryMain font-bold">{product?.name}</div>
