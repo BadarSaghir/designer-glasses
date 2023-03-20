@@ -10,6 +10,8 @@ export interface ProductModel {
   images: string[];
   shape: string[];
   frameType: string[];
+  brands:string[];
+  prescriptionRange:{start:string,end:string}
   date: string;
   distance?: number;
   lensWidth?: number;

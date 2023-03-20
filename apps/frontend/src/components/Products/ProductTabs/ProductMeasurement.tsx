@@ -28,6 +28,10 @@ export function ProductMeasurement({
             title="biofocal"
             productMeasurement={product.biofocal ? product.biofocal : ['Yes']}
           />
+            <MeasureItem
+            title="biofocal"
+            productMeasurement={product.biofocal ? product.biofocal : ['Yes']}
+          />
         </div>
         <Divider orientation={orientation} flexItem />
         <div className={`${lower.className} w-[100%]`}>{product.description}</div>
