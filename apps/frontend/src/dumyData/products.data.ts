@@ -11,6 +11,7 @@ export const products: ProductModel[] = [
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',
       'https://png.pngtree.com/png-vector/20201011/ourmid/pngtree-simple-style-elegant-black-glasses-png-image_2351998.jpg',
     ],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
     warranties:['Free Lenses','Anti Reflection','Money Back Grantee','Free Shipping'],
 promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
     advertisment: {
@@ -31,6 +32,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     prices:['300Rs','200Rs'],
     name: 'GUCCI 1010',
     warranties:['Free Lenses', 'Anti Reflection','Money Back Grantee','Free Shipping'],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
     promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
 
     images: [
@@ -54,6 +56,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     shape: ['oval', 'rectangle'],
     promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
     images: [
@@ -78,6 +81,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
     promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
     images: [
@@ -100,6 +104,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
     images: [
@@ -122,8 +127,10 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
+    
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',
@@ -145,6 +152,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
     promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
 
     name: 'GUCCI 1010',
@@ -168,6 +176,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
     images: [
@@ -189,6 +198,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
     images: [
@@ -210,6 +220,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    description:"It is a dummy description of the the product, the final description will be added in the final product",
 
     name: 'GUCCI 1010',
     images: [

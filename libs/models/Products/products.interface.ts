@@ -18,6 +18,7 @@ export interface ProductModel {
   lensHeight?: number;
   multifocal?: string[];
   warranties?: string[];
+  description:string;
   promises?: {
     secure: { status: string;  endstring: 'Secure checkout' };
     support: { status: string,endstring: 'Hour Support' };
