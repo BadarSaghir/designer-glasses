@@ -1,34 +1,54 @@
 import * as React from 'react';
-import  Tab  from '@mui/material/Tab';
+import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import { ProductModel } from '@designer-glasses/libs/models/Products/products.interface';
 
-export default function ProductInfoTabs({product}:{product:ProductModel}) {
+export default function ProductInfoTabs({
+  product,
+}: {
+  product: ProductModel;
+}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
-  return (<div className='flex flex-col overflow-hidden'>
-    <Tabs className='' variant='scrollable' value={value} onChange={handleChange}>
-      <Tab label="Description" />
-      <Tab label="Frame & Measurements" />
-      <Tab label="Shipping & Returns" />
-    </Tabs>
-
-{value === 0 && (
-    // Content for Description tab
-    <div>{product.description}{product.description}{product.description}{product.description}{product.description}</div>
-  )}
-  {value === 1 && (
-    // Content for Frame & Measurements tab
-    <div>1</div>
-  )}
-  {value === 2 && (
-    // Content for Shipping & Returns tab
-    <div>2</div>
-  )}
-  </div>
+  return (
+    <div className="flex flex-col overflow-hidden w-[100%]">
+      <Tabs
+        className=""
+        variant="scrollable"
+        value={value}
+        onChange={handleChange}
+      >
+        <Tab label="Description" />
+        <Tab label="Frame & Measurements" />
+        <Tab label="Shipping & Returns" />
+      </Tabs>
+      <div className='p-16 overflow-hidden text-opacity-75 min-h-[340px] w-[100%] rounded-2xl mt-8 bg-tertiaryMain bg-opacity-80'>
+      {value === 0 && (
+        // Content for Description tab
+        <div className="">
+          <h6 className="text-secondaryMain font-bold">About {product.name}</h6>
+          <p className="text-secondaryMain  "> {product.description}</p>
+        </div>
+      )}
+      {value === 1 && (
+        // Content for Frame & Measurements tab
+        <div className="">
+          <h6 className="text-secondaryMain font-bold">About {product.name}</h6>
+          <p className="text-secondaryMain"> {product.description}</p>
+        </div>
+      )}
+      {value === 2 && (
+        // Content for Shipping & Returns tab
+        <div className="">
+          <h6 className="text-secondaryMain font-bold">About {product.name}</h6>
+          <p className="text-secondaryMain"> {product.description}</p>
+        </div>
+      )}
+      </div>
+    </div>
   );
 }
