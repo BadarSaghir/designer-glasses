@@ -21,16 +21,20 @@ export function ProductMeasurement({
           className={`${upper.className} w-[100%] flex flex-col flex-wrap gap-1 `}
         >
           <MeasureItem title="genders" productMeasurement={product.genders} />
-          <MeasureItem title="size" productMeasurement={product.sku} />
-          <MeasureItem title="shape" productMeasurement={product.shape} />
-          <MeasureItem title="frames" productMeasurement={product.frameType} />
+          <MeasureItem title="Sizes" productMeasurement={product.sku} />
+          <MeasureItem title="Shapes" productMeasurement={product.shape} />
+          <MeasureItem title="Frames" productMeasurement={product.frameType} />
           <MeasureItem
-            title="biofocal"
+            title="Biofocal"
             productMeasurement={product.biofocal ? product.biofocal : ['Yes']}
           />
             <MeasureItem
-            title="biofocal"
-            productMeasurement={product.biofocal ? product.biofocal : ['Yes']}
+            title="Manufacturer"
+            productMeasurement={product.brands}
+          />
+             <MeasureItem
+            title="Prescription Range"
+            productMeasurement={[product.prescriptionRange.start+" , "+product.prescriptionRange.end]}
           />
         </div>
         <Divider orientation={orientation} flexItem />
