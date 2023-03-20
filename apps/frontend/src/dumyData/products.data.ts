@@ -11,8 +11,8 @@ export const products: ProductModel[] = [
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',
       'https://png.pngtree.com/png-vector/20201011/ourmid/pngtree-simple-style-elegant-black-glasses-png-image_2351998.jpg',
     ],
-    warranties:['Free Lenses Anti Reflection','Money Back Grantee','Free Shipping'],
-
+    warranties:['Free Lenses','Anti Reflection','Money Back Grantee','Free Shipping'],
+promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
     advertisment: {
       link: '',
       title: 'Armani 2020',
@@ -30,7 +30,8 @@ export const products: ProductModel[] = [
     shape: ['oval', 'rectangle'],
     prices:['300Rs','200Rs'],
     name: 'GUCCI 1010',
-    warranties:['Free Lenses Anti Reflection','Money Back Grantee','Free Shipping'],
+    warranties:['Free Lenses', 'Anti Reflection','Money Back Grantee','Free Shipping'],
+    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
 
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -52,6 +53,7 @@ export const products: ProductModel[] = [
     frameType: ['Rimless', 'Half Rimless'],
     id: '1',
     shape: ['oval', 'rectangle'],
+    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
 
     name: 'GUCCI 1010',
     images: [
@@ -75,6 +77,7 @@ export const products: ProductModel[] = [
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
 
     name: 'GUCCI 1010',
     images: [
@@ -141,6 +144,8 @@ export const products: ProductModel[] = [
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
+    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
+
 
     name: 'GUCCI 1010',
     images: [

@@ -18,7 +18,12 @@ const ProductPage = ({product}:{product:ProductModel}) => {
     <div>
       <Navbar navitems={navItems} logo={Logo} />
       <SingleProductLayout product={product}>
-        <p className='' >Divi</p>
+        <div className='w-[100%] bg-tertiaryMain justify-evenly bg-opacity-30 flex flex-wrap items-center min-h-12 p-3 text-start' >
+       {product.warranties?.map((val,idx)=>{
+        return <div className='text-secondaryMain font-bold  '  key={idx}>{val.toLocaleUpperCase()}</div>
+
+          })}
+        </div>
       </SingleProductLayout>
       <Footer logo={''} title={''} social={[]} signupLink={''} />
     </div>
