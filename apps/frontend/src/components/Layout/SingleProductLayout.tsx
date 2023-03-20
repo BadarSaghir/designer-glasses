@@ -12,7 +12,7 @@ function SingleProductLayout({
   const [selectedImage, setSelectedImage] = useState(0);
   const len = product?.images.length ||0;
   return (
-    <div className="flex col  pt-6 pb-16 w-[100%]">
+    <div className="flex flex-col  pt-6 pb-16 w-[100%]">
       <div className="flex   flex-col justify-center p-4 md:justify-around md:flex-row w-[100%]  md:pl-28 md:p-16 md:pr-72">
         <div className=" gap-4 flex-col  w-[100%] aspect-square md:p-8 flex items-center justify-center bg-white  md:w-[600px]">
           <div
@@ -82,6 +82,7 @@ function SingleProductLayout({
                 );
             })}
           </div>
+
         </div>
         <div className="flex  text-2xl justify-center items-center flex-col">
           <div className="text-tertiaryMain font-bold">{product?.name}</div>

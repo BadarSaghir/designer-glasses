@@ -18,7 +18,7 @@ const ProductPage = ({product}:{product:ProductModel}) => {
     <div>
       <Navbar navitems={navItems} logo={Logo} />
       <SingleProductLayout product={product}>
-        {/* <p className='' >Divi</p> */}
+        <p className='' >Divi</p>
       </SingleProductLayout>
       <Footer logo={''} title={''} social={[]} signupLink={''} />
     </div>
