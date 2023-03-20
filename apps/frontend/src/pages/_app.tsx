@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+// 
 import './styles.css';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '../components/theme';
