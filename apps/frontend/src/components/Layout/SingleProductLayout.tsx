@@ -5,11 +5,13 @@ import CircleIcon from '@mui/icons-material/Circle';
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Link from 'next/link';
 
 function SingleProductLayout({
   children,
   product,
-}: PropsWithChildren & { product?: ProductModel }) {
+  id,
+}: PropsWithChildren & { product?: ProductModel,id:string }) {
   const [selectedImage, setSelectedImage] = useState(0);
   const len = product?.images.length || 0;
 
@@ -124,11 +126,11 @@ function SingleProductLayout({
             ))}
           </div>
           <div className="mt-8 flex gap-4 flex-col">
-            {['SELECT LENSES', 'BUY FRAME ONLY', 'ADD TO CART'].map(
+            {[{name:'SELECT LENSES',route:"lenses",link:({href,text}:{text:string,href:string})=><Link href={href}>{text}</Link>}, {route:"lenses",name:'BUY FRAME ONLY',link:({href,text}:{text:string,href:string})=><Link href={href}>{text}</Link>}].map(
               (v, idx) => (
                 <div key={idx}>
                   <button className="text-base rounded py-1 text-primaryMain  font-bold bg-tertiaryMain  block min-w-[200px]">
-                    {v}
+                  <v.link href={`/glasses/${id}/${v.route}`} text={v.name} />  
                   </button>
                 </div>
               )

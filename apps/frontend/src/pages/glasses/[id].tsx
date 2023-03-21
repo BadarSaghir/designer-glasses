@@ -22,11 +22,11 @@ const iconsWarranty = [
   <VerifiedUserIcon key={1} className="text-primaryMain" />,
 ];
 // import 'bootstrap/dist/css/bootstrap.min.css';
-const ProductPage = ({ product }: { product: ProductModel }) => {
+const ProductPage = ({ product,id }: { product: ProductModel,id:string }) => {
   return (
     <div>
       <Navbar navitems={navItems} logo={Logo} />
-      <SingleProductLayout product={product}>
+      <SingleProductLayout product={product} id={id}>
         <div className="w-[100%] bg-tertiaryMain justify-evenly bg-opacity-30 flex flex-wrap items-center md:h-[104px] p-3 text-start">
           {product?.promises &&
             Object.entries(product.promises).map(([key, val], idx) => {
@@ -85,6 +85,7 @@ export const getStaticProps: GetStaticProps<
   return {
     props: {
       product: product as ProductModel,
+      id:id,
 
       // posts,
     },

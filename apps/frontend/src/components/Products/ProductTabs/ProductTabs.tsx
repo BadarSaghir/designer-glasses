@@ -32,9 +32,9 @@ export default function ProductInfoTabs({
           // Content for Description tab
           <div className="">
             <h6 className="text-secondaryMain font-bold">
-              About {product.name}
+              About {product?.name}
             </h6>
-            <p className="text-secondaryMain  "> {product.description}</p>
+            <p className="text-secondaryMain  "> {product?.description}</p>
           </div>
         )}
         {value === 1 && (
