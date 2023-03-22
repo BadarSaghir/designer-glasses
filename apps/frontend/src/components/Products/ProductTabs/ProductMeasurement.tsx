@@ -22,10 +22,10 @@ export function ProductMeasurement({
 }) {
   const lenseData = [
     { img: lensWidth.src, label: 'Lense Width', value: product.lensWidth },
-    { img: lensWidth.src, label: 'Lense Height', value: product.lensHeight },
-    { img: lensWidth.src, label: 'Bridge Width', value: product.bridgeHeight },
+    { img: lensHeight.src, label: 'Lense Height', value: product.lensHeight },
+    { img: lens2.src, label: 'Bridge Width', value: product.bridgeHeight },
     {
-      img: lensWidth.src,
+      img: lens1.src,
       label: 'Temple Lenght',
       value: product.templatelenght,
     },
@@ -60,7 +60,7 @@ export function ProductMeasurement({
         <div className="grid grid-rows-2 grid-cols-2">
           {lenseData.map((val,key) => (
             <div key={key}>
-              <GlassesSize img={val.img} label={val.label} value={val.value?.toString()} />
+              <GlassesSize img={val.img} label={val.label} value={"12"} />
             </div>
           ))}
         </div>
