@@ -54,8 +54,8 @@ export function ProductMeasurement({
         />
       </div>
       <Divider orientation={orientation} flexItem />
-      <div className={`${lower.className} w-[100%]`}>
-        {product.description}
+      <div className={`${lower.className} w-[100%] flex flex-col gap-2`}>
+      
         <h1>Frame & Measurements: mm/in</h1>
         <div className="grid grid-rows-2 grid-cols-2">
           {lenseData.map((val,key) => (
