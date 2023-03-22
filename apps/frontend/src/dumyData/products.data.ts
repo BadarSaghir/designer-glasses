@@ -5,17 +5,27 @@ export const products: ProductModel[] = [
     name: 'GUCCI 1010',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    prices:['300Rs','200Rs','400Rs'],
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    prices: ['300Rs', '200Rs', '400Rs'],
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',
       'https://png.pngtree.com/png-vector/20201011/ourmid/pngtree-simple-style-elegant-black-glasses-png-image_2351998.jpg',
     ],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    warranties:['Free Lenses','Anti Reflection','Money Back Grantee','Free Shipping'],
-promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    warranties: [
+      'Free Lenses',
+      'Anti Reflection',
+      'Money Back Grantee',
+      'Free Shipping',
+    ],
+    promises: {
+      secure: { status: '100%', endstring: 'Secure checkout' },
+      support: { status: '24', endstring: 'Hour Support' },
+      warranty: { status: '2', endstring: 'Years Warranty' },
+    },
     advertisment: {
       link: '',
       title: 'Armani 2020',
@@ -23,7 +33,7 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
       type: 'new',
     },
     genders: ['men', 'women', 'childrens'],
-    sku: ['xl', 'lg', 'sm'],
+    sku: ['Small', 'Medium', 'Large', 'Extra Large'],
     colors: ['#ff2f3f', '#f0af3f', '#afdf0a'],
     date: 'today',
   },
@@ -31,13 +41,23 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '2',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
-    prices:['300Rs','200Rs'],
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
+    prices: ['300Rs', '200Rs'],
     name: 'GUCCI 1010',
-    warranties:['Free Lenses', 'Anti Reflection','Money Back Grantee','Free Shipping'],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
+    warranties: [
+      'Free Lenses',
+      'Anti Reflection',
+      'Money Back Grantee',
+      'Free Shipping',
+    ],
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    promises: {
+      secure: { status: '100%', endstring: 'Secure checkout' },
+      support: { status: '24', endstring: 'Hour Support' },
+      warranty: { status: '2', endstring: 'Years Warranty' },
+    },
 
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -59,10 +79,15 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     frameType: ['Rimless', 'Half Rimless'],
     id: '1',
     shape: ['oval', 'rectangle'],
-    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    promises: {
+      secure: { status: '100%', endstring: 'Secure checkout' },
+      support: { status: '24', endstring: 'Hour Support' },
+      warranty: { status: '2', endstring: 'Years Warranty' },
+    },
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     name: 'GUCCI 1010',
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -77,7 +102,8 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     },
 
     genders: ['men', 'women', 'childrens'],
-    sku: ['xl', 'lg', 'sm'],
+    sku: ['Small', 'Medium', 'Large', 'Extra Large'],
+
     colors: ['#ff2f3f', '#f0af3f', '#afdf0a'],
     date: 'today',
   },
@@ -85,10 +111,15 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    promises: {
+      secure: { status: '100%', endstring: 'Secure checkout' },
+      support: { status: '24', endstring: 'Hour Support' },
+      warranty: { status: '2', endstring: 'Years Warranty' },
+    },
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     name: 'GUCCI 1010',
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -110,9 +141,10 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     name: 'GUCCI 1010',
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -134,11 +166,12 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
 
     name: 'GUCCI 1010',
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
       'https://www.pngfind.com/pngs/m/1-13037_semi-transparent-glasses-transparent-background-glasses-hd-png.png',
@@ -159,10 +192,15 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24",endstring:"Hour Support"},warranty:{status:"2",endstring:"Years Warranty"}},
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    promises: {
+      secure: { status: '100%', endstring: 'Secure checkout' },
+      support: { status: '24', endstring: 'Hour Support' },
+      warranty: { status: '2', endstring: 'Years Warranty' },
+    },
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
 
     name: 'GUCCI 1010',
     images: [
@@ -185,9 +223,10 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     name: 'GUCCI 1010',
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -204,13 +243,15 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     sku: ['xl', 'lg', 'sm'],
     colors: ['#ff2f3f', '#f0af3f', '#afdf0a'],
     date: 'today',
-  },  {
+  },
+  {
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     name: 'GUCCI 1010',
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
@@ -227,13 +268,15 @@ promises:{secure:{status:"100%",endstring:"Secure checkout"},support:{status:"24
     sku: ['xl', 'lg', 'sm'],
     colors: ['#ff2f3f', '#f0af3f', '#afdf0a'],
     date: 'today',
-  },  {
+  },
+  {
     id: '1',
     frameType: ['Rimless', 'Half Rimless'],
     shape: ['oval', 'rectangle'],
-    description:"It is a dummy description of the the product, the final description will be added in the final product",
-    brands:["Apple","Motrola"],
-    prescriptionRange:{start:"+7","end":"-7"},
+    description:
+      'It is a dummy description of the the product, the final description will be added in the final product',
+    brands: ['Apple', 'Motrola'],
+    prescriptionRange: { start: '+7', end: '-7' },
     name: 'GUCCI 1010',
     images: [
       'https://www.clipartmax.com/png/middle/429-4293095_geni-glasses-pictures-of-eyeglasses-clip-art-reading-glasses-transparent-background.png',
