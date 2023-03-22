@@ -31,13 +31,11 @@ const Navbar = ({ logo, navitems }: Props) => {
   });
 
   return (
-    <div className="shadow-lg md:h-[52px] h-[100%]">
+    <div className="shadow-xl md:h-[52px] h-[100%]">
       <Box
         bgcolor={theme.navbar.bg_logo}
         sx={{
-          paddingY: {
-            md: 3,
-          },
+        
         }}
       >
         <Appbar
@@ -68,13 +66,13 @@ const Navbar = ({ logo, navitems }: Props) => {
             },
           }}
         >
-          <div className="flex w-[100%] items-center h-[32px]">
-            <div className="flex pl-12 justify-around mb-6 ">
+          <div className="flex w-[100%] items-center mt-2 h-[32px]">
+            <div className="flex pl-12 justify-around  ">
               <Link className=" h-full" href="/">
                 <FitbitIcon className="h-full" />
               </Link>
             </div>
-            <div className='flex-1 mb-6'>
+            <div className='flex-1 '>
               <Menu
                 active={active}
                 setActive={setActive}
