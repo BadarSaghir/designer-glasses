@@ -66,7 +66,7 @@ const Navbar = ({ logo, navitems }: Props) => {
             },
           }}
         >
-          <div className="flex w-[100%] items-center mt-2 h-[32px]">
+          <div className="flex w-[100%] items-center mt-[10px] h-[32px]">
             <div className="flex pl-12 justify-around  ">
               <Link className=" h-full" href="/">
                 <FitbitIcon className="h-full" />
