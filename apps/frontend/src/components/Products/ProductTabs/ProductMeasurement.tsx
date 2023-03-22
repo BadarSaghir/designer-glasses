@@ -60,7 +60,7 @@ export function ProductMeasurement({
         <div className="grid grid-rows-2 grid-cols-2">
           {lenseData.map((val,key) => (
             <div key={key}>
-              <GlassesSize img={val.img} label={val.label} value={val.value} />
+              <GlassesSize img={val.img} label={val.label} value={val.value?.toString()} />
             </div>
           ))}
         </div>
