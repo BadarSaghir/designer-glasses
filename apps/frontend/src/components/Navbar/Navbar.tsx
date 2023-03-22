@@ -31,7 +31,7 @@ const Navbar = ({ logo, navitems }: Props) => {
   });
 
   return (
-    <div className="shadow-xl md:h-[52px] h-[100%]">
+    <div className="shadow-md md:h-[52px] h-[100%]">
       <Box
         bgcolor={theme.navbar.bg_logo}
         sx={{
