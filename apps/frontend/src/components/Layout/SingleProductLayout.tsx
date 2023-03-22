@@ -136,13 +136,13 @@ function SingleProductLayout({
               )
             )}
           </div>
-          <div>{}</div>
-          <div>{}</div>
-          <div>
+          {/* <div>{}</div>
+          <div>{}</div> */}
+          {/* <div>
             {
               //
             }
-          </div>
+          </div> */}
         </div>
       </div>
       {Children.toArray(children).map((child, idx) => (
